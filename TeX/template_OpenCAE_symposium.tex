@@ -1,0 +1,104 @@
+\documentclass{ltjoc}
+%
+\usepackage{graphicx}
+\usepackage[pdfencoding=auto]{hyperref}
+\usepackage{luatexja-otf}
+\usepackage[ms]{luatexja-preset}
+%\usepackage[ipa]{luatexja-preset}
+%\usepackage[hiragino-pro]{luatexja-preset}
+%
+%\markrightheadings{オープンCAEシンポジウム2018＠川崎 講演会\\2018年12月6-8日}
+\title{オープンCAEシンポジウム2017印刷用原稿の書き方(和文表題：\\Gothic 14pt)}
+%\subtitle{\LaTeX のテンプレート(和文副題：Gothic 12pt)}
+\author{\begin{tabular}[t]{ccccc}
+発表者氏名* & (発表者所属）& & 連名者氏名 & (連名者所属)\\
+連名者氏名  & (連名者所属) & & 連名者氏名 & (連名者所属)
+\end{tabular}}
+\etitle{Manuscripts preparation guide for OpenCAE symposium 2017 (English Title: Times\\New Roman 12pt)}
+%\esubtitle{The case of \LaTeX (English Sub-Title: Times New Roman 12pt)}
+\eauthor{\begin{tabular}[t]{ccccc}
+Firstname FAMILYNAME* & (affiliation) & & Firstname FAMILYNAME &（affiliation)\\
+Firstname FAMILYNAME  & (affiliation) & & Firstname FAMILYNAME &（affiliation)
+\end{tabular}}
+\keywords{Keyword1, Keyword2, Keyword3, Keyword4, Keyword5 (Please list about five keywords.)}
+\AuthorsEmail{}
+\begin{abstract}
+\end{abstract}
+%
+\begin{document}
+\maketitle
+%
+\section{原稿について}
+%%
+\subsection{言語}
+原稿本文に使用する言語は，日本語または英語としてください．
+文章の区切りには全角の読点「，」（カンマ）と句点「．」（ピリオド）を用いてください． 
+%%
+\subsection{形式}
+講演論文の長さは１題目あたりA4サイズで\textbf{1ページ}です．
+用紙の余白は，上25mm，下25mm，右20mm，左20mmとします．
+題目および著者欄は1段組です．本文は，
+2段組×片側25字×55行とします．
+原稿の作成には，本ファイルをテンプレートとしてお使い下さい．
+ファイル容量は\textbf{最大で5MB}までとします．
+
+本文で使用する言語が日本語の場合には，日本語での題目，著者名と所属の記載に続けて，英語でも同内容を記載してください．
+本文が英語の場合，英語の題目および著者名と所属のみの記載でも結構です．
+
+その後に，ご講演内容を表すキーワードを5つ程度選定し，英語にてご記入ください．
+%%
+\subsection{見出し}
+大見出しの場合は，改行して本文を続けてください．
+中見出しの場合は，本文を続けてはじめます．
+%%
+\subsection{モノクロ}
+講演論文は，モノクロ印刷して配布いたします．
+モノクロ印刷においても明瞭となる図表を使用してください．
+%%
+\subsection{本文の書式}
+本文中の文字の書式は，明朝体・Serif系（Century，Times New Romanなど）を利用し，章節項については，ゴシック体を使用してください．
+本文は9ポイント明朝体の2段組（片側1行25字）で作成して下さい． 
+%
+\vskip 1\zh
+\section{図表の書き方}
+図表中の記号およびキャプションは英語でお書きください．
+印刷物のモノクロです．モノクロでも鮮明に写る図表をご使用ください．
+
+図表中で使用するフォントに指定はございませんが，明瞭となるようにご配慮をお願いします．
+
+本文中では，\autoref{fig:Logo}，表1などと記載し，参照してください．
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=23mm]{fig/Logo-b3.jpg}
+    \caption{Logo of OpenCAE Society}
+  \label{fig:Logo}
+  \end{center}
+\end{figure}
+%
+\vskip 1\zh
+\section{原稿提出について}
+%%
+\subsection{PDFファイル}
+PDFファイルの作成にあたり，「フォントの埋め込みを行う」よう設定して下さい．
+原稿は，提出前に必ず複数のデバイス等で文字化けがないことを確認して下さい．
+%%
+\subsection{原稿提出}
+原稿は，下記のメールアドレスに添付ファイルとして送信してください．\\
+\hfill
+symposium2017@opencae.or.jp
+%
+\vskip 1\zh
+\section{参考文献の引用方法}
+参考文献は，本文中の引用箇所の右肩に小括弧をつけた番号で表し，本文の末尾に下記のようにまとめて列記してください．
+ウェブページ等についても，参考文献\cite{SIST02-200}等を参考にして，引用元を明記してください．
+%
+\vskip 1\zh
+\begin{thebibliography}{9}
+\bibitem{SIST02-200}
+科学技術情報流通技術基準　参照文献の書き方 SIST 02 – 2007，独立行政法人科学技術振興機構(2007).\\
+\href{http://jipsti.jst.go.jp/sist/pdf/SIST02-2007.pdf}{http://jipsti.jst.go.jp/sist/pdf/SIST02-2007.pdf},
+(accessed 2015-09-29).
+\end{thebibliography}
+%
+\end{document}
