@@ -1,5 +1,5 @@
 %%
-%% This is file `ltjspf.cls',
+%% This is file `ltjoc.cls',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
@@ -11,7 +11,7 @@
 %% For the copyright see the source file.
 %% 
 %% Any modified versions of this file must be renamed
-%% with new filenames distinct from ltjspf.cls.
+%% with new filenames distinct from ltjoc.cls.
 %% 
 %% For distribution of the original source see the terms
 %% for copying and modification in the file ltjsclasses.dtx.
@@ -39,7 +39,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ltjspf}
   [2017/09/19 ltjsclasses ]
-\def\jsc@clsname{ltjspf}
+\def\jsc@clsname{ltjoc}
 \RequirePackage{luatexja}
 \newif\if@restonecol
 \newif\if@titlepage
@@ -228,7 +228,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \newif\if@jslogo \@jslogotrue
 \DeclareOption{jslogo}{\@jslogotrue}
 \DeclareOption{nojslogo}{\@jslogofalse}
-\ExecuteOptions{a4paper,twoside,twocolumn,notitlepage,fleqn,final}
+\ExecuteOptions{a4paper,oneside,onecolumn,notitlepage,fleqn,final}
 \ProcessOptions
 \if@slide
   \def\maybeblue{\@ifundefined{ver@color.sty}{}{\color{blue}}}
@@ -317,37 +317,6 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
     \setlength{\pageheight}{\paperheight}
   \fi
 \fi
-\expandafter\let\csname JY3/mc/m/n/10\endcsname\relax
-\ifmingoth
-  \DeclareFontShape{JY3}{mc}{m}{n}{<-> s * [0.903375] \ltj@stdmcfont:jfm=min}{}
-  \DeclareFontShape{JY3}{gt}{m}{n}{<-> s * [0.903375] \ltj@stdgtfont:jfm=min}{}
-\else
-  \ifptexjis
-    \DeclareFontShape{JY3}{mc}{m}{n}{<-> s * [0.903375] \ltj@stdmcfont:jfm=jis}{}
-    \DeclareFontShape{JY3}{gt}{m}{n}{<-> s * [0.903375] \ltj@stdgtfont:jfm=jis}{}
-  \else
-    \DeclareFontShape{JY3}{mc}{m}{n}{<-> s * [0.903375] \ltj@stdmcfont:jfm=ujis}{}
-    \DeclareFontShape{JY3}{gt}{m}{n}{<-> s * [0.903375] \ltj@stdgtfont:jfm=ujis}{}
-  \fi
-\fi
-\DeclareFontShape{JT3}{mc}{m}{n}{<-> s * [0.903375] \ltj@stdmcfont:jfm=ujisv}{}
-\DeclareFontShape{JT3}{gt}{m}{n}{<-> s * [0.903375] \ltj@stdgtfont:jfm=ujisv}{}
-\DeclareFontShape{JY3}{mc}{bx}{n}{<->ssub*gt/m/n}{}
-\DeclareFontShape{JY3}{gt}{bx}{n}{<->ssub*gt/m/n}{}
-\DeclareFontShape{JY3}{mc}{m}{it}{<->ssub*mc/m/n}{}
-\DeclareFontShape{JY3}{mc}{m}{sl}{<->ssub*mc/m/n}{}
-\DeclareFontShape{JY3}{mc}{m}{sc}{<->ssub*mc/m/n}{}
-\DeclareFontShape{JY3}{gt}{m}{it}{<->ssub*gt/m/n}{}
-\DeclareFontShape{JY3}{gt}{m}{sl}{<->ssub*gt/m/n}{}
-\DeclareFontShape{JY3}{mc}{bx}{it}{<->ssub*gt/m/n}{}
-\DeclareFontShape{JY3}{mc}{bx}{sl}{<->ssub*gt/m/n}{}
-%% \DeclareFontShape{JT3}{mc}{m}{it}{<->ssub*mc/m/n}{}
-%% \DeclareFontShape{JT3}{mc}{m}{sl}{<->ssub*mc/m/n}{}
-%% \DeclareFontShape{JT3}{mc}{m}{sc}{<->ssub*mc/m/n}{}
-%% \DeclareFontShape{JT3}{gt}{m}{it}{<->ssub*gt/m/n}{}
-%% \DeclareFontShape{JT3}{gt}{m}{sl}{<->ssub*gt/m/n}{}
-%% \DeclareFontShape{JT3}{mc}{bx}{it}{<->ssub*gt/m/n}{}
-%% \DeclareFontShape{JT3}{mc}{bx}{sl}{<->ssub*gt/m/n}{}
 \renewcommand\jttdefault{\gtdefault}\@ltj@match@familytrue
 %%
 \AtBeginDocument{%
@@ -486,17 +455,14 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \addtolength\headsep{-\topskip}
 \setlength\maxdepth{.5\topskip}
 \newdimen\fullwidth
-\setlength\fullwidth{50\zw}
-\addtolength\fullwidth{8\jsc@mmm}
+\setlength\fullwidth{170\jsc@mmm}%%210-20*2[mm]
 \setlength\textwidth{\fullwidth}
-\setlength{\textheight}{51\baselineskip}
-\addtolength{\textheight}{\topskip}
-\addtolength{\textheight}{0.1\jsc@mpt}
+\setlength{\textheight}{247\jsc@mmm}%%297-25*2[mm]
 \setlength{\mathindent}{10\jsc@mmm}
 \def\flushbottom{%
    \def\@textbottom{\vskip \z@ \@plus.1\jsc@mpt}%
    \let\@texttop\relax}
-\setlength\marginparsep{\columnsep}
+\setlength\marginparsep{\z@}
 \setlength\marginparpush{\baselineskip}
 \setlength{\oddsidemargin}{\paperwidth}
 \addtolength{\oddsidemargin}{-\fullwidth}
@@ -507,12 +473,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
   \addtolength{\evensidemargin}{\fullwidth}
   \addtolength{\evensidemargin}{-\textwidth}
 \fi
-\setlength\marginparwidth{\paperwidth}
-\addtolength\marginparwidth{-\oddsidemargin}
-\addtolength\marginparwidth{-1in}
-\addtolength\marginparwidth{-\textwidth}
-\addtolength\marginparwidth{-10\jsc@mmm}
-\addtolength\marginparwidth{-\marginparsep}
+\setlength\marginparwidth{\z@}
 \@tempdima=1\zw
 \divide\marginparwidth\@tempdima
 \multiply\marginparwidth\@tempdima
@@ -554,7 +515,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \def\ps@plainfoot{%
   \let\@mkboth\@gobbletwo
   \let\@oddhead\@empty
-  \def\@oddfoot{\normalfont\hfil\thepage\hfil}%
+  \def\@oddfoot{\normalfont\footnotesize\hfil Copyright© The OpenCAE Society of Japan}
   \let\@evenhead\@empty
   \let\@evenfoot\@oddfoot}
 \def\ps@plainhead{%
@@ -568,11 +529,13 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
   \def\@oddhead{%
     \hbox to \fullwidth{\hfil\textbf{\thepage}}\hss}}
 \let\ps@plain\ps@plainfoot
+\newcommand*{\markrightheadings}[1]{\gdef\@markrightheadings{#1}}
 \def\ps@headings{%
-  \def\@oddfoot{\normalfont\hfil\thepage\hfil}
-  \def\@evenfoot{\normalfont\hfil\thepage\hfil}
-  \def\@oddhead{\normalfont\hfil \@title \hfil}
-  \def\@evenhead{\normalfont\hfil プラズマ・核融合学会誌\hfil}}
+  \def\@oddfoot{\normalfont\footnotesize\hfil Copyright© The OpenCAE Society of Japan}
+  \def\@evenfoot{\@oddfoot}
+  \def\@oddhead{\normalfont\footnotesize\hfil \@markrightheadings}
+  \def\@evenhead{\@oddhead}
+}
 \def\ps@myheadings{%
   \let\@oddfoot\@empty\let\@evenfoot\@empty
   \def\@evenhead{%
@@ -585,11 +548,15 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
   \let\sectionmark\@gobble
   \let\subsectionmark\@gobble
 }
+\newcommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
+\newcommand*{\affiliation}[1]{\gdef\@affiliation{#1}}
 \newcommand*{\etitle}[1]{\gdef\@etitle{#1}}
+\newcommand*{\esubtitle}[1]{\gdef\@esubtitle{#1}}
 \newcommand*{\eauthor}[1]{\gdef\@eauthor{#1}}
+\newcommand*{\eaffiliation}[1]{\gdef\@eaffiliation{#1}}
 \newcommand*{\keywords}[1]{\gdef\@keywords{#1}}
 \newcommand*{\email}[1]{\gdef\authors@mail{#1}}
-\newcommand*{\AuthorsEmail}[1]{\gdef\authors@mail{author's e-mail:\ #1}}
+\newcommand*{\AuthorsEmail}[1]{\gdef\authors@mail{${}^{\dagger}$E-mail address of corresponding author:\ #1}}
 \def\plainifnotempty{%
   \ifx \@oddhead \@empty
     \ifx \@oddfoot \@empty
@@ -597,7 +564,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
       \thispagestyle{plainfoot}%
     \fi
   \else
-    \thispagestyle{plainhead}%
+    \thispagestyle{headings}%
   \fi}
 \newcommand{\maketitle}{\par
   \begingroup
@@ -606,9 +573,8 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
     \long\def\@makefntext##1{\advance\leftskip 3\zw
       \parindent 1\zw\noindent
       \llap{\@textsuperscript{\normalfont\@thefnmark}\hskip0.3\zw}##1}%
-      \twocolumn[\@maketitle]%
+      \@maketitle%
     \plainifnotempty
-    \@thanks
   \endgroup
   \setcounter{footnote}{0}%
   \global\let\thanks\relax
@@ -626,38 +592,50 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
   }\fi
   \global\let\authors@mail\@undefined}
 \def\@maketitle{%
-  \newpage\null
-  \vskip 6em % used to be 2em
   \begin{center}
-    \let\footnote\thanks
-    \ifx\@title\@undefined\else{\LARGE\headfont\@title\par}\fi
-    \lineskip .5em
+    \ifx\@title\@undefined\else{\Large\headfont\@title\par}\fi
+    \ifx\@subtitle\@undefined\else{\large\headfont\@subtitle\par}\fi
     \ifx\@author\@undefined\else
       \vskip 1em
+      {\large
       \begin{tabular}[t]{c}%
         \@author
-      \end{tabular}\par
+      \end{tabular}}\par
+    \fi
+    \ifx\@affiliation\@undefined\else
+      {\normalfont
+      \begin{tabular}[t]{c}%
+        \@affiliation
+      \end{tabular}}\par
     \fi
     \ifx\@etitle\@undefined\else
       \vskip 1em
-      {\large \@etitle \par}%
+      {\headfont\Large \@etitle \par}%
     \fi
+    \ifx\@esubtitle\@undefined\else{\large\headfont\@esubtitle\par}\fi
     \ifx\@eauthor\@undefined\else
       \vskip 1em
+      {\large
       \begin{tabular}[t]{c}%
         \@eauthor
-      \end{tabular}\par
+      \end{tabular}}\par
     \fi
-    \vskip 1em
-    \@date
+    \ifx\@eaffiliation\@undefined\else
+      {\normalfont
+      \begin{tabular}[t]{c}%
+        \@eaffiliation
+      \end{tabular}}\par
+    \fi
   \end{center}
-  \vskip 1.5em
-  \centerline{\box\@abstractbox}
-  \ifx\@keywords\@undefined\else
-    \vskip 1.5em
-    \centerline{\parbox{157\jsc@mmm}{\textsf{Keywords:}\\ \small\@keywords}}
+  \ifx\@abstract\@undefined\else
+    \vskip 1em
+    \centerline{\box\@abstractbox}
   \fi
-  \vskip 1.5em}
+  \ifx\@keywords\@undefined\else
+    \vskip 1em
+    \centerline{\parbox{157\jsc@mmm}{\headfont\textit{Keywords}: \normalfont\@keywords}}
+  \fi
+  }
 \def\@startsection#1#2#3#4#5#6{%
   \if@noskipsec \leavevmode \fi
   \par
@@ -766,8 +744,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \newcounter{paragraph}[subsubsection]
 \newcounter{subparagraph}[paragraph]
 \renewcommand{\thepart}{\@Roman\c@part}
-% \renewcommand{\thesection}{\@arabic\c@section}
-\renewcommand{\thesection}{\presectionname\@arabic\c@section\postsectionname}
+\renewcommand{\thesection}{\@arabic\c@section.}
 \renewcommand{\thesubsection}{\@arabic\c@section.\@arabic\c@subsection}
 \renewcommand{\thesubsubsection}{%
    \thesubsection.\@arabic\c@subsubsection}
@@ -821,9 +798,9 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
   \newcommand{\section}{%
     \if@slide\clearpage\fi
     \@startsection{section}{1}{\z@}%
-    {\Cvs \@plus.5\Cdp \@minus.2\Cdp}% 前アキ
-    {.5\Cvs \@plus.3\Cdp}% 後アキ
-    {\normalfont\Large\headfont\raggedright}}
+    {\Cvs}% 前アキ
+    {.35\Cvs \@plus.3\Cdp}% 後アキ
+    {\normalfont\large\headfont\raggedright}}
 \fi
 \if@twocolumn
   \newcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
@@ -832,8 +809,8 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \else
   \newcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
     {\Cvs \@plus.5\Cdp \@minus.2\Cdp}% 前アキ
-    {.5\Cvs \@plus.3\Cdp}% 後アキ
-    {\normalfont\large\headfont}}
+    {\z@}% 後アキ
+    {\normalfont\normalsize\headfont}}
 \fi
 \if@twocolumn
   \newcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
@@ -935,7 +912,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \newcommand\labelitemiv{\textperiodcentered}
 \newenvironment{description}{%
   \list{}{%
-    \labelwidth=\leftmargin
+    \labelwidth=\leftmarginiv
     \labelsep=1\zw
     \advance \labelwidth by -\labelsep
     \let \makelabel=\descriptionlabel}}{\endlist}
@@ -943,8 +920,8 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \newbox\@abstractbox
 \newenvironment{abstract}{%
   \global\setbox\@abstractbox\hbox\bgroup
-  \begin{minipage}[b]{157\jsc@mmm}{\sffamily Abstract}\par
-    \small
+  \begin{minipage}[b]{157\jsc@mmm}{\normalfont\headfont\hfil Abstract\hfil}\par
+    \normalfont
     \if@english \parindent6\jsc@mmm \else \parindent1\zw \fi}%
   {\end{minipage}\egroup}
 \newenvironment{verse}{%
@@ -1506,6 +1483,7 @@ class has defined the old font commands like\MessageBreak
   \fi}
 \hyphenation{ado-be post-script ghost-script phe-nom-e-no-log-i-cal man-u-script}
 \pagestyle{headings}
+\thispagestyle{headings}
 \pagenumbering{arabic}
 \fnfixbottomtrue % 2017-02-19
 \IfFileExists{stfloats.sty}{\RequirePackage{stfloats}\fnbelowfloat}{}
@@ -1526,4 +1504,4 @@ class has defined the old font commands like\MessageBreak
 \fi
 \endinput
 %%
-%% End of file `ltjspf.cls'.
+%% End of file `ltjoc.cls'.
