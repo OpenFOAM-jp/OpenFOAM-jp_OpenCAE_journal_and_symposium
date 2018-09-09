@@ -629,10 +629,6 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
     \vskip 1em
     \centerline{\box\@abstractbox}
   \fi
-  \ifx\@eabstract\@undefined\else
-    \vskip 1em
-    \centerline{\box\@eabstractbox}
-  \fi
   \ifx\@keywords\@undefined\else
     \vskip 1em
     \centerline{\parbox{157\jsc@mmm}{\headfont\textit{Keywords}: \normalfont\@keywords}}
@@ -924,14 +920,6 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \newenvironment{abstract}{%
   \gdef\@abstract{}
   \global\setbox\@abstractbox\hbox\bgroup
-  \begin{minipage}[b]{157\jsc@mmm}{\normalfont\headfont\hfil 概要\hfil}\par
-    \normalfont
-    \if@english \parindent6\jsc@mmm \else \parindent1\zw \fi}%
-  {\end{minipage}\egroup}
-\newbox\@eabstractbox
-\newenvironment{eabstract}{%
-  \gdef\@eabstract{}
-  \global\setbox\@eabstractbox\hbox\bgroup
   \begin{minipage}[b]{157\jsc@mmm}{\normalfont\headfont\hfil Abstract\hfil}\par
     \normalfont
     \if@english \parindent6\jsc@mmm \else \parindent1\zw \fi}%
