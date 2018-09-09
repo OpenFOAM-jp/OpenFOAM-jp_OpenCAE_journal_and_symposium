@@ -37,7 +37,7 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ltjspf}
+\ProvidesClass{ltjoc}
   [2017/09/19 ltjsclasses ]
 \def\jsc@clsname{ltjoc}
 \RequirePackage{luatexja}
@@ -515,7 +515,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \def\ps@plainfoot{%
   \let\@mkboth\@gobbletwo
   \let\@oddhead\@empty
-  \def\@oddfoot{\normalfont\footnotesize\hfil Copyright© The OpenCAE Society of Japan}
+  \def\@oddfoot{\normalfont\hfil\thepage\hfil}%
   \let\@evenhead\@empty
   \let\@evenfoot\@oddfoot}
 \def\ps@plainhead{%
@@ -529,11 +529,10 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
   \def\@oddhead{%
     \hbox to \fullwidth{\hfil\textbf{\thepage}}\hss}}
 \let\ps@plain\ps@plainfoot
-\newcommand*{\markrightheadings}[1]{\gdef\@markrightheadings{#1}}
 \def\ps@headings{%
-  \def\@oddfoot{\normalfont\footnotesize\hfil Copyright© The OpenCAE Society of Japan}
+  \def\@oddfoot{\normalfont\hfil\thepage\hfil}
   \def\@evenfoot{\@oddfoot}
-  \def\@oddhead{\normalfont\footnotesize\hfil \@markrightheadings}
+  \def\@oddhead{\normalfont\footnotesize \rightmark\hfil Copyright© The OpenCAE Society of Japan}
   \def\@evenhead{\@oddhead}
 }
 \def\ps@myheadings{%
@@ -626,15 +625,19 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
         \@eaffiliation
       \end{tabular}}\par
     \fi
-  \end{center}
   \ifx\@abstract\@undefined\else
     \vskip 1em
     \centerline{\box\@abstractbox}
+  \fi
+  \ifx\@eabstract\@undefined\else
+    \vskip 1em
+    \centerline{\box\@eabstractbox}
   \fi
   \ifx\@keywords\@undefined\else
     \vskip 1em
     \centerline{\parbox{157\jsc@mmm}{\headfont\textit{Keywords}: \normalfont\@keywords}}
   \fi
+  \end{center}
   }
 \def\@startsection#1#2#3#4#5#6{%
   \if@noskipsec \leavevmode \fi
@@ -919,7 +922,16 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \newcommand*\descriptionlabel[1]{\normalfont\headfont #1\hfil}
 \newbox\@abstractbox
 \newenvironment{abstract}{%
+  \gdef\@abstract{}
   \global\setbox\@abstractbox\hbox\bgroup
+  \begin{minipage}[b]{157\jsc@mmm}{\normalfont\headfont\hfil 概要\hfil}\par
+    \normalfont
+    \if@english \parindent6\jsc@mmm \else \parindent1\zw \fi}%
+  {\end{minipage}\egroup}
+\newbox\@eabstractbox
+\newenvironment{eabstract}{%
+  \gdef\@eabstract{}
+  \global\setbox\@eabstractbox\hbox\bgroup
   \begin{minipage}[b]{157\jsc@mmm}{\normalfont\headfont\hfil Abstract\hfil}\par
     \normalfont
     \if@english \parindent6\jsc@mmm \else \parindent1\zw \fi}%
