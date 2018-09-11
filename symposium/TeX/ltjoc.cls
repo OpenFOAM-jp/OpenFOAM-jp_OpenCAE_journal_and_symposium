@@ -1004,9 +1004,9 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \setlength\belowcaptionskip{5\jsc@mpt} % 元: 0\p@
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
-  \sbox\@tempboxa{\small\sffamily #1\quad #2}%
+  \sbox\@tempboxa{\normalsize\sffamily #1\quad #2}%
   \ifdim \wd\@tempboxa >\hsize
-    {\small\sffamily
+    {\normalsize\sffamily
       \list{#1}{%
         \renewcommand{\makelabel}[1]{##1\hfil}
         \itemsep    \z@
