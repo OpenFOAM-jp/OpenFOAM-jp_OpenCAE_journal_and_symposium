@@ -596,13 +596,13 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
     \ifx\@subtitle\@undefined\else{\large\headfont\@subtitle\par}\fi
     \ifx\@author\@undefined\else
       \vskip 1em
-      {\large
+      {\large\headfont
       \begin{tabular}[t]{c}%
         \@author
       \end{tabular}}\par
     \fi
     \ifx\@affiliation\@undefined\else
-      {\normalfont
+      {\normalfont\headfont
       \begin{tabular}[t]{c}%
         \@affiliation
       \end{tabular}}\par
@@ -614,13 +614,13 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
     \ifx\@esubtitle\@undefined\else{\large\headfont\@esubtitle\par}\fi
     \ifx\@eauthor\@undefined\else
       \vskip 1em
-      {\large
+      {\large\headfont
       \begin{tabular}[t]{c}%
         \@eauthor
       \end{tabular}}\par
     \fi
     \ifx\@eaffiliation\@undefined\else
-      {\normalfont
+      {\normalfont\headfont
       \begin{tabular}[t]{c}%
         \@eaffiliation
       \end{tabular}}\par
@@ -744,9 +744,9 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \newcounter{subparagraph}[paragraph]
 \renewcommand{\thepart}{\@Roman\c@part}
 \renewcommand{\thesection}{\@arabic\c@section.}
-\renewcommand{\thesubsection}{\@arabic\c@section.\@arabic\c@subsection}
+\renewcommand{\thesubsection}{\@arabic\c@section.\@arabic\c@subsection.}
 \renewcommand{\thesubsubsection}{%
-   \thesubsection.\@arabic\c@subsubsection}
+   \thesubsection.\@arabic\c@subsubsection.}
 \renewcommand{\theparagraph}{%
    \thesubsubsection.\@arabic\c@paragraph}
 \renewcommand{\thesubparagraph}{%
@@ -922,7 +922,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
   \global\setbox\@abstractbox\hbox\bgroup
   \begin{minipage}[b]{157\jsc@mmm}{\normalfont\headfont\hfil Abstract\hfil}\par
     \normalfont
-    \if@english \parindent6\jsc@mmm \else \parindent1\zw \fi}%
+    \if@english \parindent1em \else \parindent1\zw \fi}%
   {\end{minipage}\egroup}
 \newenvironment{verse}{%
   \let \\=\@centercr
