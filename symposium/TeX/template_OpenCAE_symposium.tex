@@ -13,13 +13,15 @@
 \renewcommand*{\tableautorefname}{表}
 % フォント
 \usepackage{luatexja-otf}
-\usepackage[ms]{luatexja-preset} % MSフォント
-%\usepackage[ipa]{luatexja-preset} % IPAフォント
-%\usepackage[hiragino-pro]{luatexja-preset} % ヒラギノフォント
+\usepackage[ms]{luatexja-preset} % 和文フォント: MSフォント
+%\usepackage[ipa]{luatexja-preset} % 和文フォント: IPAフォント
+%\usepackage[hiragino-pro]{luatexja-preset} % 和文フォント: ヒラギノフォント
+\setmainfont[Ligatures=TeX]{Cambria} % 欧文通常フォント: Cambria
+\setsansfont[Ligatures=TeX]{Calibri} % 欧文Sans-serifフォント: Calibri
 %
 \markright{OpenCAE Symposium 2018, Dec. 8-9, 2018, Kawasaki}
 \title{オープンCAEシンポジウム2018印刷用原稿の書き方(和文表題)}
-\subtitle{\LaTeX のテンプレート(和文副題)}
+\subtitle{\TeX のテンプレート(和文副題)}
 \author{%
 氏 名$^{1\dagger}$%
 \hspace{1\zw}%
@@ -35,7 +37,7 @@ ${}^{2}$所属%
 ${}^{3}$所属%
 } 
 \etitle{Manuscripts preparation guide for the OpenCAE symposium 2018 (English Title)}
-\esubtitle{The case of \LaTeX (English Sub-Title)}
+\esubtitle{The case of \TeX (English Sub-Title)}
 \eauthor{%
 Firstname FAMILYNAME$^{*}$%
 \hspace{1em}%
@@ -53,7 +55,10 @@ ${}^{***}$affiliation%
 \keywords{Keyword1, Keyword2, Keyword3, Keyword4, Keyword5}
 \AuthorsEmail{corresponding.author@opencae.or.jp}
 \begin{abstract}
-Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abst.
+Abstract Abstract Abstract Abstract Abstract
+Abstract Abstract Abstract Abstract Abstract 
+Abstract Abstract Abstract Abstract Abstract
+Abstract Abstract Abstract Abstract Abstract 
 \end{abstract}
 %
 \begin{document}
@@ -62,61 +67,48 @@ Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 \section{原稿について}
 %%
 \subsection{様式}
-\begin{description}
-\item [用紙]
-  A4です．
-\item [余白]
-  上25mm，下25mm，右20mm，左20mmです．
-\item [段組]
-  1段組です．
-\item [頁数]
-  最小1ページ，最大10ページ，標準2〜4ページとします．
-\end{description}
+\begin{itemize}
+\item 用紙 : A4です．
+\item 余白 : 上下25mm，左右20mmです．
+  英文概要とキーワードの行は，さらに左右6.5mmの余白を設けてください．
+\item 段組 : 1段組です．
+\item 頁数 : 最小1ページ，最大10ページ，標準2〜4ページとします．
+\end{itemize}
 %%
 \subsection{本文}
-\begin{description}
-\item [言語]
-  日本語または英語です．
-\item [句読点]
-  本文が日本語の場合，
-  句読点として，
+\begin{itemize}
+\item 言語 : 日本語または英語です．
+\item 句読点 : 本文が日本語の場合，句読点として，
   全角の読点「，」（カンマ）と句点「．」（ピリオド）を用いてください． 
-\item [題目・所属]
-  題目と所属については，以下とします．
+\item 段落最初の行の字下げ : 1文字です．
+\item 題目・所属
   \begin{itemize}
   \item 
-  本文が日本語の場合，日本語での題目，著者名と所属の記載に続けて，
-  英語でも同内容を記載してください．
+    本文が日本語の場合，日本語での題目，著者名と所属の記載に続けて，
+    英語でも同内容を記載してください．
   \item 
-  本文が英語の場合，英語の題目および著者名と所属のみの記載でも結構です．
+    本文が英語の場合，英語の題目および著者名と所属のみの記載でも結構です．
   \end{itemize}
-\item [概要]
-  英文概要を40から80ワード程度で記載ください．
+\item 英文概要 : 40から80ワード程度で記載ください．
   なお，英文概要は省略しても構いません．
-\item [キーワード]
-  講演内容を良く表すキーワードを最低3語，通常5語程度選定し，英語で記入ください.
-\item [字体]
-  字体は，それぞれ以下とします．
-  \begin{description}
-  \item 
-    [本文]
-    明朝体・Serif系（Times New Romanなど）を使用してください．
-  \item 
-    [題目・所属・キーワード・見出し]
-    ゴシック体・Sans-serif系（Helveticaなど）を使用してください．
-  \end{description}
-\item [文字の大きさ]
-  フォントの大きさは，それぞれ以下とします．
-  \begin{description}
-  \item [題目]
-    14ポイント
-  \item [副題・大見出し]
-    12ポイント
-  \item [本文・所属・概要・Abstract・キーワード・図表キャプション・大見出し以外の見出し]
-    10ポイント
-  \end{description}
-\item [参考文献]
-  参考文献については，以下とします．
+\item キーワード : 講演内容を良く表すキーワードを最低3語，通常5語程度選定し，英語で記入ください.
+\item 字体
+  \begin{itemize}
+  \item 本文 :
+    明朝体・Serif系（Cambriaなど）を使用してください．
+  \item 題目・著者名・所属・見出し・図表キャプション : 
+    ゴシック体・Sans-serif系（Calibriなど）を使用してください．
+    キーワードの見出し(Keywords)はSans-serifのイタリック体を使用してください．
+  \end{itemize}
+\item 文字の大きさ
+  \begin{itemize}
+  \item 題目 : 14ポイント
+  \item 副題・大見出し : 12ポイント
+  \item ヘッダ・フッタ : 8ポイント
+  \item 上記以外(本文・著者名・所属・Abstract・キーワード・
+      図表キャプション・大見出し以外の見出し・ページ番号など) : 10ポイント
+  \end{itemize}
+\item 参考文献
   \begin{itemize}
   \item 
   参考文献は，本文中の引用箇所の末尾に角括弧をつけた番号で表し，
@@ -126,18 +118,16 @@ Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
   参考文献\cite{SIST02-200}等を参考にして，
   URLやアクセス日付を明記してください．
   \end{itemize}
-\end{description}
+\end{itemize}
 %%
 \subsection{図表}
-\begin{description}
-\item [言語]
-  図表中の記号およびキャプションは英語とします．
-\item [字体・文字の大きさ]
+\begin{itemize}
+\item 言語 : 図表中の記号およびキャプションは英語とします．
+\item 字体・文字の大きさ : 
   明瞭である限り，図表中の字体や文字の大きさは任意です．
-\item [本文中での参照]
-  \autoref{fig:Logo}，
+\item 本文中での参照 : \autoref{fig:Logo}，
   \autoref{tab:Secretariat}などと記載してください．
-\end{description}
+\end{itemize}
 %
 \begin{figure}[htbp]
 \centering
@@ -156,24 +146,19 @@ Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 %%%
 \section{原稿提出について}
 %%
-\begin{description}
-\item [ファイル形式]
-  PDF形式で提出ください．
-\item [ファイルサイズ]
-  最大{\bfseries 20MB}です．
-\item [フォント]
-  提出されるPDFファイルに全てのフォントが埋め込れている事を確認ください．
-\item [URL]
-  URLにはリンクを付加してください．
+\begin{itemize}
+\item ファイル形式 : PDF形式で提出ください．
+\item ファイルサイズ : 最大20MBです．
+\item フォント : 提出されるPDFファイルに全てのフォントが埋め込れている事を確認ください．
+\item URL : リンクを付加してください．
   また，可能であれば，図表の参照についてもリンクを付加してください．
-  なお，リンクされた文字は青色としてください．
-\item [提出方法]
-  オープンCAEシンポジウム2018のWEBページ
+  リンクされた文字は青色としてください．
+\item 提出方法 : オープンCAEシンポジウム2018のWEBページ
   \href
   {http://www.opencae.or.jp/activity/symposium/opencae_symposium2018/}
   {http://www.opencae.or.jp/activity/symposium/opencae\_symposium2018/}
   をご参照の上，提出してください．
-\end{description}
+\end{itemize}
 %%%
 \section{お問い合わせ}
 ご不明点については，
