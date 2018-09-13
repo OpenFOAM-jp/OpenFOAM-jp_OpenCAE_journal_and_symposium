@@ -30,15 +30,15 @@ make
 makeが使用できない場合には，以下のように手動でコンパイルします．
 
 ```
-lualatex template_OpenCAE_symposium.tex
+lualatex template_OpenCAE_symposium
 bibtex template_OpenCAE_symposium
-lualatex template_OpenCAE_symposium.tex
-
+lualatex template_OpenCAE_symposium
+lualatex template_OpenCAE_symposium #必要なだけ繰り返す
 ```
 
 BiBTexを用いない場合には，以下でコンパイルします．
 
 ```
-lualatex template_OpenCAE_symposium.tex
-
+lualatex template_OpenCAE_symposium
+lualatex template_OpenCAE_symposium #必要なだけ繰り返す
 ```
