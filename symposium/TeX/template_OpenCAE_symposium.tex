@@ -61,9 +61,6 @@ ${}^{***}$affiliation%
 \begin{abstract}
 The quick brown fox jumps over the lazy dog.
 The quick brown fox jumps over the lazy dog.
-The quick brown fox jumps over the lazy dog.
-The quick brown fox jumps over the lazy dog.
-The quick brown fox jumps over the lazy dog.
 \end{abstract}
 %%
 %% luatexja-fontspecパッケージ
@@ -180,10 +177,10 @@ The quick brown fox jumps over the lazy dog.
   \begin{itemize}
   \item 
   参考文献は，本文中の引用箇所の末尾に角括弧をつけた番号で表し，
-  本文の末尾にまとめて列記してください．
+  本文の末尾にまとめて列記してください\cite{BB21459576}．
   \item 
   WEBページについても，
-  参考文献\cite{BB21459576}等を参考にして，
+  参考文献\cite{SIST02-200}などを参考にして，
   URLやアクセス日付を明記してください．
   \end{itemize}
 \end{itemize}
@@ -246,14 +243,12 @@ The quick brown fox jumps over the lazy dog.
 %%
 %% 参考文献
 %% thebibliography環境を用いる場合
-\begin{thebibliography}{1}
-\bibitem{BB21459576}
-オープンCAE学会.
-OpenFOAMによる熱移動と流れの数値解析.
-森北出版, 2016.
-URL: \href{http://ci.nii.ac.jp/ncid/BB21459576}{http://ci.nii.ac.jp/ncid/BB21459576}.
-\end{thebibliography}
+%% template_OpenCAE_symposium.bblに直接参考文献を記述し，
+%% 以下の行を有効にしてください．
+\input{template_OpenCAE_symposium.bbl}
 %% BiBTeXを用いる場合
+%% template_OpenCAE_symposium.bibに参考文献データベースを記述し，
+%% 以下の2行を有効にし，MakefileでBiBTeXを使うように設定してください．
 %\bibliography{template_OpenCAE_symposium}
 %\bibliographystyle{junsrt}
 %

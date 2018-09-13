@@ -35,16 +35,14 @@ CHANGED = grep '^LaTeX Warning: Label(s) may have changed.'
 
 all: $(PDF)
 
-$(PDF): $(SRC) $(STY) $(INC)
+$(PDF): $(SRC) $(BBL) $(STY) $(INC)
 	$(TEX) $(SRC)
 	(while $(CHANGED) $(LOG); do $(TEX) $(SRC); done)
 
-# BibTeX
-#$(PDF): $(SRC) $(BIB) $(STY) $(INC)
+# BiBTeXを使う時には，以下の三行をコメントアウトしてください．
+#$(BBL): $(SRC) $(BIB)
 #	$(TEX) $(SRC)
 #	$(BIBTEX) $(TITLE)
-#	$(TEX) $(SRC)
-#	(while $(CHANGED) $(LOG); do $(TEX) $(SRC); done)
 
 doc: $(DOC)
 
@@ -53,7 +51,7 @@ $(DOC): $(SRC) $(REFDOC)
 	-V documentclass=ltjoc $< -o $@
 
 clean:
-	$(RM) $(LOG) $(AUX) $(LOG) $(BBL) $(BLG) $(OUT) $(PDF) $(DOC)
+	$(RM) $(LOG) $(AUX) $(LOG) $(BLG) $(OUT) $(PDF) $(DOC)
 
 distclean:
-	$(RM) $(LOG) $(AUX) $(LOG) $(BBL) $(BLG) $(OUT)
+	$(RM) $(LOG) $(AUX) $(LOG) $(BLG) $(OUT)
