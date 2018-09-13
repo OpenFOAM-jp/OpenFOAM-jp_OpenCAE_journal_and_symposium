@@ -607,23 +607,25 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
         \@affiliation
       \end{tabular}}\par
     \fi
-    \ifx\@etitle\@undefined\else
-      \vskip 1em
-      {\headfont\Large \@etitle \par}%
-    \fi
-    \ifx\@esubtitle\@undefined\else{\large\headfont\@esubtitle\par}\fi
-    \ifx\@eauthor\@undefined\else
-      \vskip 1em
-      {\large\headfont
-      \begin{tabular}[t]{c}%
-        \@eauthor
-      \end{tabular}}\par
-    \fi
-    \ifx\@eaffiliation\@undefined\else
-      {\normalfont\headfont
-      \begin{tabular}[t]{c}%
-        \@eaffiliation
-      \end{tabular}}\par
+    \if@english\else
+      \ifx\@etitle\@undefined\else
+        \vskip 1em
+        {\headfont\Large \@etitle \par}%
+      \fi
+      \ifx\@esubtitle\@undefined\else{\large\headfont\@esubtitle\par}\fi
+      \ifx\@eauthor\@undefined\else
+        \vskip 1em
+        {\large\headfont
+        \begin{tabular}[t]{c}%
+          \@eauthor
+        \end{tabular}}\par
+      \fi
+      \ifx\@eaffiliation\@undefined\else
+        {\normalfont\headfont
+        \begin{tabular}[t]{c}%
+          \@eaffiliation
+        \end{tabular}}\par
+      \fi
     \fi
   \ifx\@abstract\@undefined\else
     \vskip 1em
