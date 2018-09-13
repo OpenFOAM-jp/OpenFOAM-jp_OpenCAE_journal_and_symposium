@@ -5,3 +5,4 @@ ref/
 *.log
 *.out
 *.toc
+.DS_Store
