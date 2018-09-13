@@ -1,27 +1,19 @@
+%%%
+%%% OpenCAEシンポジウムTeXテンプレートファイル
+%%% template_OpenCAE_symposium.tex
+%%% OpenCAEシンポジウム2018版
+%%%
+%%
+%% ltjocはOpenCAE論文集・シンポジウム用のクラスファイルです．変更しないでください．
+%% 本文が英語の場合には，オプションにenglishを指定してください．
 \documentclass{ltjoc}
-%
-\usepackage{subfigure}
-\usepackage{graphicx}
-\usepackage[
- pdfencoding=auto,
- bookmarks=true,
- bookmarksnumbered=true,
- colorlinks=true,
- allcolors={blue}
-]{hyperref}
-\renewcommand*{\figureautorefname}{図}
-\renewcommand*{\tableautorefname}{表}
-% フォント
-\usepackage{luatexja-otf}
-\usepackage[ms]{luatexja-preset} % 和文フォント: MSフォント
-%\usepackage[ipa]{luatexja-preset} % 和文フォント: IPAフォント
-%\usepackage[hiragino-pro]{luatexja-preset} % 和文フォント: ヒラギノフォント
-\setmainfont[Ligatures=TeX]{Cambria} % 欧文通常フォント: Cambria
-\setsansfont[Ligatures=TeX]{Calibri} % 欧文Sans-serifフォント: Calibri
-%
-\markright{OpenCAE Symposium 2018, Dec. 8-9, 2018, Kawasaki}
+%\documentclass[english]{ltjoc}
+%%
+%% 表題(title)，副題(subtitle)，著者(author)，所属(affiliation)
+%% 本文が英語の場合には，こちらに英文表題，英文副題，英文著者，英文所属を記述します.
 \title{オープンCAEシンポジウム2018印刷用原稿の書き方（和文表題）}
-\subtitle{\TeX のテンプレート（和文副題）}
+% 副題が無い場合にはコメントアウトします．
+\subtitle{\TeX のテンプレート（和文副題）} 
 \author{%
 氏 名$^{1\dagger}$%
 \hspace{1\zw}%
@@ -36,10 +28,18 @@ ${}^{2}$所属%
 \hspace{1\zw}%
 ${}^{3}$所属%
 } 
+%%
+%% Corresponding authorの電子メールアドレス
+%% 本論文について連絡が取れる著者の電子メールアドレスを記載してください．
+\AuthorsEmail{corresponding.author@opencae.or.jp}
+%%
+%% 英文表題(etitle)，英文副題(esubtitle)，英文著者(eauthor)，英文所属(eaffiliation)
+%% 本文が英語の場合には表示されません．
 \etitle{Manuscripts preparation guide for the OpenCAE symposium 2018 (English Title)}
+% 副題が無い場合にはコメントアウトします．
 \esubtitle{The case of \TeX (English Sub-Title)}
 \eauthor{%
-Firstname FAMILYNAME$^{*}$%
+Firstname FAMILYNAME$^{*\dagger}$%
 \hspace{1em}%
 Firstname FAMILYNAME$^{**}$%
 \hspace{1em}%
@@ -52,16 +52,84 @@ ${}^{**}$affiliation%
 \hspace{1em}%
 ${}^{***}$affiliation%
 }
+%%
+%% キーワード
 \keywords{Keyword1, Keyword2, Keyword3, Keyword4, Keyword5}
-\AuthorsEmail{corresponding.author@opencae.or.jp}
+%%
+%% 英文概要
+%% 英文概要を省略する場合には，abstract環境の定義をしないでください．
 \begin{abstract}
-Abstract Abstract Abstract Abstract Abstract
-Abstract Abstract Abstract Abstract Abstract 
-Abstract Abstract Abstract Abstract Abstract
-Abstract Abstract Abstract Abstract Abstract 
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
 \end{abstract}
-%
+%%
+%% luatexja-fontspecパッケージ
+\usepackage{luatexja-fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+%% luatexja-presetパッケージ
+%% 和文フォントのプリセット設定
+%% オプションにnoembed(非埋込)を指定しないでください．
+%\usepackage[ipaex]{luatexja-preset} % IPAex(デフォルト)
+%\usepackage[ms]{luatexja-preset} % MS
+%\usepackage[hiragino-pro]{luatexja-preset} % ヒラギノPro
+%%
+%% 欧文フォントの指定
+%% 使用できるフォントについては，以下のコマンドで調べてください．
+%% $ luaotfload-tool --list=*
+%%
+%% 欧文通常フォント
+%\setmainfont{Cambria} % Cambria
+%\setmainfont{Times New Roman} % Times New Roman
+%\setmainfont{TeXGyreTermes} % TeXGyreTermes
+%%
+%% 欧文Sans-serifフォント
+%\setsansfont{Calibri} % Calibri
+%\setsansfont{Arial} % Arial
+%\setsansfont{Helvetica} % Helvetica
+%\setsansfont{TeXGyreHeros} % TeXGyreHeros
+%%
+%% 欧文monospaceフォント
+%\setmonofont{Consolas} % Consolas
+%\setmonofont{Courier New} % Courier New
+%\setmonofont{Lucida Console} % Lucida Console
+%%
+%% subfigureパッケージ
+\usepackage{subfigure}
+%%
+%% graphicxパッケージ
+\usepackage{graphicx}
+%%
+%% hyperrefパッケージ
+\usepackage[
+ pdfencoding=auto,
+ bookmarks=true,
+ bookmarksnumbered=true,
+ colorlinks=true,
+ allcolors={blue}
+]{hyperref}
+%%
+%% autorefでの図表の参照名の再定義
+\makeatletter
+\if@english
+  \renewcommand*{\figureautorefname}{\figurename}
+  \renewcommand*{\tableautorefname}{\tablename}
+\else
+  \renewcommand*{\figureautorefname}{図}
+  \renewcommand*{\tableautorefname}{表}
+\fi
+\makeatother
+%%
+%% ヘッダ右の設定
+%% シンポジウム毎に決められています．変更しないでください．
+\markright{OpenCAE Symposium 2018, Dec. 8-9, 2018, Kawasaki} % Do not edit this line
+%%
+%% 本文
 \begin{document}
+%%
+%% 題目などの出力
 \maketitle
 %%%
 \section{原稿について}
@@ -115,7 +183,7 @@ Abstract Abstract Abstract Abstract Abstract
   本文の末尾にまとめて列記してください．
   \item 
   WEBページについても，
-  参考文献\cite{SIST02-200}等を参考にして，
+  参考文献\cite{BB21459576}等を参考にして，
   URLやアクセス日付を明記してください．
   \end{itemize}
 \end{itemize}
@@ -175,17 +243,18 @@ Abstract Abstract Abstract Abstract Abstract
   \caption{Secretariat of the OpenCAE symposium 2018}
   \label{tab:Secretariat}
 \end{table}
-%
-\begin{thebibliography}{9}
-\bibitem{SIST02-200}
-科学技術情報流通技術基準
-参照文献の書き方
-SIST 02 – 2007,
-独立行政法人科学技術振興機構(2007).
-\href
-{http://jipsti.jst.go.jp/sist/pdf/SIST02-2007.pdf}
-{http://jipsti.jst.go.jp/sist/pdf/SIST02-2007.pdf}
-(accessed 2015-09-29).
+%%
+%% 参考文献
+%% thebibliography環境を用いる場合
+\begin{thebibliography}{1}
+\bibitem{BB21459576}
+オープンCAE学会.
+OpenFOAMによる熱移動と流れの数値解析.
+森北出版, 2016.
+URL: \href{http://ci.nii.ac.jp/ncid/BB21459576}{http://ci.nii.ac.jp/ncid/BB21459576}.
 \end{thebibliography}
+%% BiBTeXを用いる場合
+%\bibliography{template_OpenCAE_symposium}
+%\bibliographystyle{junsrt}
 %
 \end{document}
