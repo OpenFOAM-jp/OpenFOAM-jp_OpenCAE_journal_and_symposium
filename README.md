@@ -1,9 +1,32 @@
-# OpenCAEシンポジウムTeXテンプレートファイル
+# オープンCAE学会論文集・OpenCAEシンポジウムのテンプレートファイル
 
-## 必要なソフトウェア
-OpenCAEシンポジウムTeXテンプレートファイル
-template_OpenCAE_symposium.tex
-をコンパイルするには，
+## 配布物
+- オープンCAE学会論文集
+  - TeX版(準備中)
+  - Word版(準備中)
+- OpenCAEシンポジウムテンプレートファイル
+  - [TeX版](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/symposium/TeX) 
+  - Word版(準備中)
+- オープンCAE学会論文集・OpenCAEシンポジウム共通TeXクラスファイル
+  - [ltjoc.cls](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/style/ltjoc.cls) 
+
+## ダウンロード
+
+[レポジトリのWEBページ](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium)
+におけるダウンロードボタンから，
+お好きな形式でダウンロードして，
+解凍してください．
+
+または，以下のようにgitコマンドで取得してください．
+
+```
+git clone git@gitlab.com:OpenCAE/template_OpenCAE_journal_and_symposium.git
+# または以下
+git clone https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium.git
+```
+
+## TeXテンプレートファイル
+### コンパイルに必要なソフトウェア
 [LuaTeX](http://www.luatex.org/)と
 [LuaTeX-ja](https://ja.osdn.net/projects/luatex-ja/wiki/FrontPage)
 パッケージが必要です．
@@ -19,7 +42,7 @@ LuaTEX-ja パッケージの詳細については，
 [LuaTEX-jaパッケージ(pdfファイル)](http://mirrors.ibiblio.org/CTAN/macros/luatex/generic/luatexja/doc/luatexja-ja.pdf)
 を参照ください．
 
-## コンパイル方法
+### コンパイル方法
 
 コンパイルするにはmakeを実行します．
 
@@ -30,20 +53,20 @@ make
 makeが使用できない場合には，以下のように手動でコンパイルします．
 
 ```
-lualatex template_OpenCAE_symposium
-bibtex template_OpenCAE_symposium
-lualatex template_OpenCAE_symposium
-lualatex template_OpenCAE_symposium #必要なだけ繰り返す
+lualatex TeXファイル名
+bibtex TeXファイル名から拡張子.texを除いたもの
+lualatex TeXファイル名
+lualatex TeXファイル名 #必要なだけ繰り返す
 ```
 
 BiBTexを用いない場合には，以下でコンパイルします．
 
 ```
-lualatex template_OpenCAE_symposium
-lualatex template_OpenCAE_symposium #必要なだけ繰り返す
+lualatex TeXファイル名
+lualatex TeXファイル名 #必要なだけ繰り返す
 ```
 
-## PDFファイルのフォント埋め込み確認
+### PDFファイルのフォント埋め込み確認
 
 作成したPDFファイルのフォント埋め込み確認には，例えば以下のような方法があります．
 

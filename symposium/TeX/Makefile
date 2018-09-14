@@ -17,7 +17,7 @@ RM= rm -f
 TITLE = template_OpenCAE_symposium
 
 ## Class file
-STY = ltjoc.cls
+STY = ../../style/ltjoc.cls
 
 SRC = $(TITLE).tex
 BBL = $(TITLE).bbl
