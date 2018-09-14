@@ -12,8 +12,7 @@
 
 ## ダウンロード
 
-[レポジトリのWEBページ](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium)
-におけるダウンロードボタンから，
+本ページ上部にあるダウンロードボタンから，
 お好きな形式でダウンロードして，
 解凍してください．
 
@@ -54,14 +53,14 @@ makeが使用できない場合には，以下のように手動でコンパイ�
 
 ```
 lualatex TeXファイル名
-bibtex TeXファイル名から拡張子.texを除いたもの
-lualatex TeXファイル名
 lualatex TeXファイル名 #必要なだけ繰り返す
 ```
 
-BiBTexを用いない場合には，以下でコンパイルします．
+BiBTexを用いる場合には，以下でコンパイルします．
 
 ```
+lualatex TeXファイル名
+bibtex TeXファイル名から拡張子.texを除いたもの
 lualatex TeXファイル名
 lualatex TeXファイル名 #必要なだけ繰り返す
 ```
