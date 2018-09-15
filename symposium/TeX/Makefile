@@ -47,7 +47,7 @@ $(PDF): $(SRC) $(BBL) $(STY) $(INC)
 
 doc: $(DOC)
 
-$(DOC): $(SRC) $(REFDOC)
+$(DOC): $(SRC) $(REF)
 	$(PANDOC) -f latex -t docx --reference-doc=$(REF) $< -o $@
 
 clean:
