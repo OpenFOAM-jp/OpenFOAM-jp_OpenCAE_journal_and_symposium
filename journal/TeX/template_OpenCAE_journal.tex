@@ -118,26 +118,9 @@ The quick brown fox jumps over the lazy dog.
  allcolors={blue}
 ]{hyperref}
 %%
-%% autorefでの図表の参照名の再定義
-\makeatletter
-\if@english
-  \renewcommand*{\figureautorefname}{\figurename}
-  \renewcommand*{\tableautorefname}{\tablename}
-\else
-  \renewcommand*{\figureautorefname}{図}
-  \renewcommand*{\tableautorefname}{表}
-\fi
-\makeatother
-%%
 %% listingsパッケージ
 \usepackage{listings}
-\makeatletter
-\if@english
-  \renewcommand{\lstlistingname}{Code}
-\else
-  \renewcommand{\lstlistingname}{コード}
-\fi
-\makeatother
+\renewcommand{\lstlistingname}{Code}
 \lstset{
 basicstyle={\footnotesize\ttfamily},
 commentstyle=\color{blue},
@@ -148,6 +131,17 @@ numbers=left,
 numberstyle={\footnotesize},
 keepspaces=true
 }
+%%
+%% autorefでの図表の参照名の再定義
+\makeatletter
+\if@english
+  \renewcommand*{\figureautorefname}{\figurename}
+  \renewcommand*{\tableautorefname}{\tablename}
+\else
+  \renewcommand*{\figureautorefname}{図}
+  \renewcommand*{\tableautorefname}{表}
+\fi
+\makeatother
 %%
 %% ヘッダ右の設定
 %% 変更しないでください．
@@ -235,7 +229,7 @@ keepspaces=true
 \includegraphics[width=0.1\textwidth]{fig/Logo-b3.jpg}
 \label{fig:Logo-b3}
 }
-\caption{Logo of the OpenCAE Society Japan}
+\caption{Logo of the Open CAE Society Japan.}
 \label{fig:Logo}
 \end{figure}
 %%%
@@ -258,16 +252,16 @@ keepspaces=true
 \section{お問い合わせ}
 ご不明点については，
 お手数ですが，
-\autoref{tab:Secretariat}の事務局まで，
+\autoref{tab:Secretariat}の学会論文集事務局まで，
 電子メールでお問い合わせください．
 \begin{table}[htbp]
   \centering
   \begin{tabular}{l|l}
     \hline
-    E-mail address & office@opencae.or.jp\\
+    E-mail address & paper@opencae.or.jp\\
     \hline
     \end{tabular}
-  \caption{Secretariat of the OpenCAE Society of Japan}
+  \caption{Secretariat of the Open CAE Society of Japan}
   \label{tab:Secretariat}
 \end{table}
 %%
@@ -294,7 +288,7 @@ keepspaces=true
 \autoref{code:template_OpenCAE_journal.tex}に示す．
 %
 \lstinputlisting[
-caption={template\_OpenCAE\_journal.texの冒頭}
+caption={Header of template\_OpenCAE\_journal.tex.}
 ,language={tex}
 ,linerange={1-56}
 ,label={code:template_OpenCAE_journal.tex}]

@@ -532,7 +532,7 @@ option, since LuaTeX does not support \string\mag\MessageBreak in pdf output}%
 \def\ps@headings{%
   \def\@oddfoot{\normalfont\hfil\thepage\hfil}
   \def\@evenfoot{\@oddfoot}
-  \def\@oddhead{\normalfont\footnotesize \rightmark\hfil Copyright© The OpenCAE Society of Japan}
+  \def\@oddhead{\normalfont\footnotesize \rightmark\hfil Copyright© The Open CAE Society of Japan}
   \def\@evenhead{\@oddhead}
 }
 \def\ps@myheadings{%
