@@ -31,11 +31,11 @@ ${}^{3}$所属%
 %%
 %% Corresponding authorの電子メールアドレス
 %% 本論文について連絡が取れる著者の電子メールアドレスを記載してください．
-\AuthorsEmail{corresponding.author@opencae.or.jp}
+\AuthorsEmail{office@opencae.or.jp}
 %%
 %% 英文表題(etitle)，英文副題(esubtitle)，英文著者(eauthor)，英文所属(eaffiliation)
 %% 本文が英語の場合には表示されません．
-\etitle{Manuscripts preparation guide for the OpenCAE symposium 2018 (English Title)}
+\etitle{Manuscripts preparation guide for the Open CAE symposium 2018 (English Title)}
 % 副題が無い場合にはコメントアウトします．
 \esubtitle{The case of \TeX (English Sub-Title)}
 \eauthor{%
@@ -59,6 +59,10 @@ ${}^{***}$affiliation%
 %% 英文概要
 %% 英文概要を省略する場合には，abstract環境の定義をしないでください．
 \begin{abstract}
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
 The quick brown fox jumps over the lazy dog.
 The quick brown fox jumps over the lazy dog.
 \end{abstract}
@@ -108,6 +112,20 @@ The quick brown fox jumps over the lazy dog.
  allcolors={blue}
 ]{hyperref}
 %%
+%% listingsパッケージ
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Code}
+\lstset{
+basicstyle={\footnotesize\ttfamily},
+commentstyle=\color{blue},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},
+numbers=left,
+numberstyle={\footnotesize},
+keepspaces=true
+}
+%%
 %% autorefでの図表の参照名の再定義
 \makeatletter
 \if@english
@@ -120,8 +138,8 @@ The quick brown fox jumps over the lazy dog.
 \makeatother
 %%
 %% ヘッダ右の設定
-%% シンポジウム毎に決められています．変更しないでください．
-\markright{OpenCAE Symposium 2018, Dec. 8-9, 2018, Kawasaki} % Do not edit this line
+%% 変更しないでください．
+\markright{Open CAE Symposium 2018, Dec. 8-9, 2018, Kawasaki} % Do not edit this line
 %%
 %% 本文
 \begin{document}
@@ -169,7 +187,7 @@ The quick brown fox jumps over the lazy dog.
   \begin{itemize}
   \item 題目 : 14ポイント
   \item 副題・大見出し : 12ポイント
-  \item ヘッダ・フッタ : 8ポイント
+  \item ヘッダ・フッタ・付録におけるコード引用 : 8ポイント
   \item 上記以外（本文・著者名・所属・Abstract・キーワード・
       図表キャプション・大見出し以外の見出し・ページ番号など） : 10ポイント
   \end{itemize}
@@ -202,7 +220,7 @@ The quick brown fox jumps over the lazy dog.
 \includegraphics[width=0.1\textwidth]{fig/Logo-b3.jpg}
 \label{fig:Logo-b3}
 }
-\caption{Logo of the OpenCAE Society Japan}
+\caption{Logo of the Open CAE Society Japan.}
 \label{fig:Logo}
 \end{figure}
 %%%
@@ -234,7 +252,7 @@ The quick brown fox jumps over the lazy dog.
     E-mail address & symposium2018@opencae.or.jp\\
     \hline
     \end{tabular}
-  \caption{Secretariat of the OpenCAE symposium 2018}
+  \caption{Secretariat of the Open CAE symposium 2018}
   \label{tab:Secretariat}
 \end{table}
 %%
@@ -248,5 +266,16 @@ The quick brown fox jumps over the lazy dog.
 %% 以下の2行を有効にし，MakefileでBiBTeXを使うように設定してください．
 %\bibliography{template_OpenCAE_symposium}
 %\bibliographystyle{junsrt}
+%%
+%% 付録
+\appendix
+%%%
+\section{コードの引用表示例}
+%
+コードの引用表示例を
+\autoref{code:template_OpenCAE_symposium.tex}に示す．
+%
+\lstinputlisting[caption={Header of template\_OpenCAE\_symposium.tex.},language={tex},linerange={1-10},label={code:template_OpenCAE_symposium.tex}]
+{./template_OpenCAE_symposium.tex}
 %
 \end{document}
