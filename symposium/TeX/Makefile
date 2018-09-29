@@ -8,9 +8,6 @@ TEXOPTION = -interaction batchmode
 ## BiBTeX
 BIBTEX = pbibtex
 
-## Pandoc
-PANDOC=pandoc
-
 ## Remove command
 RM= rm -f
 
@@ -27,9 +24,7 @@ AUX = $(TITLE).aux
 LOG = $(TITLE).log
 BLG = $(TITLE).blg
 OUT = $(TITLE).out
-DOC = $(TITLE).doc
 BIB = $(TITLE).bib
-REF = reference.docx
 INC =
 
 CHANGED = grep '^LaTeX Warning: Label(s) may have changed.'
@@ -44,11 +39,6 @@ $(PDF): $(SRC) $(BBL) $(STY) $(INC)
 #$(BBL): $(SRC) $(BIB)
 #	$(TEX) $(TEXOPTION) $(SRC)
 #	$(BIBTEX) $(TITLE)
-
-doc: $(DOC)
-
-$(DOC): $(SRC) $(REF)
-	$(PANDOC) -f latex -t docx --reference-doc=$(REF) $< -o $@
 
 clean:
 	$(RM) $(LOG) $(AUX) $(LOG) $(BLG) $(OUT) $(PDF) $(DOC)
