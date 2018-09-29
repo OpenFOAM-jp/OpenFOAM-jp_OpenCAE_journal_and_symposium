@@ -2,11 +2,11 @@
 
 ## 配布物
 - オープンCAE学会論文集テンプレートファイル
-  - [TeX版](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/journal/TeX) 
-  - Word版(準備中)
+  - [TeX版](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/journal/TeX)
+  - [Word版](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/journal/Word)
 - Open CAEシンポジウムテンプレートファイル
-  - [TeX版](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/symposium/TeX) 
-  - Word版(準備中)
+  - [TeX版](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/symposium/TeX)
+  - [Word版](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/symposium/Word)
 - オープンCAE学会論文集・Open CAEシンポジウム共通TeXクラスファイル
   - [ltjoc.cls](https://gitlab.com/OpenCAE/template_OpenCAE_journal_and_symposium/tree/master/style/ltjoc.cls) 
 
