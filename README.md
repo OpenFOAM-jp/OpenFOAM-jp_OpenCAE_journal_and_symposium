@@ -88,4 +88,4 @@ lualatex TeXファイル名 #必要なだけ繰り返す
 以下のWEBページも参考にしてください．
 - 日本応用数理学会 [pdf ファイルのフォント埋め込みについて](http://www.jsiam.org/modules/xfsection/article.php?articleid=57)
 - TeX Wiki [フォントの埋め込みとライセンス](https://texwiki.texjp.org/?%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%81%AE%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF%E3%81%A8%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9)
-
+- 緑陽社 [Word→PDFへの書き出しでシステムフォントが埋め込みできません | 同人誌印刷の緑陽社](https://www.ryokuyou.co.jp/doujin/faq/faq58.html)
