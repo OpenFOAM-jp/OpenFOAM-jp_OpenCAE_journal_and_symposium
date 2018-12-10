@@ -3,7 +3,7 @@
 TEX = lualatex
 # Use luajittex (Please see https://texwiki.texjp.org/?LuajitTeX)
 #TEX = luajittex --fmt=luajitlatex.fmt
-TEXOPTION = -interaction batchmode
+TEXOPTION =
 
 ## BiBTeX
 BIBTEX = pbibtex
@@ -15,7 +15,7 @@ RM= rm -f
 TITLE = template_OpenCAE_symposium
 
 ## Class file
-STY = ../../style/ltjoc.cls
+STY = ltjoc.cls
 
 SRC = $(TITLE).tex
 BBL = $(TITLE).bbl
@@ -39,6 +39,9 @@ $(PDF): $(SRC) $(BBL) $(STY) $(INC)
 #$(BBL): $(SRC) $(BIB)
 #	$(TEX) $(TEXOPTION) $(SRC)
 #	$(BIBTEX) $(TITLE)
+
+$(STY): ../../style/ltjoc.cls
+	cp -a $< $@
 
 clean:
 	$(RM) $(LOG) $(AUX) $(LOG) $(BLG) $(OUT) $(PDF) $(DOC)
