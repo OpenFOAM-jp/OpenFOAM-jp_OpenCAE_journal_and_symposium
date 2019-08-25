@@ -12,7 +12,7 @@ BIBTEX = pbibtex
 RM= rm -f
 
 ##  Filename
-TITLE = template_OpenCAE_symposium
+TITLE = OpenFOAM-jp_OpenCAE_symposium
 
 ## Class file
 STY = ltjoc.cls
