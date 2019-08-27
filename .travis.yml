@@ -1,0 +1,23 @@
+sudo: required
+dist: bionic
+before_install:
+- mkdir -p ~/.ssh
+- touch ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa
+- openssl aes-256-cbc -K $encrypted_b66af6951016_key -iv $encrypted_b66af6951016_iv -in .secrets/key.enc -out ~/.ssh/id_rsa -d
+- echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-luatex texlive-lang-japanese texlive-latex-recommended texlive-latex-extra
+script:
+- cd symposium/TeX
+- make
+- cd ../../
+after_success:
+- git branch -a
+- git checkout master
+- git add symposium/TeX/*.pdf
+- |
+  git commit -m "[skip ci] by Travis CI (JOB $TRAVIS_JOB_NUMBER)
+  https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+- git remote -v
+- git remote add github git@github.com:OpenFOAM-jp/OpenFOAM-jp_OpenCAE_journal_and_symposium.git
+- git push github master
