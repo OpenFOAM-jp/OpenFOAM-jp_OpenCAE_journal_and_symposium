@@ -9,6 +9,7 @@ before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-luatex texlive-lang-japanese texlive-latex-recommended texlive-latex-extra
 script:
 - cd symposium/TeX
+- make clean
 - make
 - cd ../../
 after_success:
