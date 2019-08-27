@@ -12,6 +12,7 @@ script:
 - make
 - cd ../../
 after_success:
+- git fetch
 - git branch -a
 - git checkout $TRAVIS_BRANCH
 - git add symposium/TeX/*.pdf
