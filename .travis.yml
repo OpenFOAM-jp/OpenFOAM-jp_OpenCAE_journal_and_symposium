@@ -10,6 +10,7 @@ before_install:
 script:
 - cd symposium/TeX
 - make
+- cd ../../
 after_success:
 - git branch -a
 - git checkout $TRAVIS_BRANCH
