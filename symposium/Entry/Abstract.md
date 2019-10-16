@@ -34,3 +34,10 @@ OpenFOAMコントリビュート活動
 そこで有志による"OpenFOAM-jp"というグループが立ち上がり、本家の開発やドキュメントの翻訳、チュートリアルの作成などに関するコントリビュート活動を開始した。
 その活動内容などについて発表する。
 参考URL : https://github.com/OpenFOAM-jp
+
+## Keyword
+
+- OpenFOAM
+- Open CAE
+- CFD
+- OSS contribution
