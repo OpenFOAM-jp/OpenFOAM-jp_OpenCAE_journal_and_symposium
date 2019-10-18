@@ -1,4 +1,4 @@
-# OpenFOAMコントリビュート活動
+### OpenFOAMコントリビュート活動
 
 - @inabower
 - @tkoyama010
@@ -6,7 +6,7 @@
 
 ---
 
-# 目次
+### 目次
 
 - OpenFOAM
 - Open Source Software
@@ -15,20 +15,20 @@
 
 ---
 
-# OpenFOAM
+### OpenFOAM
 
 - オープンソースのCFDライブラリ
 - 他説明
 
 ---
 
-# Open Source Software
+### Open Source Software
 
 - 「みんなの協力が必要ですよ」的な説明
 
 ---
 
-# コントリビュート活動
+### コントリビュート活動
 
 - 寄付
 - バグ報告
@@ -37,4 +37,4 @@
 
 ---
 
-# OpenFOAM-jp
+### OpenFOAM-jp
