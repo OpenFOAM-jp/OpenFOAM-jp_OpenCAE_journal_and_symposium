@@ -182,7 +182,7 @@ TODO: フォークの際の画面キャプチャを挿入する。
 
 フォーク後は自分のアカウントのリポジトリをクローンします。
 
-\$ git clone https://github.com/your_account_name/OpenFOAM-jp.git
+\$ git clone https://github.com/your\_account\_name/OpenFOAM-jp.git
 
 クローンをしたら自分の環境でテストを実行してください。
 
@@ -191,11 +191,11 @@ TODO: テスト実行のコマンドを記述する。
 テストが全てパスしたらソースを変更します。
 masterブランチで直接変更することはできないため、ファイルを変更する前に開発ブランチを作成してください。
 
-\$ git branch branch_name
+\$ git branch branch\_name
 
-\$ git checkout branch_name
+\$ git checkout branch\_name
 
-branch_name には任意の名前を入れてください。
+branch\_name には任意の名前を入れてください。
 自分のアカウント名と加えたい変更について言及されていると分かりやすいです。
 最初のコマンドでブランチを作成し、2番目のコマンドでブランチに移動します。
 これにより、変更を行う準備はほぼ完了です。
@@ -207,17 +207,17 @@ branch_name には任意の名前を入れてください。
 
 もし src/toto.cc というファイルをいくつか変更したり、新しいファイルとして追加したら、
 ローカルのコミットは次のコマンドで行います。
-"Your extensive commit message here #1" には変更に関するメッセージを追加します。
-#1の部分は自分が追加したイシューの番号としてください。
+"Your extensive commit message here \#1" には変更に関するメッセージを追加します。
+\#1の部分は自分が追加したイシューの番号としてください。
 
 \$ git add src/toto.cc
 
-\$ git commit -m "Your extensive commit message here #1"
+\$ git commit -m "Your extensive commit message here \#1"
 
 この段階ではコミットはあなたのローカルリポジトリで行われていますが、GitHubリポジトリでは行われません。
 十分なテストで変更を検証したら、以下のコマンドでGitHubの自分のアカウントのリポジトリに変更を移すことができます。
 
-\$ git push origin branch_name
+\$ git push origin branch\_name
 
 TODO: コマンドのメッセージを含める
 
