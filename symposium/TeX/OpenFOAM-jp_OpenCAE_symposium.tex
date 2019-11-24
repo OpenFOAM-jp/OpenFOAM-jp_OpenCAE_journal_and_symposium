@@ -155,11 +155,36 @@ OpenFOAMは，Imperial Collageで開発された商用CFDコードFOAM(Field Ope
 一方でOpenFOAMには多くのフォークが存在する.
 2012年以降はESI社がOpenCFD社の買収という形から開発に加わるようになり，
 2016年にはOpenFOAM-v3.0からフォークしたOpenFOAM-v3.0+をリリースした.
-2019年11月時点ではこの最新版はOpenFOAM-v1906であり，このフォークが”ESI版”\cite{URL:openfoam.com}\cite{URL:GitLab-plus}と呼ばれる.
+2019年11月時点ではこの最新版はOpenFOAM-v1906であり，このフォークが”ESI版”\cite{URL:openfoam.com}\cite{URL:GitLab-plus}もしくは”plus版”と呼ばれる.
 
 本報告ではこのFoudation版とESI版の2つについてコントリビュートの流れなどを報告する．
+%
 \section{ESI版コントリビュート方法}
 ESI版の開発はGitLabで行われている．[develop.openfoam.com/Development/OpenFOAM-plus](develop.openfoam.com/Development/OpenFOAM-plus)
+このページからレポジトリをcloneすることができ，これをそのままコンパイルすることで次期リリース予定のESI版OpenFOAMを使用することができる．
+またここには開発途中のbranchが多くあり，将来的に追加されるであろう機能をチェックすることもできる．
+
+GitLabのページの右上のボタン[\autoref{fig:plus-register}]からこのOpenFOAM-plusのレポジトリに登録することもでき，これによりissueの作成や書き込みをすることができるようになる．
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/plus_register.png}
+\caption{A register button of OpenFOAM-plus's GitLab page.}
+\label{fig:plus-register}
+\end{figure}
+例えばバグを見つけた場合やOpenFOAMへの要望がある場合には，issueを作成することで開発者へ周知することができ，必要と判断された場合には開発者によりコードの修正や作成が行われる．
+\autoref{fig:plus-issue}には実際に作成したissueの例を示す．内容としてはソルバーのDiscriptionの中のスペルミスを指摘した簡単なものであるが，数日以内に@mark氏により該当箇所の修正が行われていることが確認できる．
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/plus_issue.png}
+\caption{An Example issue to fix typo.}
+\label{fig:plus-issue}
+\end{figure}
+このような小さなコントリビュートの積み重ねがOSSであるOpenFOAMを精錬していくこととなる．
+
+一方で，pushやPRなどのコードの変更を行うための権限は制限されている．
+このため，ESI版OpenFOAMのコードにコントリビュートする手段としては，開発メンバーに加わらない限りはissueの作成もしくはissue内の議論へ参加することに限られる．
+なお2019年11月現在OpenFOAM-plusの開発メンバーは15名であり，実力や面識，貢献頻度が担保されたメンバーで開発を行っていることが推察される．\cite{URL:GitLab-plus-members}
+%
 \section{Foundation版コントリビュート方法}
 Foundation版のRepositoryはGithubで公開されているが，issueの管理はFoundationのHPのissue Trackingのページで行われる．
 
