@@ -8,6 +8,7 @@
 %% 本文が英語の場合には，オプションにenglishを指定してください．
 \documentclass{ltjoc}
 %\documentclass[english]{ltjoc}
+\usepackage{shdoc}
 %%
 %% 表題(title)，副題(subtitle)，著者(author)，所属(affiliation)
 %% 本文が英語の場合には，こちらに英文表題，英文副題，英文著者，英文所属を記述します.
@@ -215,11 +216,17 @@ Foundation版のRepositoryはGithubで公開されているが，issueの管理�
 OSSのコントリビュートのバージョン管理ソフトにはGitが一般的に使用されています。
 まずは、バージョン管理ソフトgitをインストールします。
 
-\$ sudo apt install git
+\begin{shbox}
+  \shuser{user}
+  \shline{}{sudo apt install git}
+\end{shbox}
 
 必要なのはソースだけで貢献しないのであれば、次のコマンドでクローンすることで済みます。
 
-\$ git clone https://github.com/OpenFOAM-jp/OpenFOAM-jp.git
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git clone https://github.com/OpenFOAM-jp/OpenFOAM-jp.git}
+\end{shbox}
 
 貢献をしたい場合は、OpenFOAM-jpのリポジトリを自分のアカウントにフォークします。
 
@@ -227,7 +234,10 @@ TODO: フォークの際の画面キャプチャを挿入する。
 
 フォーク後は自分のアカウントのリポジトリをクローンします。
 
-\$ git clone https://github.com/your\_account\_name/OpenFOAM-jp.git
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git clone https://github.com/your\_account\_name/OpenFOAM-jp.git}
+\end{shbox}
 
 クローンをしたら自分の環境でテストを実行してください。
 
@@ -236,9 +246,15 @@ TODO: テスト実行のコマンドを記述する。
 テストが全てパスしたらソースを変更します。
 masterブランチで直接変更することはできないため、ファイルを変更する前に開発ブランチを作成してください。
 
-\$ git branch branch\_name
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git branch branch\_name}
+\end{shbox}
 
-\$ git checkout branch\_name
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git checkout branch\_name}
+\end{shbox}
 
 branch\_name には任意の名前を入れてください。
 自分のアカウント名と加えたい変更について言及されていると分かりやすいです。
@@ -246,23 +262,30 @@ branch\_name には任意の名前を入れてください。
 これにより、変更を行う準備はほぼ完了です。
 変更のラベルを付けるために、連絡先の名前と電子メールを以下のコマンドで指定します。
 
-\$ git config --global user.name "Your Name Comes Here"
-
-\$ git config --global user.email you@yourdomain.example.com
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git config --global user.name "Your Name Comes Here"}
+  \shline{}{git config --global user.email you@yourdomain.example.com}
+\end{shbox}
 
 もし src/toto.cc というファイルをいくつか変更したり、新しいファイルとして追加したら、
 ローカルのコミットは次のコマンドで行います。
 "Your extensive commit message here \#1" には変更に関するメッセージを追加します。
 \#1の部分は自分が追加したイシューの番号としてください。
 
-\$ git add src/toto.cc
-
-\$ git commit -m "Your extensive commit message here \#1"
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git add src/toto.cc}
+  \shline{}{git commit -m "Your extensive commit message here \#1"}
+\end{shbox}
 
 この段階ではコミットはあなたのローカルリポジトリで行われていますが、GitHubリポジトリでは行われません。
 十分なテストで変更を検証したら、以下のコマンドでGitHubの自分のアカウントのリポジトリに変更を移すことができます。
 
-\$ git push origin branch\_name
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git push origin branch\_name}
+\end{shbox}
 
 TODO: コマンドのメッセージを含める
 
@@ -277,11 +300,12 @@ GetFEM++ のマスターブランチにマージすることは許可されて�
 
 いくつかの便利なgitコマンドを示します。
 
-\$ git status  : status of your repository / branch
-
-\$ git log --follow "filepath"   : Show all the commits modifying the specified file (and follow the eventual change of name of the file).
-
-\$ gitk --follow filename : same as previous but with a graphical interface
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git status  : status of your repository / branch}
+  \shline{}{git log --follow "filepath"   : Show all the commits modifying the specified file (and follow the eventual change of name of the file).}
+  \shline{}{gitk --follow filename : same as previous but with a graphical interface}
+\end{shbox}
 
 \section{GitHub および Travis による継続的インテグレーション}
 Travis CIは、GitHub上のソフトウェアのビルドやテストを行う、オンラインで分散型の継続的インテグレーション (CI) サービスです。
