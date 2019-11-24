@@ -8,7 +8,16 @@
 %% 本文が英語の場合には，オプションにenglishを指定してください．
 \documentclass{ltjoc}
 %\documentclass[english]{ltjoc}
-\usepackage{shdoc}
+\usepackage[
+ backgroundcolor=gray!50,
+ usernamecolor=black,
+ machinenamecolor=black,
+ indicatorcolor=black,
+ separatorcolor=black,
+ pathcolor=black,
+ optioncolor=black,
+ textcolor=black
+]{shdoc}
 %%
 %% 表題(title)，副題(subtitle)，著者(author)，所属(affiliation)
 %% 本文が英語の場合には，こちらに英文表題，英文副題，英文著者，英文所属を記述します.
@@ -322,8 +331,8 @@ sudo: false
 dist: bionic
 cache:
   directories:
-  - \$HOME/.cache/pip
-before\_install:
+  - $HOME/.cache/pip
+before_install:
 - sudo apt-get install -y --no-install-recommends automake
 - sudo apt-get install -y --no-install-recommends libtool
 - sudo apt-get install -y --no-install-recommends make
@@ -356,7 +365,7 @@ script:
 - make -j8
 - make -j8 check
 - (cd doc/sphinx; make html)
-after\_success:
+after_success:
 - bash <(curl -s https://codecov.io/bash)
 \end{lstlisting}
 
