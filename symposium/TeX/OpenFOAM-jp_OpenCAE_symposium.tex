@@ -314,7 +314,7 @@ Travis CIは、GitHub上のソフトウェアのビルドやテストを行う�
 以下に、GetFEM++で使用している.travis.ymlを示します。
 リポジトリにymlファイルを追加することで、Travisによるインテグレーションテストが実行されます。
 今後OpenFOAMのリポジトリでもCIが実行できるようにする予定です。
-
+\begin{lstlisting}
 language: python
 python:
   - "3.6"
@@ -358,6 +358,7 @@ script:
 - (cd doc/sphinx; make html)
 after\_success:
 - bash <(curl -s https://codecov.io/bash)
+\end{lstlisting}
 
 TODO Travis CIについてWikipediaからの引用であることを明記する。
 
