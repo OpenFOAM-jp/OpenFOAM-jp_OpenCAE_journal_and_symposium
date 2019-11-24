@@ -148,6 +148,96 @@ keepspaces=true
 \section{ESI版コントリビュート方法}
 \section{Foundation版コントリビュート方法}
 \section{Gitの使い方}
+本節では https://github.com/OpenFOAM-jp/OpenFOAM-jp.git 
+のリポジトリにコントリビュートの練習をする方法について解説します。
+環境はUbuntu18.04の環境を想定します。
+事前に{GitHub}のアカウントを作成してください。
+コントリビュートをする際にはまず、Issueを立て自分が加えたい変更について議論します。
+
+機能の簡単な説明
+**機能リクエストは問題に関連していますか？記述してください。**
+問題が何であるかの明確で簡潔な説明。
+
+**希望するソリューションを説明してください**
+あなたが何をしたいのかについての明確で簡潔な説明。
+
+**検討した代替案を説明してください**
+検討した代替ソリューションまたは機能の明確で簡潔な説明。
+
+**追加のコンテキスト**
+機能リクエストに関する他のコンテキストまたはスクリーンショットをここに追加します。
+
+OSSのコントリビュートのバージョン管理ソフトにはGitが一般的に使用されています。
+まずは、バージョン管理ソフトgitをインストールします。
+
+\$ sudo apt install git
+
+必要なのはソースだけで貢献しないのであれば、次のコマンドでクローンすることで済みます。
+
+\$ git clone https://github.com/OpenFOAM-jp/OpenFOAM-jp.git
+
+貢献をしたい場合は、OpenFOAM-jpのリポジトリを自分のアカウントにフォークします。
+
+TODO: フォークの際の画面キャプチャを挿入する。
+
+フォーク後は自分のアカウントのリポジトリをクローンします。
+
+\$ git clone https://github.com/your\_account\_name/OpenFOAM-jp.git
+
+クローンをしたら自分の環境でテストを実行してください。
+
+TODO: テスト実行のコマンドを記述する。
+
+テストが全てパスしたらソースを変更します。
+masterブランチで直接変更することはできないため、ファイルを変更する前に開発ブランチを作成してください。
+
+\$ git branch branch\_name
+
+\$ git checkout branch\_name
+
+branch\_name には任意の名前を入れてください。
+自分のアカウント名と加えたい変更について言及されていると分かりやすいです。
+最初のコマンドでブランチを作成し、2番目のコマンドでブランチに移動します。
+これにより、変更を行う準備はほぼ完了です。
+変更のラベルを付けるために、連絡先の名前と電子メールを以下のコマンドで指定します。
+
+\$ git config --global user.name "Your Name Comes Here"
+
+\$ git config --global user.email you@yourdomain.example.com
+
+もし src/toto.cc というファイルをいくつか変更したり、新しいファイルとして追加したら、
+ローカルのコミットは次のコマンドで行います。
+"Your extensive commit message here \#1" には変更に関するメッセージを追加します。
+\#1の部分は自分が追加したイシューの番号としてください。
+
+\$ git add src/toto.cc
+
+\$ git commit -m "Your extensive commit message here \#1"
+
+この段階ではコミットはあなたのローカルリポジトリで行われていますが、GitHubリポジトリでは行われません。
+十分なテストで変更を検証したら、以下のコマンドでGitHubの自分のアカウントのリポジトリに変更を移すことができます。
+
+\$ git push origin branch\_name
+
+TODO: コマンドのメッセージを含める
+
+このコマンドのメッセージに図のようなURLが表示されます。
+URLにアクセスしプルリクエストを作成します。
+
+TODO: GetFEMのドキュメントから引用を行っているため言及する。
+
+GetFEM++ のマスターブランチにマージすることは許可されていないので、あなたの役割はここで終わりです。
+プルリクエストのページで管理者や他の開発者と議論することができます。
+管理者が承認した場合には変更がマージされます。
+
+いくつかの便利なgitコマンドを示します。
+
+\$ git status  : status of your repository / branch
+
+\$ git log --follow "filepath"   : Show all the commits modifying the specified file (and follow the eventual change of name of the file).
+
+\$ gitk --follow filename : same as previous but with a graphical interface
+
 \section{GitHub および Travis による継続的インテグレーション}
 \section{まとめ}
 \end{document}
