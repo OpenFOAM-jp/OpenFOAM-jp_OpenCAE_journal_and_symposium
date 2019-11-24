@@ -15,7 +15,7 @@
 % 副題が無い場合にはコメントアウトします．
 % \subtitle{\TeX のテンプレート（和文副題）} 
 \author{%
-@public\_inabower$^{1\dagger}$%
+稲葉竜一$^{1\dagger}$%
 \hspace{1\zw}%
 松原 大輔$^{2}$%
 \hspace{1\zw}%
@@ -37,7 +37,7 @@ ${}^{2}$オープン CAE勉強会%
 % 副題が無い場合にはコメントアウトします．
 % \esubtitle{The case of \TeX (English Sub-Title)}
 \eauthor{%
-@public\_inabower$^{*\dagger}$%
+Ryuichi INABA$^{*\dagger}$%
 \hspace{1em}%
 Daisuke MATSUBARA$^{**}$%
 \hspace{1em}%
@@ -148,16 +148,22 @@ keepspaces=true
 そこで有志により"OpenFOAM-jp"といグループを立ち上げ，本家の開発やドキュメントの翻訳，チュートリアルの作成などのコントリビュート活動を始めた．
 本報告ではその活動内容などについて発表する．
 \section{ESI版とFoundation版の違い}
-OpenFOAMは，Imperial Collageで開発された商用CFDコードFOAM(Field Operation And Manipulation)が，2004年にOpenFOAMと名前を変えてオープンソースとしてリリースされたことから始まる．
-2011年にはOpenFOAMを運営しているOpenCFD社がSGI社に買収され,またその2社によりOpenFOAMの商標を譲渡したOpenFOAM Foundation Inc.を設立した.
-これ以降OpenFOAMはOpenFOAM Foundation Inc.より開発と配布が行われており,2019年11月現在はOpenFOAM-v7が最新版であり,これは”Foundation版”と呼ばれている.
+OpenFOAMは，Imperial Collageで開発された商用CFDコードFOAM(Field Operation And Manipulation)が，2004年にOpenFOAMと名前を変えてオープンソースとしてリリースされたことから始まる．\cite{URL:openfoam.history}\cite{Minabe:OpenCAE2015-GP23}
+2011年にはOpenFOAMを運営しているOpenCFD社がSGI社に買収され，またその2社によりOpenFOAMの商標を譲渡したOpenFOAM Foundation Inc.を設立した.
+これ以降OpenFOAMはOpenFOAM Foundation Inc.より開発と配布が行われており，2019年11月現在OpenFOAM-V7を最新版とするフォークが”Foundation版”\cite{URL:openfoam.org}\cite{URL:GitHub-foundation}と呼ばれている.
+
 一方でOpenFOAMには多くのフォークが存在する.
-2012年以降はESI社がOpenCFD社の買収という形から開発に加わるようになり,
+2012年以降はESI社がOpenCFD社の買収という形から開発に加わるようになり，
 2016年にはOpenFOAM-v3.0からフォークしたOpenFOAM-v3.0+をリリースした.
-2019年11月時点ではこの最新版はOpenFOAM-ｖ1906であり、これが”ESI版”と呼ばれる.
+2019年11月時点ではこの最新版はOpenFOAM-v1906であり，このフォークが”ESI版”\cite{URL:openfoam.com}\cite{URL:GitLab-plus}と呼ばれる.
+
+本報告ではこのFoudation版とESI版の2つについてコントリビュートの流れなどを報告する．
 \section{ESI版コントリビュート方法}
+
 \section{Foundation版コントリビュート方法}
 \section{Gitの使い方}
 \section{GitHub および Travis による継続的インテグレーション}
 \section{まとめ}
+
+\input{OpenFOAM-jp_OpenCAE_symposium.bbl}
 \end{document}

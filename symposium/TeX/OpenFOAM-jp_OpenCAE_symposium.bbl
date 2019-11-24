@@ -1,27 +1,67 @@
 \begin{thebibliography}{1}
 
-\bibitem{Nishi:OpenCAE2018-001}
-西剛伺, 今野雅.
-\newblock
-  熱伝導問題に関する{OpenFOAM}の固体・流体熱連成定常解析ソルバの妥当性確認.
-\newblock オープンCAE学会論文集, Vol.~1, No.~1, 2018.
-\newblock OpenCAE2018-001,
-  \href{http://www.opencae.or.jp/wp-content/uploads/2018/02/OpenCAE2018_001.pdf}{http://www.opencae.or.jp/wp-content/uploads/2018/02/OpenCAE2018\_001.pdf},
-  (accessed 2018-09-14).
+\bibitem{URL:openfoam.history}
+ESI Group, OpenCFD Inc.
+\newblock OpenFOAM History,
+  \href{https://www.openfoam.com/history/}{https://www.openfoam.com/history/},
+  (accessed 2019-11-24).
 
-\bibitem{BB21459576}
-オープンCAE学会.
-\newblock OpenFOAMによる熱移動と流れの数値解析.
-\newblock 森北出版, 2016.
+\bibitem{Minabe:OpenCAE2015-GP23}
+三邉 考志
 \newblock
-  \href{http://ci.nii.ac.jp/ncid/BB21459576}{http://ci.nii.ac.jp/ncid/BB21459576},
-  (accessed 2018-09-14).
+  OpenFOAM 開発・ファンディングプロジェクトの概要と事例
+\newblock オープンCAEシンポジウム2015 梗概集，GP23，2015.
+  \href{http://www.opencae.or.jp/wp-content/uploads/2016/01/OpenCAESymposium2015\_GP23\_Abstract.pdf}{http://www.opencae.or.jp/wp-content/uploads/2016/01/OpenCAESymposium2015\_GP23\_Abstract.pdf},
+  (accessed 2019-11-24).
 
-\bibitem{SIST02-200}
-独立行政法人科学技術振興機構.
-\newblock 科学技術情報流通技術基準 参照文献の書き方 {SIST} 02-2007, 2007.
-\newblock
-  \href{http://jipsti.jst.go.jp/sist/pdf/SIST02-2007.pdf}{http://jipsti.jst.go.jp/sist/pdf/SIST02-2007.pdf},
-  (accessed 2015-09-29).
+\bibitem{URL:openfoam.org}
+OpenFOAM Foundation Inc.
+\newblock openfoam.org,
+  \href{https://openfoam.org/}{https://openfoam.org/},
+  (accessed 2019-11-24).
+
+\bibitem{URL:GitHub-foundation}
+OpenFOAM Foundation Inc.
+\newblock OpenFOAM-dev,
+  \href{https://github.com/OpenFOAM/OpenFOAM-dev}{https://github.com/OpenFOAM/OpenFOAM-dev},
+  (accessed 2019-11-24).
+
+\bibitem{URL:openfoam.com}
+ESI Group, OpenCFD Inc.
+\newblock openfoam.com,
+  \href{https://openfoam.com/}{https://openfoam.com/},
+  (accessed 2019-11-24).
+
+\bibitem{URL:GitLab-plus}
+ESI Group, OpenCFD Inc.
+\newblock OpenFOAM-plus,
+  \href{https://develop.openfoam.com/Development/OpenFOAM-plus}{https://develop.openfoam.com/Development/OpenFOAM-plus},
+  (accessed 2019-11-24).
+
+
+
+%\bibitem{Nishi:OpenCAE2018-001}
+%西剛伺, 今野雅.
+%\newblock
+%  熱伝導問題に関する{OpenFOAM}の固体・流体熱連成定常解析ソルバの妥当性確認.
+%\newblock オープンCAE学会論文集, Vol.~1, No.~1, 2018.
+%\newblock OpenCAE2018-001,
+%  \href{http://www.opencae.or.jp/wp-content/uploads/2018/02/OpenCAE2018_001.pdf}{http://www.opencae.or.jp/wp-content/uploads/2018/02/OpenCAE2018\_001.pdf},
+%  (accessed 2018-09-14).
+
+%\bibitem{BB21459576}
+%オープンCAE学会.
+%\newblock OpenFOAMによる熱移動と流れの数値解析.
+%\newblock 森北出版, 2016.
+%\newblock
+%  \href{http://ci.nii.ac.jp/ncid/BB21459576}{http://ci.nii.ac.jp/ncid/BB21459576},
+%  (accessed 2018-09-14).
+
+%\bibitem{SIST02-200}
+%独立行政法人科学技術振興機構.
+%\newblock 科学技術情報流通技術基準 参照文献の書き方 {SIST} 02-2007, 2007.
+%\newblock
+%  \href{http://jipsti.jst.go.jp/sist/pdf/SIST02-2007.pdf}{http://jipsti.jst.go.jp/sist/pdf/SIST02-2007.pdf},
+%  (accessed 2015-09-29).
 
 \end{thebibliography}
