@@ -247,7 +247,9 @@ git add . git commit -m "変更内容のコメント" git push origin (開発者
 今回の例では以下の様な流れになる．
 
 \begin{shbox}
-  \shuser{user}
+  \shchangesymbol{separatorsymbol}{}
+  \shuser{}
+  \shmachine{}
   \shline{}{git clone https://github.com/matsubaraDaisuke/OpenFOAM-dev.git}  
   \shline{}{cd OpenFOAM-dev}  
   \shline{}{git checkout matsubara-patch1}
@@ -256,7 +258,7 @@ git add . git commit -m "変更内容のコメント" git push origin (開発者
 （コーディング）
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git add .}
   \shline{}{git commit -m "bugfix ******"}
   \shline{}{git push origin matsubara-patch1}
@@ -305,14 +307,14 @@ OpenFOAMの開発においてもGitが使用されている．
 まずは，Gitをインストールする．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{sudo apt install git}
 \end{shbox}
 
 必要なのはソースだけで貢献しないのであれば，次のコマンドでcloneすることで作業は終わる．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git clone https://github.com/OpenFOAM-jp/OpenFOAM-jp.git}
 \end{shbox}
 
@@ -323,7 +325,7 @@ TODO: Forkの際の画面キャプチャを挿入する．
 Fork後は自分のアカウントのリポジトリをcloneする．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git clone https://github.com/your\_account\_name/OpenFOAM-jp.git}
 \end{shbox}
 
@@ -331,7 +333,7 @@ cloneをしたら自分の環境で実行環境を構築する．
 まずは，OpenFOAMを動かすために必要な外部ライブラリをインストールする．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{sudo apt update}
   \shline{}{sudo apt upgrade}
   \shline{}{sudo apt install git-core}
@@ -385,7 +387,7 @@ cloneをしたら自分の環境で実行環境を構築する．
 次に，OpenFOAMのbashrcをターミナル起動時に読み込むように~/.bashrcに登録する．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{echo "source ~/OpenFOAM/OpenFOAM-dev/etc/bashrc" >> ~/.bashrc}
   \shline{}{. ~/.bashrc}
 \end{shbox}
@@ -396,7 +398,7 @@ ThirdPartyの中のParaViewをインストールする．
 以下の手順でもう一つインストールすることを推奨する．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{cd \$WM\_THIRD\_PARTY\_DIR}
   \shline{}{./makeParaView -python -python-lib /usr/lib/x86\_64-linux-gnu/libpython2.7.so.1.0}
 \end{shbox}
@@ -404,7 +406,7 @@ ThirdPartyの中のParaViewをインストールする．
 最後にOpenFOAMをインストールする．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{wmRefresh}
   \shline{}{cd \$WM\_PROJECT\_DIR}
   \shline{}{./Allwmake -j | tee log.Allwmake}
@@ -413,7 +415,7 @@ ThirdPartyの中のParaViewをインストールする．
 ソルバーを動かしてインストールの確認を行う．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{mkdir \$WM\_PROJECT\_USER\_DIR}
   \shline{}{cd \$WM\_PROJECT\_USER\_DIR}
   \shline{}{cp -r \$FOAM\_TUTORIALS/basic/potentialFoam/pitzDaily/ ./}
@@ -427,11 +429,11 @@ ThirdPartyの中のParaViewをインストールする．
 masterブランチで直接変更することはできないため，ファイルを変更する前に開発ブランチを作成する．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git branch branch\_name}
 \end{shbox}
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git checkout branch\_name}
 \end{shbox}
 
@@ -442,7 +444,7 @@ branch\_name には任意の名前を入れる．
 変更のラベルを付けるために，連絡先の名前と電子メールを以下のコマンドで指定する．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git config --global user.name "Your Name Comes Here"}
   \shline{}{git config --global user.email you@yourdomain.example.com}
 \end{shbox}
@@ -453,7 +455,7 @@ branch\_name には任意の名前を入れる．
 \#1の部分は自分が追加したイシューの番号とする．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git add src/toto.cc}
   \shline{}{git commit -m "Your extensive commit message here \#1"}
 \end{shbox}
@@ -462,7 +464,7 @@ branch\_name には任意の名前を入れる．
 十分なテストで変更を検証したら，以下のコマンドでGitHubの自分のアカウントのリポジトリに変更を移すことができる．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git push origin branch\_name}
 \end{shbox}
 
@@ -480,7 +482,7 @@ GetFEM++ のマスターブランチにマージすることは許可されて�
 いくつかの便利なgitコマンドを示す．
 
 \begin{shbox}
-  \shuser{user}
+  \shuser{}
   \shline{}{git status  : status of your repository / branch}
   \shline{}{git log --follow "filepath"   : Show all the commits modifying the specified file (and follow the eventual change of name of the file).}
   \shline{}{gitk --follow filename : same as previous but with a graphical interface}
