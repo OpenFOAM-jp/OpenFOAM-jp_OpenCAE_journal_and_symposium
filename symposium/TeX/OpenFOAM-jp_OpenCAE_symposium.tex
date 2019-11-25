@@ -204,72 +204,157 @@ Foundation版のRepositoryはGithubで公開されているが，issueの管理�
 
 \section{Gitの使い方}
 本節では https://github.com/OpenFOAM-jp/OpenFOAM-jp.git 
-のリポジトリにコントリビュートの練習をする方法について解説します。
-環境はUbuntu18.04の環境を想定します。
-事前に{GitHub}のアカウントを作成してください。
-コントリビュートをする際にはまず、Issueを立て自分が加えたい変更について議論します。
-
-機能の簡単な説明
-**機能リクエストは問題に関連していますか？記述してください。**
-問題が何であるかの明確で簡潔な説明。
-
-**希望するソリューションを説明してください**
-あなたが何をしたいのかについての明確で簡潔な説明。
-
-**検討した代替案を説明してください**
-検討した代替ソリューションまたは機能の明確で簡潔な説明。
-
-**追加のコンテキスト**
-機能リクエストに関する他のコンテキストまたはスクリーンショットをここに追加します。
-
-OSSのコントリビュートのバージョン管理ソフトにはGitが一般的に使用されています。
-まずは、バージョン管理ソフトgitをインストールします。
+のリポジトリにコントリビュートの練習をする方法について解説する。
+環境はUbuntu18.04の環境を想定する。
+事前に{GitHub}のアカウントを作成する必要がある。
+コントリビュートをする際にはまず、Issueを立て自分が加えたい変更について議論する。
+Issueを立てる際には以下の内容が含まれていることが望ましい。
+\begin{itemize}
+  \item 機能の簡単な説明。問題が何であるかの明確で簡潔な説明。
+  \item 希望するソリューションの説明。あなたが何をしたいのかについての明確で簡潔な説明。
+  \item 検討した代替案を説明。検討した代替ソリューションまたは機能の明確で簡潔な説明。
+  \item 追加のコンテキスト。機能リクエストに関する他のコンテキストまたはスクリーンショットをここに追加します。
+\end{itemize}
+OSSのコントリビュートのバージョン管理ソフトにはGitが一般的に使用されている。
+OpenFOAMの開発においてもGitが使用されている。
+まずは、Gitをインストールする。
 
 \begin{shbox}
   \shuser{user}
   \shline{}{sudo apt install git}
 \end{shbox}
 
-必要なのはソースだけで貢献しないのであれば、次のコマンドでクローンすることで済みます。
+必要なのはソースだけで貢献しないのであれば、次のコマンドでクローンすることで作業は終わる。
 
 \begin{shbox}
   \shuser{user}
   \shline{}{git clone https://github.com/OpenFOAM-jp/OpenFOAM-jp.git}
 \end{shbox}
 
-貢献をしたい場合は、OpenFOAM-jpのリポジトリを自分のアカウントにフォークします。
+貢献をしたい場合は、OpenFOAM-jpのリポジトリを自分のアカウントにフォークする。
 
 TODO: フォークの際の画面キャプチャを挿入する。
 
-フォーク後は自分のアカウントのリポジトリをクローンします。
+フォーク後は自分のアカウントのリポジトリをクローンする。
 
 \begin{shbox}
   \shuser{user}
   \shline{}{git clone https://github.com/your\_account\_name/OpenFOAM-jp.git}
 \end{shbox}
 
-クローンをしたら自分の環境でテストを実行してください。
+クローンをしたら自分の環境で実行環境を構築する。
+まずは、OpenFOAMを動かすために必要な外部ライブラリをインストールする。
 
-TODO: テスト実行のコマンドを記述する。
+\begin{shbox}
+  \shuser{user}
+  \shline{}{sudo apt update}
+  \shline{}{sudo apt upgrade}
+  \shline{}{sudo apt install git-core}
+  \shline{}{sudo apt install build-essential}
+  \shline{}{sudo apt install cmake}
+  \shline{}{sudo apt install libfl-dev}
+  \shline{}{sudo apt install bison}
+  \shline{}{sudo apt install zlib1g-dev}
+  \shline{}{sudo apt install qt4-dev-tools}
+  \shline{}{sudo apt install libqt4-dev}
+  \shline{}{sudo apt install libqtwebkit-dev}
+  \shline{}{sudo apt install gnuplot}
+  \shline{}{sudo apt install libreadline-dev}
+  \shline{}{sudo apt install libncurses-dev}
+  \shline{}{sudo apt install libxt-dev}
+  \shline{}{sudo apt install libopenmpi-dev}
+  \shline{}{sudo apt install openmpi-bin}
+  \shline{}{sudo apt install libboost-system-dev}
+  \shline{}{sudo apt install libboost-thread-dev}
+  \shline{}{sudo apt install libgmp-dev}
+  \shline{}{sudo apt install libmpfr-dev}
+  \shline{}{sudo apt install python}
+  \shline{}{sudo apt install python-dev}
+  \shline{}{sudo apt install libcgal-dev}
+  \shline{}{sudo apt install curl}
+  \shline{}{sudo apt install git-core}
+  \shline{}{sudo apt install build-essential}
+  \shline{}{sudo apt install cmake}
+  \shline{}{sudo apt install libfl-dev}
+  \shline{}{sudo apt install bison}
+  \shline{}{sudo apt install zlib1g-dev}
+  \shline{}{sudo apt install qt4-dev-tools}
+  \shline{}{sudo apt install libqt4-dev}
+  \shline{}{sudo apt install libqtwebkit-dev}
+  \shline{}{sudo apt install gnuplot}
+  \shline{}{sudo apt install libreadline-dev}
+  \shline{}{sudo apt install libncurses-dev}
+  \shline{}{sudo apt install libxt-dev}
+  \shline{}{sudo apt install libopenmpi-dev}
+  \shline{}{sudo apt install openmpi-bin}
+  \shline{}{sudo apt install libboost-system-dev}
+  \shline{}{sudo apt install libboost-thread-dev}
+  \shline{}{sudo apt install libgmp-dev}
+  \shline{}{sudo apt install libmpfr-dev}
+  \shline{}{sudo apt install python}
+  \shline{}{sudo apt install python-dev}
+  \shline{}{sudo apt install libcgal-dev}
+  \shline{}{sudo apt install curl}
+\end{shbox}
 
-テストが全てパスしたらソースを変更します。
-masterブランチで直接変更することはできないため、ファイルを変更する前に開発ブランチを作成してください。
+次に、OpenFOAMのbashrcをターミナル起動時に読み込むように~/.bashrcに登録する。
+
+\begin{shbox}
+  \shuser{user}
+  \shline{}{echo "source ~/OpenFOAM/OpenFOAM-dev/etc/bashrc" >> ~/.bashrc}
+  \shline{}{. ~/.bashrc}
+\end{shbox}
+
+ThirdPartyの中のParaViewをインストールする。
+この際にpythonを登録するとParaViewのpython拡張機能が使用可能になる。
+既にParaViewをインストールしている場合であっても、このParaViewはOpenFOAMの結果表にのプラグインなども同梱しているため、
+以下の手順でもう一つインストールすることを推奨する。
+
+\begin{shbox}
+  \shuser{user}
+  \shline{}{cd \$WM\_THIRD\_PARTY\_DIR}
+  \shline{}{./makeParaView -python -python-lib /usr/lib/x86\_64-linux-gnu/libpython2.7.so.1.0}
+\end{shbox}
+
+最後にOpenFOAMをインストールする。
+
+\begin{shbox}
+  \shuser{user}
+  \shline{}{wmRefresh}
+  \shline{}{cd \$WM\_PROJECT\_DIR}
+  \shline{}{./Allwmake -j | tee log.Allwmake}
+\end{shbox}
+
+ソルバーを動かしてインストールの確認を行う。
+
+\begin{shbox}
+  \shuser{user}
+  \shline{}{mkdir \$WM\_PROJECT\_USER\_DIR}
+  \shline{}{cd \$WM\_PROJECT\_USER\_DIR}
+  \shline{}{cp -r \$FOAM\_TUTORIALS/basic/potentialFoam/pitzDaily/ ./}
+  \shline{}{cd pitzDaily/}
+  \shline{}{foamRunTutorials}
+  \shline{}{paraFoam}
+\end{shbox}
+
+これでParaViewが起動されて結果の表示ができたら完成である。
+テストが全てパスしたらソースを変更する。
+masterブランチで直接変更することはできないため、ファイルを変更する前に開発ブランチを作成する。
 
 \begin{shbox}
   \shuser{user}
   \shline{}{git branch branch\_name}
 \end{shbox}
-
 \begin{shbox}
   \shuser{user}
   \shline{}{git checkout branch\_name}
 \end{shbox}
 
-branch\_name には任意の名前を入れてください。
-自分のアカウント名と加えたい変更について言及されていると分かりやすいです。
-最初のコマンドでブランチを作成し、2番目のコマンドでブランチに移動します。
-これにより、変更を行う準備はほぼ完了です。
-変更のラベルを付けるために、連絡先の名前と電子メールを以下のコマンドで指定します。
+branch\_name には任意の名前を入れる。
+自分のアカウント名と加えたい変更について言及されていると分かりやすい。
+最初のコマンドでブランチを作成し、2番目のコマンドでブランチに移動する。
+これにより、変更を行う準備はほぼ完了である。
+変更のラベルを付けるために、連絡先の名前と電子メールを以下のコマンドで指定する。
 
 \begin{shbox}
   \shuser{user}
@@ -278,9 +363,9 @@ branch\_name には任意の名前を入れてください。
 \end{shbox}
 
 もし src/toto.cc というファイルをいくつか変更したり、新しいファイルとして追加したら、
-ローカルのコミットは次のコマンドで行います。
-"Your extensive commit message here \#1" には変更に関するメッセージを追加します。
-\#1の部分は自分が追加したイシューの番号としてください。
+ローカルのコミットは次のコマンドで行う。
+"Your extensive commit message here \#1" には変更に関するメッセージを追加する。
+\#1の部分は自分が追加したイシューの番号とする。
 
 \begin{shbox}
   \shuser{user}
@@ -288,8 +373,8 @@ branch\_name には任意の名前を入れてください。
   \shline{}{git commit -m "Your extensive commit message here \#1"}
 \end{shbox}
 
-この段階ではコミットはあなたのローカルリポジトリで行われていますが、GitHubリポジトリでは行われません。
-十分なテストで変更を検証したら、以下のコマンドでGitHubの自分のアカウントのリポジトリに変更を移すことができます。
+この段階ではコミットはあなたのローカルリポジトリで行われていますが、GitHubリポジトリでは行われない。
+十分なテストで変更を検証したら、以下のコマンドでGitHubの自分のアカウントのリポジトリに変更を移すことができる。
 
 \begin{shbox}
   \shuser{user}
@@ -298,16 +383,16 @@ branch\_name には任意の名前を入れてください。
 
 TODO: コマンドのメッセージを含める
 
-このコマンドのメッセージに図のようなURLが表示されます。
-URLにアクセスしプルリクエストを作成します。
+このコマンドのメッセージに図のようなURLが表示される。
+URLにアクセスしプルリクエストを作成する。
 
 TODO: GetFEMのドキュメントから引用を行っているため言及する。
 
-GetFEM++ のマスターブランチにマージすることは許可されていないので、あなたの役割はここで終わりです。
-プルリクエストのページで管理者や他の開発者と議論することができます。
-管理者が承認した場合には変更がマージされます。
+GetFEM++ のマスターブランチにマージすることは許可されていないので、あなたの役割はここで終わる。
+プルリクエストのページで管理者や他の開発者と議論することができる。
+管理者が承認した場合には変更がマージされる。
 
-いくつかの便利なgitコマンドを示します。
+いくつかの便利なgitコマンドを示す。
 
 \begin{shbox}
   \shuser{user}
@@ -317,12 +402,12 @@ GetFEM++ のマスターブランチにマージすることは許可されて�
 \end{shbox}
 
 \section{GitHub および Travis による継続的インテグレーション}
-Travis CIは、GitHub上のソフトウェアのビルドやテストを行う、オンラインで分散型の継続的インテグレーション (CI) サービスです。
-継続的インテグレーションサービスとは、ビルドやテストを継続的に自動実行するサービスです。
-継続的インテグレーションを行うことにより、機能追加やリファクタリングによるデグレードを防ぐことができます。
-以下に、GetFEM++で使用している.travis.ymlを示します。
-リポジトリにymlファイルを追加することで、Travisによるインテグレーションテストが実行されます。
-今後OpenFOAMのリポジトリでもCIが実行できるようにする予定です。
+Travis CIは、GitHub上のソフトウェアのビルドやテストを行う、オンラインで分散型の継続的インテグレーション (CI) サービスである。
+継続的インテグレーションサービスとは、ビルドやテストを継続的に自動実行するサービスである。
+継続的インテグレーションを行うことにより、機能追加やリファクタリングによるデグレードを防ぐことができる。
+以下に、GetFEM++で使用している.travis.ymlを示す。
+リポジトリにymlファイルを追加することで、Travisによるインテグレーションテストが実行される。
+今後OpenFOAMのリポジトリでもCIが実行できるようにする予定である。
 \begin{lstlisting}
 language: python
 python:
