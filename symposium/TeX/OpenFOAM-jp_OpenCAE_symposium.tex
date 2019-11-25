@@ -174,7 +174,7 @@ ESI版の開発はGitLabで行われている．[develop.openfoam.com/Developmen
 このページからレポジトリをcloneすることができ，これをそのままコンパイルすることで次期リリース予定のESI版OpenFOAMを使用することができる．
 またここには開発途中のbranchが多くあり，将来的に追加されるであろう機能をチェックすることもできる．
 
-GitLabのページの右上のボタン[\autoref{fig:plus-register}]からこのOpenFOAM-plusのレポジトリに登録することもでき，これによりissueの作成や書き込みをすることができるようになる．
+\autoref{fig:plus-register}に示すGitLabのページの右上のボタンからこのOpenFOAM-plusのレポジトリに登録することもでき，これによりissueの作成や書き込みをすることができるようになる．
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/plus_register.png}
@@ -374,12 +374,33 @@ TODO Travis CIについてWikipediaからの引用であることを明記する
 TODO 継続的インテグレーションサービスについてWikipediaからの引用であることを明記する。
 %
 \section{OpeFOAM-jp}
+OpenFOAM-jp\cite{URL:OpenFOAM-jp}は今回立ち上がったコミュニティの活動を行うためのGiuHubレポジトリである．
+目的は日本のOpenFOAMコミュニティの活性化，OpenFOAMへのコントリビュートの入り口，およびOSSコントリビュート活動の学習の場としている．
+参加は誰でも国籍を問わず可能であり,今後人口が増えてオープンで有意義な場として機能することを期待する．
 %
 \subsection{OpenFOAM-jp/issues}
+issuesレポジトリ\cite{URL:OpenFOAM-jp-issues}は最初の議論を行う場として設置された．
+テキストエディタVimの日本コミュニティのレポジトリ\cite{URL:vim-jp}のForkであり，運用方法もこれを参考にする．
+ここではOpenFOAMの新機能の提案やOpenFOAM-jpで行う活動の議論などを行うことを目的としている．
+質問掲示板であるGoogle Forumと役割が重複すると混乱や情報の偏りを発生させるため明確な差別化を行うように注意して運用していく．
 %
 \subsection{OpenFOAM-jp/OpenFOAM-jp}
+OpenFOAM-jpレポジトリ\cite{URL:OpenFOAM-jp-OpenFOAM-jp}はFoundation版のOpenFOAM-devのForkであり，pushやPRなどのgitの基本機能の練習用に設置された．
+branchを作成してオリジナルの機能を配布する目的で使用することも期待している．
+エラーメッセージの日本語化プロジェクトなども予定している．
 %
 \subsection{OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp}
+OpenFOAM-utilities-tutorials-jp\cite{URL:OpenFOAM-jp-OpenFOAM-utilities-tutorials-jp}は，web上にあまり情報のないOpenFOAMのutilitiesに関するまとめを行う目的で設置された．
+その一例を\autoref{fig:utilities-example}に示す．
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/utilities-example.png}
+\caption{moveDynamicMesh(v1906) utilitiy's tutorial document.(\href{link}{https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp/blob/master/v1906/mesh/manipulation/moveDynamicMesh/moveDynamicMesh.md})}
+\label{fig:utilities-example}
+\end{figure}
+各utilityについて，使用方法をMarkDown形式のドキュメントでまとめ，そのチュートリアルを作成する．
+ディレクトリ構成は実際のソースコードに準拠し，最表層のMarkDownファイルから各ドキュメントにアクセスできるようにしている．\cite{URL:OpenFOAM-jp-util-index}
+現時点ではOpenFOAM-v1906について作成中である．
 %
 \section{まとめ}
 

@@ -38,6 +38,42 @@ ESI Group, OpenCFD Inc.
   \href{https://develop.openfoam.com/Development/OpenFOAM-plus}{https://develop.openfoam.com/Development/OpenFOAM-plus},
   (accessed 2019-11-24).
 
+\bibitem{URL:OpenFOAM-jp}
+\newblock OpenFOAM-jp,
+  \href{https://github.com/OpenFOAM-jp}{https://github.com/OpenFOAM-jp},
+  (accessed 2019-11-24).
+
+\bibitem{URL:OpenFOAM-jp-issues}
+\newblock OpenFOAM-jp/issues,
+  \href{https://github.com/OpenFOAM-jp/issues}{https://github.com/OpenFOAM-jp/issues},
+  (accessed 2019-11-24).
+
+\bibitem{URL:vim-jp}
+\newblock vim-jp,
+  \href{https://github.com/vim-jp}{https://github.com/vim-jp},
+  (accessed 2019-11-24).
+
+\bibitem{URL:OpenFOAM-jp-OpenFOAM-jp}
+\newblock OpenFOAM-jp/OpenFOAM-jp,
+  \href{https://github.com/OpenFOAM-jp/OpenFOAM-jp}{https://github.com/OpenFOAM-jp/OpenFOAM-jp},
+  (accessed 2019-11-24).
+
+\bibitem{URL:OpenFOAM-jp-OpenFOAM-utilities-tutorials-jp}
+\newblock OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp,
+  \href{https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp}{https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp},
+  (accessed 2019-11-24).
+
+\bibitem{URL:OpenFOAM-jp-movedDynamicMesh}
+\newblock movedDynamicMesh example,
+  \href{https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp/blob/master/v1906/mesh/manipulation/moveDynamicMesh/moveDynamicMesh.md}{https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp/blob/master/v1906/mesh/manipulation/moveDynamicMesh/moveDynamicMesh.md},
+  (accessed 2019-11-24).
+
+\bibitem{URL:OpenFOAM-jp-util-index}
+\newblock utilities tutorials index,
+  \href{https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp/tree/master/v1906}{https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp/tree/master/v1906},
+  (accessed 2019-11-24).
+
+
 
 
 %\bibitem{Nishi:OpenCAE2018-001}
