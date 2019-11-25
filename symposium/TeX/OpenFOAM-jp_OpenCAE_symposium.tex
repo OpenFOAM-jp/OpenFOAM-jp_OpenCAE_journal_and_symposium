@@ -93,7 +93,7 @@ The quick brown fox jumps over the lazy dog.
 %\setmonofont{Courier New} % Courier New
 %\setmonofont{Lucida Console} % Lucida Console
 %%
-%% subfigureパッケージ
+%% subureパッケージ
 \usepackage{subfigure}
 %%
 %% graphicxパッケージ
@@ -148,33 +148,55 @@ keepspaces=true
 \section{ESI版コントリビュート方法}
 \section{Foundation版コントリビュート方法}
 
-Foundation版は基本的にbugfixを目的としたコントリビュートが主であるため，バグ報告を行うためのissueTrackingのページへ登録する必要がある．未登録の場合は，名前とメールアドレスを入力し，返信のリンクを辿ることでviewerとして参加することができる．また数時間後にスパムでないことが認められると，reporterに昇格できる．reporterとなることでissueを立てて，バグの報告が可能となる．ここで本当にバグなのか，改善する方法はあるのかなどを議論することになる．
+Foundation版は基本的にbugfixを目的としたコントリビュートが主であるため，バグ報告を行うためのissueTrackingのページへ登録する必要がある．
+未登録の場合は，名前とメールアドレスを入力し，返信のリンクを辿ることでviewerとして参加することができる．
+また数時間後にスパムでないことが認められると，reporterに昇格できる．
+reporterとなることでissueを立てて，バグの報告が可能となる．
+ここで本当にバグなのか，改善する方法はあるのかなどを議論することになる．
 
 重大なバグの修正または，新しい開発を提供する場合，OpenFOAM Foundation Contributor Agreementに署名する必要がある．
-
-Foundation版HPのメニューバーのDevelopment/ContributorAgreeementのリンクを辿り，Contact Usのページから名前と所属，コントリビュートに参加した意思を記載して送信すると，後日，Henry G. WellerからPDF形式の登録用紙が送付されてくる．登録用紙の内容は，前述のContributorAgreeementのページに記載されているものと同じである．
+Foundation版HPのメニューバーのDevelopment/ContributorAgreeementのリンクを辿り，Contact Usのページから名前と所属，コントリビュートに参加した意思を記載して送信すると，後日，Henry G. WellerからPDF形式の登録用紙が送付されてくる．
+登録用紙の内容は，前述のContributorAgreeementのページに記載されているものと同じである．
 
 バグの修正などでFoundation版のOpenFOAMの修正を開発元に共有する場合，Foundation版のOpenFOAMはgithub上で管理されているため，githubアカウントが必要となる．
 
-コントリビュートで最初に行うことは開発元のリポジトリをForkすることから始まる．Forkしたことにより，自身のgithubアカウントにOpenFOAMのリポジトリが作成されていることが確認できる．次に開発用の新しいブランチを作成する．ブランチ名は「(開発者名)-patch***」などとするとよいだろう．
+コントリビュートで最初に行うことは開発元のリポジトリをForkすることから始まる．
+Forkしたことにより，自身のgithubアカウントにOpenFOAMのリポジトリが作成されていることが確認できる．
+次に開発用の新しいブランチを作成する．ブランチ名は「(開発者名)-patch***」などとするとよいだろう．今回の例では「matsubara-patch1」とした．
+
+\includegraphics[width=5cm]{fig-f1.png}
+\includegraphics[width=5cm]{fig-f2.png}
 
 次に個人の開発環境に移りターミナル上でgit cloneを行う．例：git clone https://github.com/(githubアカウント名)/OpenFOAM-dev.git
 これによって，git cloneしたディレクトリ下にOpenFOAMのプロジェクトがコピーされる．
+\includegraphics[width=5cm]{fig-f3.png}
+
 次にgit checkoutにて作成したブランチに切り替える 例：git checkout (開発者名)-patch***
 OpenFOAMのプロジェクト内で修正や開発が完了した後，
 git add . git commit -m "変更内容のコメント" git push origin (開発者名)-patch***
 とすることで，コードの修正内容を個人のgithubのリポジトリに反映させる．
+今回の例では以下の様な流れになる．
 
-最後にpull requestを開発元に対して行う．この時コメントに
+\begin{shbox}
+  \shuser{user}
+  \shline{}{git clone https://github.com/matsubaraDaisuke/OpenFOAM-dev.git}  
+  \shline{}{cd OpenFOAM-dev}  
+  \shline{}{git checkout matsubara-patch1}
+  \shline{}{~コーディング~}
+  \shline{}{git add .}
+  \shline{}{git commit -m "bugfix ******"}
+  \shline{}{git push origin matsubara-patch1}
+\end{shbox}
+
+
+
+最後にgithub上でpull requestを開発元に対して行う．この時コメントに
 Fixes issue:
 https://bugs.openfoam.org/view.php?id=****
-と最初に議論したissueのURLを添付するのが慣例のようである．
+の様に最初に議論したissueのURLを添付するのが慣例のようである．
 
-TODO:画像配置していきます．
-TODO:コマンドのところもう少し綺麗にしたいね
-
-
-
+\includegraphics[width=5cm]{fig-f4.png}
+\includegraphics[width=5cm]{fig-f5.png}
 
 
 \section{Gitの使い方}
