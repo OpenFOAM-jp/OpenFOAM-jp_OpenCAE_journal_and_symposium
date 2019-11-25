@@ -181,7 +181,7 @@ ESI版の開発はGitLabで行われている．\cite{URL:GitLab-plus}
 \label{fig:plus-register}
 \end{figure}
 例えばバグを見つけた場合やOpenFOAMへの要望がある場合には，issueを作成することで開発者へ周知することができ，必要と判断された場合には開発者によりコードの修正や作成が行われる．
-\autoref{fig:plus-issue}には実際に作成したissueの例を示す．内容としてはソルバーのDiscriptionの中のスペルミスを指摘した簡単なものであるが，数日以内に@mark氏により該当箇所の修正が行われていることが確認できる．
+\autoref{fig:plus-issue}には実際に作成したissueの例を示す．内容としてはソルバーのDescriptionの中のスペルミスを指摘した簡単なものであるが，数日以内に@mark氏により該当箇所の修正が行われていることが確認できる．
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/plus_issue.png}
@@ -192,7 +192,7 @@ ESI版の開発はGitLabで行われている．\cite{URL:GitLab-plus}
 
 一方で，pushやPull Requestなどのコードの変更を行うための権限は制限されている．
 このため，ESI版OpenFOAMのコードにコントリビュートする手段としては，開発メンバーに加わらない限りはissueの作成もしくはissue内の議論へ参加することに限られる．
-なお2019年11月現在OpenFOAM-plusの開発メンバーは15名であり，実力や面識，貢献頻度が担保されたメンバーで開発を行っていることが推察される．\cite{URL:GitLab-plus-members}
+なお2019年11月現在OpenFOAM-plusの開発メンバーは15名であり，実力や面識，貢献頻度が担保されたメンバーで開発を行っていることが推察される．\cite{URL:GitLab-plus}
 %
 \section{Foundation版コントリビュート方法}
 
@@ -319,8 +319,6 @@ OpenFOAMの開発においてもGitが使用されている．
 \end{shbox}
 
 貢献をしたい場合は，OpenFOAM-jpのリポジトリを自分のアカウントにForkする．
-
-TODO: Forkの際の画面キャプチャを挿入する．
 
 Fork後は自分のアカウントのリポジトリをcloneする．
 
@@ -468,12 +466,9 @@ branch\_name には任意の名前を入れる．
   \shline{}{git push origin branch\_name}
 \end{shbox}
 
-TODO: コマンドのメッセージを含める
 
 このコマンドのメッセージに図のようなURLが表示される．
 URLにアクセスしプルリクエストを作成する．
-
-TODO: GetFEMのドキュメントから引用を行っているため言及する．
 
 GetFEM++ のマスターブランチにマージすることは許可されていないので，あなたの役割はここで終わる．
 プルリクエストのページで管理者や他の開発者と議論することができる．
@@ -541,9 +536,6 @@ after_success:
 - bash <(curl -s https://codecov.io/bash)
 \end{lstlisting}
 
-TODO Travis CIについてWikipediaからの引用であることを明記する．
-
-TODO 継続的インテグレーションサービスについてWikipediaからの引用であることを明記する．
 %
 \section{OpeFOAM-jp}
 OpenFOAM-jp\cite{URL:OpenFOAM-jp}は今回立ち上がったコミュニティの活動を行うためのGiuHubレポジトリである．
