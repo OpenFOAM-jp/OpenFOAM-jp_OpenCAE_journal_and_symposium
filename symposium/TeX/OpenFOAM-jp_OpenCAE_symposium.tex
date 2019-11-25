@@ -170,7 +170,7 @@ OpenFOAMは，Imperial Collageで開発された商用CFDコードFOAM(Field Ope
 本報告ではこのFoudation版とESI版の2つについてコントリビュートの流れなどを報告する．
 %
 \section{ESI版コントリビュート方法}
-ESI版の開発はGitLabで行われている．[develop.openfoam.com/Development/OpenFOAM-plus](develop.openfoam.com/Development/OpenFOAM-plus)
+ESI版の開発はGitLabで行われている．\cite{URL:GitLab-plus}
 このページからレポジトリをcloneすることができ，これをそのままコンパイルすることで次期リリース予定のESI版OpenFOAMを使用することができる．
 またここには開発途中のbranchが多くあり，将来的に追加されるであろう機能をチェックすることもできる．
 
@@ -209,16 +209,36 @@ Foundation版HPのメニューバーのDevelopment/ContributorAgreeementのリ�
 
 バグの修正などでFoundation版のOpenFOAMの修正を開発元に共有する場合，Foundation版のOpenFOAMはgithub上で管理されているため，githubアカウントが必要となる．
 
-コントリビュートで最初に行うことは開発元のリポジトリをForkすることから始まる．
+コントリビュートで最初に行うことは開発元のリポジトリをForkすることから始まる．(\autoref{fig:f1})
 Forkしたことにより，自身のgithubアカウントにOpenFOAMのリポジトリが作成されていることが確認できる．
-次に開発用の新しいブランチを作成する．ブランチ名は「(開発者名)-patch***」などとするとよいだろう．今回の例では「matsubara-patch1」とした．
+次に開発用の新しいブランチを作成する．ブランチ名は「(開発者名)-patch***」などとするとよいだろう．今回の例では「matsubara-patch1」とした．(\autoref{fig:f2})
 
-\includegraphics[width=5cm]{fig/fig-f1.png}
-\includegraphics[width=5cm]{fig/fig-f2.png}
+\begin{figure}[htbp]
+\centering
+\subfigure[A fork button of Github page]{
+  \includegraphics[width=0.8\textwidth]{fig/fig-f1.png}
+  \label{fig:f1}
+}
+%\hspace{0.1\textwidth}
+\subfigure[Creating new branch]{
+  \includegraphics[width=0.8\textwidth]{fig/fig-f2.png}
+  \label{fig:f2}
+}
+\caption{A Explication to fork OpenFOAM-dev repository and to create your new branch.}
+\label{fig:f1f2}
+\end{figure}
+%\includegraphics[width=5cm]{fig/fig-f1.png}
+%\includegraphics[width=5cm]{fig/fig-f2.png}
 
-次に個人の開発環境に移りターミナル上でgit cloneを行う．例：git clone https://github.com/(githubアカウント名)/OpenFOAM-dev.git
+次に個人の開発環境に移りターミナル上でgit cloneを行う．(\autoref{fig:f3})例：git clone https://github.com/(githubアカウント名)/OpenFOAM-dev.git
 これによって，git cloneしたディレクトリ下にOpenFOAMのプロジェクトがコピーされる．
-\includegraphics[width=5cm]{fig/fig-f3.png}
+%\includegraphics[width=5cm]{fig/fig-f3.png}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/fig-f3.png}
+\caption{Cloning repository on your local machine.}
+\label{fig:f3}
+\end{figure}
 
 次にgit checkoutにて作成したブランチに切り替える 例：git checkout (開発者名)-patch***
 OpenFOAMのプロジェクト内で修正や開発が完了した後，
@@ -244,57 +264,71 @@ git add . git commit -m "変更内容のコメント" git push origin (開発者
 
 
 
-最後にgithub上でpull requestを開発元に対して行う．この時コメントに
+最後にgithub上でpull requestを開発元に対して行う．(\autoref{fig:f4})この時コメントに
 Fixes issue:
 https://bugs.openfoam.org/view.php?id=****
-の様に最初に議論したissueのURLを添付するのが慣例のようである．
+の様に最初に議論したissueのURLを添付するのが慣例のようである．(\autoref{fig:f5})
 
-\includegraphics[width=5cm]{fig/fig-f4.png}
-\includegraphics[width=5cm]{fig/fig-f5.png}
+%\includegraphics[width=5cm]{fig/fig-f4.png}
+%\includegraphics[width=5cm]{fig/fig-f5.png}
+\begin{figure}[htbp]
+\centering
+\subfigure[Pull request your branch into the master branch.]{
+  \includegraphics[width=0.8\textwidth]{fig/fig-f4.png}
+  \label{fig:f4}
+}
+%\hspace{0.1\textwidth}
+\subfigure[Add your message to pull request.]{
+  \includegraphics[width=0.8\textwidth]{fig/fig-f5.png}
+  \label{fig:f5}
+}
+\caption{A explication to pull request your branch into the master branch.}
+\label{fig:f4f5}
+\end{figure}
 
 
 \section{Gitの使い方}
 本節では https://github.com/OpenFOAM-jp/OpenFOAM-jp.git 
-のリポジトリにコントリビュートの練習をする方法について解説する。
-環境はUbuntu18.04の環境を想定する。
-事前に{GitHub}のアカウントを作成する必要がある。
-コントリビュートをする際にはまず、Issueを立て自分が加えたい変更について議論する。
-Issueを立てる際には以下の内容が含まれていることが望ましい。
+のリポジトリにコントリビュートの練習をする方法について解説する．
+環境はUbuntu18.04の環境を想定する．
+事前に{GitHub}のアカウントを作成する必要がある．
+コントリビュートをする際にはまず，Issueを立て自分が加えたい変更について議論する．
+Issueを立てる際には以下の内容が含まれていることが望ましい．
 \begin{itemize}
-  \item 機能の簡単な説明。問題が何であるかの明確で簡潔な説明。
-  \item 希望するソリューションの説明。あなたが何をしたいのかについての明確で簡潔な説明。
-  \item 検討した代替案を説明。検討した代替ソリューションまたは機能の明確で簡潔な説明。
-  \item 追加のコンテキスト。機能リクエストに関する他のコンテキストまたはスクリーンショットをここに追加します。
+  \item 機能の簡単な説明．問題が何であるかの明確で簡潔な説明．
+  \item 希望するソリューションの説明．あなたが何をしたいのかについての明確で簡潔な説明．
+  \item 検討した代替案を説明．検討した代替ソリューションまたは機能の明確で簡潔な説明．
+  \item 追加のコンテキスト．機能リクエストに関する他のコンテキストまたはスクリーンショットをここに追加します．
 \end{itemize}
-OSSのコントリビュートのバージョン管理ソフトにはGitが一般的に使用されている。
-OpenFOAMの開発においてもGitが使用されている。
-まずは、Gitをインストールする。
+OSSのコントリビュートのバージョン管理ソフトにはGitが一般的に使用されている．
+OpenFOAMの開発においてもGitが使用されている．
+まずは，Gitをインストールする．
 
 \begin{shbox}
   \shuser{user}
   \shline{}{sudo apt install git}
 \end{shbox}
 
-必要なのはソースだけで貢献しないのであれば、次のコマンドでクローンすることで作業は終わる。
+必要なのはソースだけで貢献しないのであれば，次のコマンドでクローンすることで作業は終わる．
 
 \begin{shbox}
   \shuser{user}
   \shline{}{git clone https://github.com/OpenFOAM-jp/OpenFOAM-jp.git}
 \end{shbox}
 
-貢献をしたい場合は、OpenFOAM-jpのリポジトリを自分のアカウントにフォークする。
+貢献をしたい場合は，OpenFOAM-jpのリポジトリを自分のアカウントにフォークする．
 
-TODO: フォークの際の画面キャプチャを挿入する。
+TODO: フォークの際の画面キャプチャを挿入する．
 
-フォーク後は自分のアカウントのリポジトリをクローンする。
+フォーク後は自分のアカウントのリポジトリをクローンする．
 
 \begin{shbox}
   \shuser{user}
   \shline{}{git clone https://github.com/your\_account\_name/OpenFOAM-jp.git}
 \end{shbox}
 
-クローンをしたら自分の環境で実行環境を構築する。
-まずは、OpenFOAMを動かすために必要な外部ライブラリをインストールする。
+クローンをしたら自分の環境で実行環境を構築する．
+まずは，OpenFOAMを動かすために必要な外部ライブラリをインストールする．
 
 \begin{shbox}
   \shuser{user}
@@ -348,7 +382,7 @@ TODO: フォークの際の画面キャプチャを挿入する。
   \shline{}{sudo apt install curl}
 \end{shbox}
 
-次に、OpenFOAMのbashrcをターミナル起動時に読み込むように~/.bashrcに登録する。
+次に，OpenFOAMのbashrcをターミナル起動時に読み込むように~/.bashrcに登録する．
 
 \begin{shbox}
   \shuser{user}
@@ -356,10 +390,10 @@ TODO: フォークの際の画面キャプチャを挿入する。
   \shline{}{. ~/.bashrc}
 \end{shbox}
 
-ThirdPartyの中のParaViewをインストールする。
-この際にpythonを登録するとParaViewのpython拡張機能が使用可能になる。
-既にParaViewをインストールしている場合であっても、このParaViewはOpenFOAMの結果表にのプラグインなども同梱しているため、
-以下の手順でもう一つインストールすることを推奨する。
+ThirdPartyの中のParaViewをインストールする．
+この際にpythonを登録するとParaViewのpython拡張機能が使用可能になる．
+既にParaViewをインストールしている場合であっても，このParaViewはOpenFOAMの結果表にのプラグインなども同梱しているため，
+以下の手順でもう一つインストールすることを推奨する．
 
 \begin{shbox}
   \shuser{user}
@@ -367,7 +401,7 @@ ThirdPartyの中のParaViewをインストールする。
   \shline{}{./makeParaView -python -python-lib /usr/lib/x86\_64-linux-gnu/libpython2.7.so.1.0}
 \end{shbox}
 
-最後にOpenFOAMをインストールする。
+最後にOpenFOAMをインストールする．
 
 \begin{shbox}
   \shuser{user}
@@ -376,7 +410,7 @@ ThirdPartyの中のParaViewをインストールする。
   \shline{}{./Allwmake -j | tee log.Allwmake}
 \end{shbox}
 
-ソルバーを動かしてインストールの確認を行う。
+ソルバーを動かしてインストールの確認を行う．
 
 \begin{shbox}
   \shuser{user}
@@ -388,9 +422,9 @@ ThirdPartyの中のParaViewをインストールする。
   \shline{}{paraFoam}
 \end{shbox}
 
-これでParaViewが起動されて結果の表示ができたら完成である。
-テストが全てパスしたらソースを変更する。
-masterブランチで直接変更することはできないため、ファイルを変更する前に開発ブランチを作成する。
+これでParaViewが起動されて結果の表示ができたら完成である．
+テストが全てパスしたらソースを変更する．
+masterブランチで直接変更することはできないため，ファイルを変更する前に開発ブランチを作成する．
 
 \begin{shbox}
   \shuser{user}
@@ -401,11 +435,11 @@ masterブランチで直接変更することはできないため、ファイ�
   \shline{}{git checkout branch\_name}
 \end{shbox}
 
-branch\_name には任意の名前を入れる。
-自分のアカウント名と加えたい変更について言及されていると分かりやすい。
-最初のコマンドでブランチを作成し、2番目のコマンドでブランチに移動する。
-これにより、変更を行う準備はほぼ完了である。
-変更のラベルを付けるために、連絡先の名前と電子メールを以下のコマンドで指定する。
+branch\_name には任意の名前を入れる．
+自分のアカウント名と加えたい変更について言及されていると分かりやすい．
+最初のコマンドでブランチを作成し，2番目のコマンドでブランチに移動する．
+これにより，変更を行う準備はほぼ完了である．
+変更のラベルを付けるために，連絡先の名前と電子メールを以下のコマンドで指定する．
 
 \begin{shbox}
   \shuser{user}
@@ -413,10 +447,10 @@ branch\_name には任意の名前を入れる。
   \shline{}{git config --global user.email you@yourdomain.example.com}
 \end{shbox}
 
-もし src/toto.cc というファイルをいくつか変更したり、新しいファイルとして追加したら、
-ローカルのコミットは次のコマンドで行う。
-"Your extensive commit message here \#1" には変更に関するメッセージを追加する。
-\#1の部分は自分が追加したイシューの番号とする。
+もし src/toto.cc というファイルをいくつか変更したり，新しいファイルとして追加したら，
+ローカルのコミットは次のコマンドで行う．
+"Your extensive commit message here \#1" には変更に関するメッセージを追加する．
+\#1の部分は自分が追加したイシューの番号とする．
 
 \begin{shbox}
   \shuser{user}
@@ -424,8 +458,8 @@ branch\_name には任意の名前を入れる。
   \shline{}{git commit -m "Your extensive commit message here \#1"}
 \end{shbox}
 
-この段階ではコミットはあなたのローカルリポジトリで行われていますが、GitHubリポジトリでは行われない。
-十分なテストで変更を検証したら、以下のコマンドでGitHubの自分のアカウントのリポジトリに変更を移すことができる。
+この段階ではコミットはあなたのローカルリポジトリで行われていますが，GitHubリポジトリでは行われない．
+十分なテストで変更を検証したら，以下のコマンドでGitHubの自分のアカウントのリポジトリに変更を移すことができる．
 
 \begin{shbox}
   \shuser{user}
@@ -434,16 +468,16 @@ branch\_name には任意の名前を入れる。
 
 TODO: コマンドのメッセージを含める
 
-このコマンドのメッセージに図のようなURLが表示される。
-URLにアクセスしプルリクエストを作成する。
+このコマンドのメッセージに図のようなURLが表示される．
+URLにアクセスしプルリクエストを作成する．
 
-TODO: GetFEMのドキュメントから引用を行っているため言及する。
+TODO: GetFEMのドキュメントから引用を行っているため言及する．
 
-GetFEM++ のマスターブランチにマージすることは許可されていないので、あなたの役割はここで終わる。
-プルリクエストのページで管理者や他の開発者と議論することができる。
-管理者が承認した場合には変更がマージされる。
+GetFEM++ のマスターブランチにマージすることは許可されていないので，あなたの役割はここで終わる．
+プルリクエストのページで管理者や他の開発者と議論することができる．
+管理者が承認した場合には変更がマージされる．
 
-いくつかの便利なgitコマンドを示す。
+いくつかの便利なgitコマンドを示す．
 
 \begin{shbox}
   \shuser{user}
@@ -453,12 +487,12 @@ GetFEM++ のマスターブランチにマージすることは許可されて�
 \end{shbox}
 
 \section{GitHub および Travis による継続的インテグレーション}
-Travis CIは、GitHub上のソフトウェアのビルドやテストを行う、オンラインで分散型の継続的インテグレーション (CI) サービスである。
-継続的インテグレーションサービスとは、ビルドやテストを継続的に自動実行するサービスである。
-継続的インテグレーションを行うことにより、機能追加やリファクタリングによるデグレードを防ぐことができる。
-以下に、GetFEM++で使用している.travis.ymlを示す。
-リポジトリにymlファイルを追加することで、Travisによるインテグレーションテストが実行される。
-今後OpenFOAMのリポジトリでもCIが実行できるようにする予定である。
+Travis CIは，GitHub上のソフトウェアのビルドやテストを行う，オンラインで分散型の継続的インテグレーション (CI) サービスである．
+継続的インテグレーションサービスとは，ビルドやテストを継続的に自動実行するサービスである．
+継続的インテグレーションを行うことにより，機能追加やリファクタリングによるデグレードを防ぐことができる．
+以下に，GetFEM++で使用している.travis.ymlを示す．
+リポジトリにymlファイルを追加することで，Travisによるインテグレーションテストが実行される．
+今後OpenFOAMのリポジトリでもCIが実行できるようにする予定である．
 \begin{lstlisting}
 language: python
 python:
@@ -505,9 +539,9 @@ after_success:
 - bash <(curl -s https://codecov.io/bash)
 \end{lstlisting}
 
-TODO Travis CIについてWikipediaからの引用であることを明記する。
+TODO Travis CIについてWikipediaからの引用であることを明記する．
 
-TODO 継続的インテグレーションサービスについてWikipediaからの引用であることを明記する。
+TODO 継続的インテグレーションサービスについてWikipediaからの引用であることを明記する．
 %
 \section{OpeFOAM-jp}
 OpenFOAM-jp\cite{URL:OpenFOAM-jp}は今回立ち上がったコミュニティの活動を行うためのGiuHubレポジトリである．
