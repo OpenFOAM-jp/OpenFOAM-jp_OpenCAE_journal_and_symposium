@@ -214,6 +214,7 @@ Issueを立てる際には以下の内容が含まれていることが望まし
   \item 希望するソリューションの説明。あなたが何をしたいのかについての明確で簡潔な説明。
   \item 検討した代替案を説明。検討した代替ソリューションまたは機能の明確で簡潔な説明。
   \item 追加のコンテキスト。機能リクエストに関する他のコンテキストまたはスクリーンショットをここに追加します。
+\end{itemize}
 OSSのコントリビュートのバージョン管理ソフトにはGitが一般的に使用されている。
 OpenFOAMの開発においてもGitが使用されている。
 まずは、Gitをインストールする。
@@ -246,10 +247,54 @@ TODO: フォークの際の画面キャプチャを挿入する。
 
 \begin{shbox}
   \shuser{user}
-  \shline{}{sudo apt update && sudo apt upgrade}
-  \shline{}{sudo apt install git-core build-essential cmake libfl-dev bison zlib1g-dev qt4-dev-tools libqt4-dev libqtwebkit-dev gnuplot \
-libreadline-dev libncurses-dev libxt-dev libopenmpi-dev openmpi-bin libboost-system-dev libboost-thread-dev libgmp-dev \
-libmpfr-dev python python-dev libcgal-dev curl}
+  \shline{}{sudo apt update}
+  \shline{}{sudo apt upgrade}
+  \shline{}{sudo apt install git-core}
+  \shline{}{sudo apt install build-essential}
+  \shline{}{sudo apt install cmake}
+  \shline{}{sudo apt install libfl-dev}
+  \shline{}{sudo apt install bison}
+  \shline{}{sudo apt install zlib1g-dev}
+  \shline{}{sudo apt install qt4-dev-tools}
+  \shline{}{sudo apt install libqt4-dev}
+  \shline{}{sudo apt install libqtwebkit-dev}
+  \shline{}{sudo apt install gnuplot}
+  \shline{}{sudo apt install libreadline-dev}
+  \shline{}{sudo apt install libncurses-dev}
+  \shline{}{sudo apt install libxt-dev}
+  \shline{}{sudo apt install libopenmpi-dev}
+  \shline{}{sudo apt install openmpi-bin}
+  \shline{}{sudo apt install libboost-system-dev}
+  \shline{}{sudo apt install libboost-thread-dev}
+  \shline{}{sudo apt install libgmp-dev}
+  \shline{}{sudo apt install libmpfr-dev}
+  \shline{}{sudo apt install python}
+  \shline{}{sudo apt install python-dev}
+  \shline{}{sudo apt install libcgal-dev}
+  \shline{}{sudo apt install curl}
+  \shline{}{sudo apt install git-core}
+  \shline{}{sudo apt install build-essential}
+  \shline{}{sudo apt install cmake}
+  \shline{}{sudo apt install libfl-dev}
+  \shline{}{sudo apt install bison}
+  \shline{}{sudo apt install zlib1g-dev}
+  \shline{}{sudo apt install qt4-dev-tools}
+  \shline{}{sudo apt install libqt4-dev}
+  \shline{}{sudo apt install libqtwebkit-dev}
+  \shline{}{sudo apt install gnuplot}
+  \shline{}{sudo apt install libreadline-dev}
+  \shline{}{sudo apt install libncurses-dev}
+  \shline{}{sudo apt install libxt-dev}
+  \shline{}{sudo apt install libopenmpi-dev}
+  \shline{}{sudo apt install openmpi-bin}
+  \shline{}{sudo apt install libboost-system-dev}
+  \shline{}{sudo apt install libboost-thread-dev}
+  \shline{}{sudo apt install libgmp-dev}
+  \shline{}{sudo apt install libmpfr-dev}
+  \shline{}{sudo apt install python}
+  \shline{}{sudo apt install python-dev}
+  \shline{}{sudo apt install libcgal-dev}
+  \shline{}{sudo apt install curl}
 \end{shbox}
 
 次に、OpenFOAMのbashrcをターミナル起動時に読み込むように~/.bashrcに登録する。
@@ -267,8 +312,8 @@ ThirdPartyの中のParaViewをインストールする。
 
 \begin{shbox}
   \shuser{user}
-  \shline{}{cd $WM_THIRD_PARTY_DIR}
-  \shline{}{./makeParaView -python -python-lib /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0 | tee log.makeParaView}
+  \shline{}{cd \$WM\_THIRD\_PARTY\_DIR}
+  \shline{}{./makeParaView -python -python-lib /usr/lib/x86\_64-linux-gnu/libpython2.7.so.1.0}
 \end{shbox}
 
 最後にOpenFOAMをインストールする。
@@ -276,7 +321,7 @@ ThirdPartyの中のParaViewをインストールする。
 \begin{shbox}
   \shuser{user}
   \shline{}{wmRefresh}
-  \shline{}{cd $WM_PROJECT_DIR}
+  \shline{}{cd \$WM\_PROJECT\_DIR}
   \shline{}{./Allwmake -j | tee log.Allwmake}
 \end{shbox}
 
@@ -284,8 +329,9 @@ ThirdPartyの中のParaViewをインストールする。
 
 \begin{shbox}
   \shuser{user}
-  \shline{}{mkdir $WM_PROJECT_USER_DIR && cd $WM_PROJECT_USER_DIR}
-  \shline{}{cp -r $FOAM_TUTORIALS/basic/potentialFoam/pitzDaily/ ./}
+  \shline{}{mkdir \$WM\_PROJECT\_USER\_DIR}
+  \shline{}{cd \$WM\_PROJECT\_USER\_DIR}
+  \shline{}{cp -r \$FOAM\_TUTORIALS/basic/potentialFoam/pitzDaily/ ./}
   \shline{}{cd pitzDaily/}
   \shline{}{foamRunTutorials}
   \shline{}{paraFoam}
@@ -297,11 +343,11 @@ masterブランチで直接変更することはできないため、ファイ�
 
 \begin{shbox}
   \shuser{user}
-  \shline{}{git branch branch_name}
+  \shline{}{git branch branch\_name}
 \end{shbox}
 \begin{shbox}
   \shuser{user}
-  \shline{}{git checkout branch_name}
+  \shline{}{git checkout branch\_name}
 \end{shbox}
 
 branch\_name には任意の名前を入れる。
