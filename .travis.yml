@@ -17,11 +17,11 @@ script:
 - cd ../../
 after_success:
 - git branch -a
-- git checkout develop
+- git checkout master
 - git add symposium/TeX/*.pdf
 - |
   git commit -m "[skip ci] by Travis CI (JOB $TRAVIS_JOB_NUMBER)
   https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 - git remote -v
 - git remote add github git@github.com:OpenFOAM-jp/OpenFOAM-jp_OpenCAE_journal_and_symposium.git
-- git push github develop
+- git push github master
