@@ -1,6 +1,6 @@
 ### OpenFOAMコントリビュート活動
 
-- @inabower
+- 稲葉竜一
 - @tkoyama010
 - 松原大輔
 
@@ -8,32 +8,120 @@
 
 ### 目次
 
-- OpenFOAM
-- Open Source Software
-- コントリビュート活動
-- OpenFOAM-jp
+- OpenFOAM Foundation版とESI版の違い
+- ESI版のコントリビュート方法
+- Foundation版のコントリビュート方法
+- Gitの使い方
+- GitHub および Travis による継続的インテグレーション
+- OpeFOAM-jp
 
 ---
+
+## OpenFOAM Foundation版とESI版の違い
+
++++
 
 ### OpenFOAM
 
-- オープンソースのCFDライブラリ
-- 他説明
+- Imperial Collageで開発された商用ソルバー"FOAM"がベース
+- 2004年にオープンソース化
+- その後いくつかのForkができる
+  - Foundation版：OpenFOAM Foundation Inc.によるFork
+  - ESI版：ESI社とOpenCFD社によるFork
+  - foam-extend:
+  - RapidCFD:
+  
++++
+
+## ESI版のコントリビュート方法
+
++++
+
+### GitLab
+
+TODO: GitLabのスクショ
+TODO: 登録方法
+TODO: 
+
++++
+
+### issue報告してみた
+
+TODO: 画像→OK
+TODO: 内容→OK
+TODO: 
 
 ---
 
-### Open Source Software
+## Foundation版のコントリビュート方法
 
-- 「みんなの協力が必要ですよ」的な説明
++++
+
+### GitHub
+
++++
+
+### Reporter登録
+
++++
+
+### Pull Requestを送ってみた
 
 ---
 
-### コントリビュート活動
+## Gitの使い方
 
-- 寄付
-- バグ報告
-- ローカライズ（翻訳、講習、普及活動）
-- 開発
+TODO: イシューの立て方
+TODO: ブランチの考え方
+TODO: プルリクエストの立て方
+
++++
+
+### git clone：OpenFOAM-jpの導入
+
++++
+
+### ブランチを切る
+
++++
+
+### プルリクエストを送る
+
+---
+
+## GitHub および Travis による継続的インテグレーション
+
++++
+
+### 動作例
+
++++
+
+### .travis.ymlの例
+
+---
+
+## OpeFOAM-jp
+
++++
+
+### 目的
+
++++
+
+### issues
+
++++
+
+### OpenFOAM-jp
+
++++
+
+### OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp
+
+---
+
++++
 
 ---
 
@@ -47,15 +135,3 @@ TODO: DockerFileを使ったバク報告の方法
 
 TODO: Omegatを使用したドキュメント翻訳
 TODO: エラーメッセージの翻訳について
-
----
-
-### 開発
-
-TODO: イシューの立て方
-TODO: ブランチの考え方
-TODO: プルリクエストの立て方
-
----
-
-### OpenFOAM-jp
