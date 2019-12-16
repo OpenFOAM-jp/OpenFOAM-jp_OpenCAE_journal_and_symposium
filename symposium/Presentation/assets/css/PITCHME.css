@@ -1,0 +1,16 @@
+/* Enable List Bullet Icons */
+.list-no-bullets { list-style-type : none !important; }
+
+/* Enable Huge Icons */
+.fa-huge { font-size : 15em; color: #eba3ff; }
+
+/* Custom Icons Colors */
+.fa-pink { color : #eba3ff; }
+.fa-peach { color : #ffa6b9; }
+.fa-lime { color : #b9ff66; }
+
+@import url("https://fonts.googleapis.com/css?family=Kosugi+Maru");
+ 
+ .reveal {
+    font-family: 'Kosugi Maru', sans-serif;
+}

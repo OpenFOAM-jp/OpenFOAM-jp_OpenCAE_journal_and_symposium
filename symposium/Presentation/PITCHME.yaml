@@ -10,3 +10,5 @@ theme-controls   : [ "#484848" ]
 theme-margins    : [ "0", "15px" ]
 
 highlight        : tomorrow
+
+theme-override : assets/css/PITCHME.css
