@@ -95,6 +95,11 @@
 
 ### GitHub
 
+```cpp
+#include "a.h"
+
+int test = 2;
+
 +++
 
 ### Reporter登録
