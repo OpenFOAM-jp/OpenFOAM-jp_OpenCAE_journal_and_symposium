@@ -35,7 +35,7 @@
 
 ## gitを使ったOSSの開発
   
-![GitHub Register](symposium/Presentation/fig/git.png)
+![git all](symposium/Presentation/fig/git.png)
 
 +++
 
@@ -45,7 +45,7 @@
 - GitHubの場合はコミットのコメントに`#12`の様に記載するとissueにもそのコミットが追加される
 - 気づいたことはこまめにコメントを残す
   
-![GitHub Register](symposium/Presentation/fig/gitissue.png)
+![GitHub issue](symposium/Presentation/fig/gitissue.png)
 
 +++
 
@@ -55,7 +55,7 @@
 - 本体への影響を与えない
 - 不具合発生時に問題の切り分けなどが容易になる
 
-![GitHub Register](symposium/Presentation/fig/PR2.png)
+![GitHub branch](symposium/Presentation/fig/PR2.png)
 
 +++
 
@@ -64,7 +64,7 @@
 - リモートとのやりとり : clone（ダウンロード）、pull（更新）、push（アップロード）
 - ローカル : checkout（branch切り替えor作成）、add（選択）、commit（登録）
 
-![GitHub Register](symposium/Presentation/fig/gitlocal.png)
+![git operation](symposium/Presentation/fig/gitlocal.png)
 
 +++
 
@@ -92,8 +92,7 @@ $ git push
 
 ### プルリクエストを送る
 
-- pushした変更をdevelopに統合するためにPull Requestを送る
-- 
+![git operation](symposium/TeX/fig/fig-f4.png)
 
 ---
 
