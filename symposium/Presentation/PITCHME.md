@@ -56,7 +56,7 @@
   - 機能の要望
   - 導入予定の機能の審議と開発
 
-![gitlabIssues](symposium/Presentation/fig/gitlabIssues.png&size=50%)
+![gitlabIssues](symposium/Presentation/fig/gitlabIssues.png&size=50% auto)
 
 +++
 
