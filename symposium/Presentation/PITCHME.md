@@ -50,17 +50,13 @@
 
 ### issue
 
----?image=symposium/Presentation/fig/gitlabIssues.png
+---?image=symposium/Presentation/fig/gitlabIssues.png&size=auto 60%
 
 - 登録を行うとissueを立てることができるようになる
 - issueでは以下のような議論が行われている
   - バグ報告
   - 機能の要望
   - 導入予定の機能の審議と開発
-
-<!----
-![gitlabIssues](symposium/Presentation/fig/gitlabIssues.png | width=60)
---->
 
 +++
 
