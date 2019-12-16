@@ -40,6 +40,7 @@
 ### GitLab
 
 - ESI版は[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発されている
+- この中の最新リリース版がOpenFOAM-v1906
 - GitLabは各開発レポジトリ毎にユーザー登録を行う必要がある
 - 登録はページの右上のRegisterボタンから行うことができる
 - `git clone`によりダウンロード可能
@@ -94,6 +95,72 @@
 
 ### GitHub
 
+- Foundation版は[OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub上で開発されている
+- この中の最新リリース版がOpenFOAM-V7
+- `git clone`のみであればGitHubアカウントの登録も必要ない
+
+![GitLab Register](symposium/Presentation/fig/openfoam-dev-top-page.png)
+
++++
+
+### Foundation版のissue
+
+- Foundation版のissueはGitHub上ではなくissueTrackingで行われる
+- 専用ページから必要情報を入力して申請するとviewerとして登録される
+- スパムでないことを確認されると数時間後に権限がReporterに変化し、issueへ参加が可能になる
+
+<img src="symposium/Presentation/fig/issueTracking.png" title="git issue sample" width="500">
+
++++
+
+## Pull Requestを送ってみた
+
+1. まずは自分のGitHubアカウントを作る
+2. issueTrackingに登録
+3. issueを立てる
+4. OpenFOAM-devを自分のレポジトリにForkする
+5. ブランチを作成する
+6. `git clone`で自分のローカルマシンへダウンロード
+7. 内容を変更する
+8. 自分のブランチへプッシュする
+9. OpenFOAM-devのdevelopブランチへPull Requestを送る
+
++++
+
+### 自分のForkの作成
+
+![myFork](symposium/Tex/fig/fig-f1.png)
+
++++
+
+### ブランチの作成
+
+![myFork](symposium/Tex/fig/fig-f2.png)
+
++++
+
+### `git clone`で自分のローカルマシンへダウンロード
+
+![myFork](symposium/Tex/fig/fig-f3.png)
+
++++
+
+### Pull Requestを送る
+
+![myFork](symposium/Tex/fig/fig-f4.png)
+
+---
+
+## Gitの使い方
+
+TODO: イシューの立て方
+TODO: ブランチの考え方
+TODO: プルリクエストの立て方
+
++++
+
+### 基本操作（ターミナル）
+
 ```sh
 git checkout develop
 # 作業をする
@@ -106,22 +173,6 @@ git push develop origin
 @[2-3](作業したらaddで変更点を読み込む)
 @[4](コメントをつけてコミット)
 @[5](リモートブランチにプッシュ)
-
-+++
-
-### Reporter登録
-
-+++
-
-### Pull Requestを送ってみた
-
----
-
-## Gitの使い方
-
-TODO: イシューの立て方
-TODO: ブランチの考え方
-TODO: プルリクエストの立て方
 
 +++
 
