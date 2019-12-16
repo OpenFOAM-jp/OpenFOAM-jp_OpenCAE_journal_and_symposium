@@ -34,10 +34,8 @@
 ---
 
 ## gitを使ったOSSの開発
-
-- TODO: イシューの立て方
-- TODO: ブランチの考え方
-- TODO: プルリクエストの立て方
+  
+![GitHub Register](symposium/Presentation/fig/git.png)
 
 +++
 
@@ -46,26 +44,33 @@
 - バグ報告, 機能の要望, 導入予定の機能の審議と開発などについて議論する
 - GitHubの場合はコミットのコメントに`#12`の様に記載するとissueにもそのコミットが追加される
 - 気づいたことはこまめにコメントを残す
+  
+![GitHub Register](symposium/Presentation/fig/gitissue.png)
 
 +++
 
-### branchとPull Request
+### branchの考え方
 
-- branch
-  - 一つのプロジェクトを複数のバージョンとして管理可能
-  - 共同編集を行う場合には各自でbranchを作成してそれぞれ編集することが多い
-  - 一般的に**master→develop(開発途中)→各自のbranch**という形が多い
-- Pull Request(Merge Request)
-  - 作成したbranchを元のbranchに統合する操作
-  - 統合する前に議論の場を設けることができる
-  - 変更予定の差分を確認することもできる
-  - 複数で行うプロジェクトの場合にはPull Request権限を制限する場合もある
+- 目的別、作業者別に同時並行で編集可能
+- 本体への影響を与えない
+- 不具合発生時に問題の切り分けなどが容易になる
+
+![GitHub Register](symposium/Presentation/fig/PR2.png)
 
 +++
 
-### ローカルマシンでの変更操作
+### 手元のPCでの操作
+
+- リモートとのやりとり : clone（ダウンロード）、pull（更新）、push（アップロード）
+- ローカル : checkout（branch切り替えor作成）、add（選択）、commit（登録）
+
+![GitHub Register](symposium/Presentation/fig/gitlocal.png)
+
++++
+
+### 操作例
  
-ローカルマシンで自分のbranchを作成してアップロードする例
+ローカルで自分のbranchを作成してアップロードする例
 
 ```sh
 $ git clone https://github.com/myName/myProject.git
