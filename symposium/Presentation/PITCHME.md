@@ -44,7 +44,7 @@
 - 登録はページの右上のRegisterボタンから行うことができる
 - `git clone`によりダウンロード可能
 
-![GitLab Register](../TeX/fig/plus_register.png)
+![GitLab Register](symposium/TeX/fig/plus_register.png)
 
 +++
 
@@ -56,7 +56,7 @@
   - 機能の要望
   - 導入予定の機能の審議と開発
 
-![gitlabIssues](fig/gitlabIssues.png)
+![gitlabIssues](symposium/Presentation/fig/gitlabIssues.png)
 
 +++
 
@@ -74,7 +74,7 @@
 - 立ててから数日後に@mark氏により修正された
 - こういう細かな報告も重要
 
-![gitlab issue example](../TeX/fig/plus_issue.png)
+![gitlab issue example](symposium/TeX/fig/plus_issue.png)
 
 +++
 
