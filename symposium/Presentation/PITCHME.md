@@ -52,7 +52,7 @@
 
 <!-- ---?image=symposium/Presentation/fig/gitlabIssues.png&size=auto 60% -->
 
-- @size[60%](登録を行うとissueを立てることができるようになる)
+- 登録を行うとissueを立てることができるようになる
 - issueでは以下のような議論が行われている
   - バグ報告
   - 機能の要望
@@ -76,8 +76,7 @@
 - 立ててから数日後に@mark氏により修正された
 - こういう細かな報告も重要
 
-<!-- ![gitlab issue example](symposium/TeX/fig/plus_issue.png) -->
-<img src="symposium/Presentation/TeX/fig/plus_issue.png" title="git issue sample" width="500">
+<img src="symposium/TeX/fig/plus_issue.png" title="git issue sample" width="500">
 
 +++
 
@@ -96,6 +95,7 @@
 ### GitHub
 
 ```cpp
+// コードシンタックスのテスト
 #include "a.h"
 
 int test = 2;
