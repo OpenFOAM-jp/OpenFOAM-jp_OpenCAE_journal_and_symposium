@@ -94,12 +94,18 @@
 
 ### GitHub
 
-```cpp
-// コードシンタックスのテスト
-#include "a.h"
-
-int test = 2;
+```sh
+git checkout develop
+# 作業をする
+git add *
+git commit -m "#16 test"
+git push develop origin
 ```
+
+@[1]("develop"ブランチに切り替え)
+@[2-3](作業したらaddで変更点を読み込む)
+@[4](コメントをつけてコミット)
+@[5](リモートブランチにプッシュ)
 
 +++
 
