@@ -11,4 +11,4 @@ theme-margins    : [ "0", "15px" ]
 
 highlight        : tomorrow
 
-theme-override : assets/css/PITCHME.css
+theme-override : symposium/Presentation/assets/css/PITCHME.css
