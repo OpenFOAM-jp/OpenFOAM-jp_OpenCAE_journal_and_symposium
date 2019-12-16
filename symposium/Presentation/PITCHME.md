@@ -99,7 +99,7 @@
 - この中の最新リリース版がOpenFOAM-V7
 - `git clone`のみであればGitHubアカウントの登録も必要ない
 
-![GitLab Register](symposium/Presentation/fig/openfoam-dev-top-page.png)
+![GitHub Register](symposium/Presentation/fig/openfoam-dev-toppage.png)
 
 +++
 
@@ -129,7 +129,7 @@
 
 ### 自分のForkの作成
 
-![myFork](symposium/Tex/fig/fig-f1.png)
+![Create Fork](symposium/Tex/fig/fig-f1.png)
 
 +++
 
