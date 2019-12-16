@@ -41,8 +41,7 @@
 
 ### issue
 
-- バグ報告, 機能の要望, 導入予定の機能の審議と開発などについて議論する
-- GitHubの場合はコミットのコメントに`#12`の様に記載するとissueにもそのコミットが追加される
+- バグ報告, 機能の要望, 導入予定の機能の審議と開発など
 - 気づいたことはこまめにコメントを残す
   
 ![GitHub issue](symposium/Presentation/fig/gitissue.png)
@@ -61,8 +60,14 @@
 
 ### 手元のPCでの操作
 
-- リモートとのやりとり : clone（ダウンロード）、pull（更新）、push（アップロード）
-- ローカル : checkout（branch切り替えor作成）、add（選択）、commit（登録）
+- リモートとのやりとり : 
+  - clone（ダウンロード）
+  - pull（更新）
+  - push（アップロード）
+- ローカル : 
+  - checkout（branch切り替えor作成）
+  - add（選択）
+  - commit（登録）
 
 ![git operation](symposium/Presentation/fig/gitlocal.png)
 
@@ -70,7 +75,7 @@
 
 ### 操作例
  
-ローカルで自分のbranchを作成してアップロードする例
+ローカルで自分のbranchを作成してpush
 
 ```sh
 $ git clone https://github.com/myName/myProject.git
@@ -91,6 +96,8 @@ $ git push
 +++
 
 ### プルリクエストを送る
+
+GitHubなどのweb上で行う
 
 ![git operation](symposium/TeX/fig/fig-f4.png)
 
