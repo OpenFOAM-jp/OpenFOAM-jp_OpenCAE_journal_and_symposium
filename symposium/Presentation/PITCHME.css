@@ -9,84 +9,15 @@
 
 .reveal {
     font-family: 'Kosugi Maru', sans-serif !important;
-}
-
-.oSans {
-    font-family: 'Kosugi Maru', sans-serif !important;
-}
-.jSans {
-    font-family: 'Kosugi Maru', sans-serif !important;
-}
-.wSans {
-    font-family: 'Kosugi Maru', sans-serif !important;
-}
-.fSans {
-    font-family: 'Kosugi Maru', sans-serif !important;
-}
-.aSans {
-    font-family: 'Kosugi Maru', sans-serif !important;
-}
-.cCursive {
-    font-family: 'Kosugi Maru', cursive !important;
-}
-.rCursive {
-    font-family: 'Kosugi Maru', cursive !important;
-}
-
-
-.reveal section img {
-    border: 0;
-    box-shadow: none;
-}
-
-.reveal pre {
-    width: 120%;
-    margin-inline-start: -10%;
-    box-shadow : none;
+    font-size: 0.6em;
 }
 
 .reveal pre code {
-    font-size: 1em;
     font-family: 'Ubuntu Mono';
-    line-height: 1.2;
-    max-height: 600 !important;
-    opacity: 1;
-    border-radius: 10px;
-    width: 100%;
-    margin-inline-start: 0%;
-}
-
-.demo {
-    color: darkorange;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    font-style: bold;
 }
 
 .slide-title {
     color: orangered;
     text-transform: uppercase;
     font-size: 0.5em;
-}
-
-.box-title {
-    text-align: center;
-    color: #282828;
-    width: 33%;
-    border-radius: 10px;
-    padding: 5px 10px !important;
-}
-
-.box-title hr {
-    border-top: 2px solid black#282828;
-}
-
-.box-content {
-    background-color: darkorange;
-}
-
-.graph-trend {
-    width: 80%;
-    box-shadow : none;
 }
