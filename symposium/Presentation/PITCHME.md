@@ -106,10 +106,8 @@
 ### Foundation版のissue
 
 - Foundation版のissueはGitHub上ではなくissueTrackingで行われる
-- 専用ページから必要情報を入力して申請するとviewerとして登録される
-- スパムでないことを確認されると数時間後に権限がReporterに変化し、issueへ参加が可能になる
 
-<img src="symposium/Presentation/fig/issueTracking.png" title="git issue sample" width="500">
+<img src="symposium/Presentation/fig/issueTracking.png" title="git issue sample" width="600">
 
 +++
 
@@ -129,25 +127,25 @@
 
 ### 自分のForkの作成
 
-![Create Fork](symposium/Tex/fig/fig-f1.png)
+![Create Fork](symposium/TeX/fig/fig-f1.png)
 
 +++
 
 ### ブランチの作成
 
-![myFork](symposium/Tex/fig/fig-f2.png)
+![myFork](symposium/TeX/fig/fig-f2.png)
 
 +++
 
 ### `git clone`で自分のローカルマシンへダウンロード
 
-![myFork](symposium/Tex/fig/fig-f3.png)
+![myFork](symposium/TeX/fig/fig-f3.png)
 
 +++
 
 ### Pull Requestを送る
 
-![myFork](symposium/Tex/fig/fig-f4.png)
+![myFork](symposium/TeX/fig/fig-f4.png)
 
 ---
 
