@@ -39,17 +39,50 @@
 
 ### GitLab
 
-TODO: GitLabのスクショ
-TODO: 登録方法
-TODO: 
+- ESI版は[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発されている
+- GitLabは各開発レポジトリ毎にユーザー登録を行う必要がある
+- 登録はページの右上のRegisterボタンから行うことができる
+- `git clone`によりダウンロード可能
+
+![GitLab Register](../TeX/fig/plus_register.png)
 
 +++
 
-### issue報告してみた
+### issue
 
-TODO: 画像→OK
-TODO: 内容→OK
-TODO: 
+- 登録を行うとissueを立てることができるようになる
+- issueでは以下のような議論が行われている
+  - バグ報告
+  - 機能の要望
+  - 導入予定の機能の審議と開発
+
+![gitlabIssues](fig/gitlabIssues.png)
+
++++
+
+### issueの立て方
+
+- -issuesのページの右上のNew Issueボタンから作成する-
+- 12月頭からissue機能が使用できない状況
+- (v1912リリースの影響？)
+
++++
+
+### issueを立ててみた
+
+- 簡単なtypoのissue
+- 立ててから数日後に@mark氏により修正された
+- こういう細かな報告も重要
+
+![gitlab issue example](../TeX/fig/plus_issue.png)
+
++++
+
+### まとめ
+
+- ESI版はGitLabで開発されている
+- issueの作成は-誰でもできる-現在は権限が必要
+- 権限を得るためにはESI社との交渉が必要 
 
 ---
 
