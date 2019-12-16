@@ -50,19 +50,21 @@
 
 ### issue
 
----?image=symposium/Presentation/fig/gitlabIssues.png&size=auto 60%
+<!-- ---?image=symposium/Presentation/fig/gitlabIssues.png&size=auto 60% -->
 
-- 登録を行うとissueを立てることができるようになる
+- @size[60%](登録を行うとissueを立てることができるようになる)
 - issueでは以下のような議論が行われている
   - バグ報告
   - 機能の要望
   - 導入予定の機能の審議と開発
+  
+<img src="symposium/Presentation/fig/gitlabIssues.png" title="git issue sample" width="500">
 
 +++
 
 ### issueの立て方
 
-- -issuesのページの右上のNew Issueボタンから作成する-
+- ~~issuesのページの右上のNew Issueボタンから作成する~~
 - 12月頭からissue機能が使用できない状況
 - (v1912リリースの影響？)
 
@@ -74,7 +76,8 @@
 - 立ててから数日後に@mark氏により修正された
 - こういう細かな報告も重要
 
-![gitlab issue example](symposium/TeX/fig/plus_issue.png)
+<!-- ![gitlab issue example](symposium/TeX/fig/plus_issue.png) -->
+<img src="symposium/Presentation/TeX/fig/plus_issue.png" title="git issue sample" width="500">
 
 +++
 
