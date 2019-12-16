@@ -33,17 +33,73 @@
   
 ---
 
+## gitを使ったOSSの開発
+
+- TODO: イシューの立て方
+- TODO: ブランチの考え方
+- TODO: プルリクエストの立て方
+
++++
+
+### issue
+
+- バグ報告, 機能の要望, 導入予定の機能の審議と開発などについて議論する
+- GitHubの場合はコミットのコメントに`#12`の様に記載するとissueにもそのコミットが追加される
+- 気づいたことはこまめにコメントを残す
+
++++
+
+### branchとPull Request
+
+- branch
+  - 一つのプロジェクトを複数のバージョンとして管理可能
+  - 共同編集を行う場合には各自でbranchを作成してそれぞれ編集することが多い
+  - 一般的に**master→develop(開発途中)→各自のbranch**という形が多い
+- Pull Request(Merge Request)
+  - 作成したbranchを元のbranchに統合する操作
+  - 統合する前に議論の場を設けることができる
+  - 変更予定の差分を確認することもできる
+  - 複数で行うプロジェクトの場合にはPull Request権限を制限する場合もある
+
++++
+
+### ローカルマシンでの変更操作
+ 
+ローカルマシンで自分のbranchを作成してアップロードする例
+
+```sh
+$ git clone https://github.com/myName/myProject.git
+$ cd myProject
+$ git checkout develop
+$ git checkout -b my-branch-1
+# 作業をする
+$ git add *
+$ git commit -m "#16 test"
+$ git push
+```
+
+@[1-2](GutHubなどにあるリモートレポジトリからダウンロード)
+@[3](developブランチに切り替える)
+@[4](developブランチから派生したブランチを作成)
+@[5-8](変更が終わったら、変更ファイルを指定(add)→コメントをつけて登録(commit)→リモートへアップロード(push))
+
++++
+
+### プルリクエストを送る
+
+- pushした変更をdevelopに統合するためにPull Requestを送る
+- 
+
+---
+
 ## ESI版のコントリビュート方法
 
 +++
 
 ### GitLab
 
-- ESI版は[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発されている
+- [OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発
 - この中の最新リリース版がOpenFOAM-v1906
-- GitLabは各開発レポジトリ毎にユーザー登録を行う必要がある
-- 登録はページの右上のRegisterボタンから行うことができる
-- `git clone`によりダウンロード可能
 
 ![GitLab Register](symposium/TeX/fig/plus_register.png)
 
@@ -53,13 +109,9 @@
 
 <!-- ---?image=symposium/Presentation/fig/gitlabIssues.png&size=auto 60% -->
 
-- 登録を行うとissueを立てることができるようになる
-- issueでは以下のような議論が行われている
-  - バグ報告
-  - 機能の要望
-  - 導入予定の機能の審議と開発
+議論対象：バグ報告, 機能の要望, 導入予定の機能の審議と開発など
   
-<img src="symposium/Presentation/fig/gitlabIssues.png" title="git issue sample" width="500">
+![issue sample](symposium/Presentation/fig/gitlabIssues.png)
 
 +++
 
@@ -74,10 +126,8 @@
 ### issueを立ててみた
 
 - 簡単なtypoのissue
-- 立ててから数日後に@mark氏により修正された
-- こういう細かな報告も重要
 
-<img src="symposium/TeX/fig/plus_issue.png" title="git issue sample" width="500">
+![plus issue](symposium/TeX/fig/plus_issue.png)
 
 +++
 
@@ -95,9 +145,8 @@
 
 ### GitHub
 
-- Foundation版は[OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub上で開発されている
+- [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub上で開発
 - この中の最新リリース版がOpenFOAM-V7
-- `git clone`のみであればGitHubアカウントの登録も必要ない
 
 ![GitHub Register](symposium/Presentation/fig/openfoam-dev-toppage.png)
 
@@ -105,9 +154,9 @@
 
 ### Foundation版のissue
 
-- Foundation版のissueはGitHub上ではなくissueTrackingで行われる
+- issueTrackingで行われる(GitHub上ではない)
 
-<img src="symposium/Presentation/fig/issueTracking.png" title="git issue sample" width="600">
+![issueTracking](symposium/Presentation/fig/issueTracking.png)
 
 +++
 
@@ -147,45 +196,6 @@
 
 ![myFork](symposium/TeX/fig/fig-f4.png)
 
----
-
-## Gitの使い方
-
-TODO: イシューの立て方
-TODO: ブランチの考え方
-TODO: プルリクエストの立て方
-
-+++
-
-### 基本操作（ターミナル）
-
-```sh
-git checkout develop
-# 作業をする
-git add *
-git commit -m "#16 test"
-git push develop origin
-```
-
-@[1]("develop"ブランチに切り替え)
-@[2-3](作業したらaddで変更点を読み込む)
-@[4](コメントをつけてコミット)
-@[5](リモートブランチにプッシュ)
-
-+++
-
-### git clone：OpenFOAM-jpの導入
-
-+++
-
-### ブランチを切る
-
-+++
-
-### プルリクエストを送る
-
----
-
 ## GitHub および Travis による継続的インテグレーション
 
 +++
@@ -208,15 +218,23 @@ git push develop origin
 
 ### issues
 
+- 日本コミュニティ内でのOpenFOAMに関する議論の場
+- 質問掲示板ではない
+
 +++
 
 ### OpenFOAM-jp
+
+- OpenFOAM-devのFork
+- Gitの練習などで使用してもらえたら
 
 +++
 
 ### OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp
 
-<iframe class="stretch" data-src="https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp/blob/master/v1906/mesh/manipulation/moveDynamicMesh/moveDynamicMesh.md&id=readme"></iframe>
+OpenFOAMのユーティリティに関するまとめ
+
+![util](symposium/Presentation/fig/util-tut.png)
 
 ---
 
