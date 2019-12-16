@@ -31,7 +31,7 @@
   - foam-extend:
   - RapidCFD:
   
-+++
+---
 
 ## ESI版のコントリビュート方法
 
@@ -50,13 +50,15 @@
 
 ### issue
 
+@size[0.8em](
 - 登録を行うとissueを立てることができるようになる
 - issueでは以下のような議論が行われている
   - バグ報告
   - 機能の要望
   - 導入予定の機能の審議と開発
+)
 
-![gitlabIssues](symposium/Presentation/fig/gitlabIssues.png | width=100)
+![gitlabIssues](symposium/Presentation/fig/gitlabIssues.png | width=60)
 
 +++
 
