@@ -7,6 +7,10 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 
+.reveal {
+    font-family: 'Kosugi Maru', sans-serif !important;
+}
+
 .oSans {
     font-family: 'Kosugi Maru', sans-serif !important;
 }
