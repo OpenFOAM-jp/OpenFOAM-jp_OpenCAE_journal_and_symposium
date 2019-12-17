@@ -111,12 +111,12 @@ GitHubなどのweb上で行う
 
 +++
 
-### GitLab
+### ESI版
 
 - ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発~~
 - **[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLabで開発**
 
-![GitLab Register](symposium/TeX/fig/plus_register.png)
+![GitLab Register](symposium/Presentation/fig/gitlab_top.png)
 
 +++
 
@@ -132,9 +132,9 @@ GitHubなどのweb上で行う
 
 ### issueの立て方
 
-- ~~issuesのページの右上のNew Issueボタンから作成する~~
-- ~~12月頭からissue機能が使用できない状況~~
-- (v1912リリースの影響？)
+- issuesのページの右上のNew Issueボタンから作成する
+
+![GitLab issue](symposium/Presentation/fig/gitlab_issue.png)
 
 +++
 
@@ -148,10 +148,11 @@ GitHubなどのweb上で行う
 
 ### ESI版まとめ
 
+| :---: | :---: |
 | リモートレポジトリ | GitLab |
-| レポジトリ名 | OpenFOAM-plus| 
-| clone, fork | GitLabアカウントがあれば誰でも可能 |
-| issue | 閲覧は誰でも可能。参加は~~誰でもOK~~現在は権限が必要 |
+| レポジトリ名 | ~~OpenFOAM-plus~~ openfoam | 
+| clone, fork | 誰でもOK |
+| issue | 誰でもOK |
 | Pull Request | 権限が必要 |
 
 ---
@@ -183,7 +184,7 @@ GitHubなどのweb上で行う
 | リモートレポジトリ | GitHub |
 | レポジトリ名 | OpenFOAM-dev |
 | clone, fork | 誰でもOK |
-| issue | [専用サイト](https://bugs.openfoam.org/)だが申請すれば誰でもOK |
+| issue | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
 | Pull Request | 権限が必要 |
 
 ---
@@ -192,12 +193,11 @@ GitHubなどのweb上で行う
 
 |   | ESI版 | Foundation版 |
 | :---: | :---: | :---: |
-| 運営 | [ESI-OpenCFD](https://openfoam.com/) | [OpenFOAM Foundation Ltd](https://openfoam.org/) |
+| 運営 | [ESI-OpenCFD](https://openfoam.com/) | @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) |
 | リモートレポジトリ | GitLab | GitHub |
 | レポジトリ名 | [OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)| [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) |
 | clone, fork | 誰でもOK | 誰でもOK |
-| issue閲覧 | 誰でもOK([GitLab](https://bugs.openfoam.org/)) | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
-| issue作成・参加 | ~~誰でもOK~~現在は権限が必要 | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
+| issue | 誰でもOK([GitLab](https://bugs.openfoam.org/)) | 誰でもOK@size[80%](([専用サイト](https://bugs.openfoam.org/))) |
 | Pull Request | 権限が必要 | 権限が必要 |
 
 ---
