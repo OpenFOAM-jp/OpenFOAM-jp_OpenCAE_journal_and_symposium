@@ -8,41 +8,31 @@
 
 ### 目次
 
+- gitを使ったossの開発
 - OpenFOAM Foundation版とESI版の違い
 - ESI版のコントリビュート方法
 - Foundation版のコントリビュート方法
-- Gitの使い方
-- GitHub および Travis による継続的インテグレーション
 - OpeFOAM-jp
+- Travis による継続的インテグレーション
 
 ---
 
-## OpenFOAM Foundation版とESI版の違い
+## (予備知識)gitを使ったOSSの開発
+  
+![git all](symposium/Presentation/fig/git.png)
 
 +++
 
-### OpenFOAM
-
-- Imperial Collageで開発された商用ソルバー"FOAM"がベース
-- 2004年にオープンソース化
-- その後いくつかのForkができる
-  - Foundation版：OpenFOAM Foundation Inc.によるFork
-  - ESI版：ESI社とOpenCFD社によるFork
-  - foam-extend:
-  - RapidCFD:
+## gitとは？
   
----
-
-## gitを使ったOSSの開発
-  
-![git all](symposium/Presentation/fig/git.png)
+- 分散型プロジェクト管理システム
+- 
 
 +++
 
 ### issue
 
 - バグ報告, 機能の要望, 導入予定の機能の審議と開発など
-- 気づいたことはこまめにコメントを残す
   
 ![GitHub issue](symposium/Presentation/fig/gitissue.png)
 
@@ -103,14 +93,28 @@ GitHubなどのweb上で行う
 
 ---
 
+## OpenFOAM Foundation版とESI版の違い
+
++++
+
+### OpenFOAM
+
+- Imperial Collageで開発された商用ソルバー"FOAM"がベース
+- 2004年にオープンソース化
+- その後いくつかのForkができる
+  - Foundation版：OpenFOAM Foundation Inc.によるFork
+  - ESI版：ESI社とOpenCFD社によるFork
+  
+---
+
 ## ESI版のコントリビュート方法
 
 +++
 
 ### GitLab
 
-- [OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発
-- この中の最新リリース版がOpenFOAM-v1906
+- ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発~~
+- **[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLabで開発**
 
 ![GitLab Register](symposium/TeX/fig/plus_register.png)
 
@@ -129,7 +133,7 @@ GitHubなどのweb上で行う
 ### issueの立て方
 
 - ~~issuesのページの右上のNew Issueボタンから作成する~~
-- 12月頭からissue機能が使用できない状況
+- ~~12月頭からissue機能が使用できない状況~~
 - (v1912リリースの影響？)
 
 +++
@@ -142,11 +146,13 @@ GitHubなどのweb上で行う
 
 +++
 
-### まとめ
+### ESI版まとめ
 
-- ESI版はGitLabで開発されている
-- issueの作成は-誰でもできる-現在は権限が必要
-- 権限を得るためにはESI社との交渉が必要 
+| リモートレポジトリ | GitLab |
+| レポジトリ名 | OpenFOAM-plus| 
+| clone, fork | GitLabアカウントがあれば誰でも可能 |
+| issue | 閲覧は誰でも可能。参加は~~誰でもOK~~現在は権限が必要 |
+| Pull Request | 権限が必要 |
 
 ---
 
@@ -157,7 +163,7 @@ GitHubなどのweb上で行う
 ### GitHub
 
 - [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub上で開発
-- この中の最新リリース版がOpenFOAM-V7
+- 最新リリース版は**OpenFOAM-V7**
 
 ![GitHub Register](symposium/Presentation/fig/openfoam-dev-toppage.png)
 
@@ -165,57 +171,34 @@ GitHubなどのweb上で行う
 
 ### Foundation版のissue
 
-- issueTrackingで行われる(GitHub上ではない)
+- [専用サイト](https://bugs.openfoam.org/)で行われる(GitHub上ではない)
+- 申請すれば誰でもViewer→Reporterに権限が変わる
 
 ![issueTracking](symposium/Presentation/fig/issueTracking.png)
 
 +++
 
-## Pull Requestを送ってみた
+### Foundation版まとめ
 
-1. まずは自分のGitHubアカウントを作る
-2. issueTrackingに登録
-3. issueを立てる
-4. OpenFOAM-devを自分のレポジトリにForkする
-5. ブランチを作成する
-6. `git clone`で自分のローカルマシンへダウンロード
-7. 内容を変更する
-8. 自分のブランチへプッシュする
-9. OpenFOAM-devのdevelopブランチへPull Requestを送る
+| リモートレポジトリ | GitHub |
+| レポジトリ名 | OpenFOAM-dev |
+| clone, fork | 誰でもOK |
+| issue | [専用サイト](https://bugs.openfoam.org/)だが申請すれば誰でもOK |
+| Pull Request | 権限が必要 |
 
-+++
+---
 
-### 自分のForkの作成
+## ESI版とFoundation版 まとめ
 
-![Create Fork](symposium/TeX/fig/fig-f1.png)
-
-+++
-
-### ブランチの作成
-
-![myFork](symposium/TeX/fig/fig-f2.png)
-
-+++
-
-### `git clone`で自分のローカルマシンへダウンロード
-
-![myFork](symposium/TeX/fig/fig-f3.png)
-
-+++
-
-### Pull Requestを送る
-
-![myFork](symposium/TeX/fig/fig-f4.png)
-
-## GitHub および Travis による継続的インテグレーション
-
-+++
-
-### 動作例
-
-+++
-
-### .travis.ymlの例
+|   | ESI版 | Foundation版 |
+| :---: | :---: | :---: |
+| 運営 | [ESI-OpenCFD](https://openfoam.com/) | [OpenFOAM Foundation Ltd](https://openfoam.org/) |
+| リモートレポジトリ | GitLab | GitHub |
+| レポジトリ名 | [OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)| [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) |
+| clone, fork | 誰でもOK | 誰でもOK |
+| issue閲覧 | 誰でもOK([GitLab](https://bugs.openfoam.org/)) | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
+| issue作成・参加 | ~~誰でもOK~~現在は権限が必要 | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
+| Pull Request | 権限が必要 | 権限が必要 |
 
 ---
 
@@ -249,6 +232,15 @@ OpenFOAMのユーティリティに関するまとめ
 
 ---
 
+## GitHub および Travis による継続的インテグレーション
+
++++
+
+### 動作例
+
++++
+
+### .travis.ymlの例
 +++
 
 ---
