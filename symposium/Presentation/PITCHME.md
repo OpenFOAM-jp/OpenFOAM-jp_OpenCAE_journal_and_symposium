@@ -50,14 +50,14 @@
 
 ### 手元のPCでの操作
 
-- リモートとのやりとり : 
-  - clone（ダウンロード）
-  - pull（更新）
-  - push（アップロード）
-- ローカル : 
-  - checkout（branch切り替えor作成）
-  - add（選択）
-  - commit（登録）
+- @size[80%](リモートとのやりとり : )
+  - @size[80%](clone（ダウンロード）)
+  - @size[80%](pull（更新）)
+  - @size[80%](push（アップロード）)
+- @size[80%](ローカル : )
+  - @size[80%](checkout（branch切り替えor作成）)
+  - @size[80%](add（選択）)
+  - @size[80%](commit（登録）)
 
 ![git operation](symposium/Presentation/fig/gitlocal.png)
 
@@ -150,7 +150,7 @@ GitHubなどのweb上で行う
 
 | :---: | :---: |
 | リモートレポジトリ | GitLab |
-| レポジトリ名 | ~~OpenFOAM-plus~~ openfoam | 
+| レポジトリ名 | ~~OpenFOAM-plus~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | 
 | clone, fork | 誰でもOK |
 | issue | 誰でもOK |
 | Pull Request | 権限が必要 |
@@ -195,7 +195,7 @@ GitHubなどのweb上で行う
 | :---: | :---: | :---: |
 | 運営 | [ESI-OpenCFD](https://openfoam.com/) | @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) |
 | リモートレポジトリ | GitLab | GitHub |
-| レポジトリ名 | [OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)| [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) |
+| レポジトリ名 | ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) |
 | clone, fork | 誰でもOK | 誰でもOK |
 | issue | 誰でもOK([GitLab](https://bugs.openfoam.org/)) | 誰でもOK@size[80%](([専用サイト](https://bugs.openfoam.org/))) |
 | Pull Request | 権限が必要 | 権限が必要 |
