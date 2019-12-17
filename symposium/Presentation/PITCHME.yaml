@@ -7,5 +7,6 @@ theme-text       : ["Kosugi Maru", "none"]
 
 theme-override : symposium/Presentation/PITCHME.css
 charts : true
+transition : fade
 mathjax : TeX-MML-AM_HTMLorMML-full
 footnote : "OpenCAE symposium 2019, OpenFOAM contribution, R.Inaba, T.Koyama, D.Matsubara"
