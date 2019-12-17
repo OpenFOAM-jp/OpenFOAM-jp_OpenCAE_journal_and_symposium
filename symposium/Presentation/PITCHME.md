@@ -122,8 +122,6 @@ GitHubなどのweb上で行う
 
 ### issue
 
-<!-- ---?image=symposium/Presentation/fig/gitlabIssues.png&size=auto 60% -->
-
 議論対象：バグ報告, 機能の要望, 導入予定の機能の審議と開発など
   
 ![issue sample](symposium/Presentation/fig/gitlabIssues.png)
@@ -208,21 +206,57 @@ GitHubなどのweb上で行う
 
 ### 目的
 
+- コントリビュートの最初の一歩として
+- OpenFOAMの開発をやってみたい
+- 日本のコントリビュート活動の活性化
+- Gitとかの練習をしたい
+
 +++
 
 ### issues
 
+- [issuesレポジトリ](https://github.com/OpenFOAM-jp/issues)を単独で作成（[vim-jp/issues](https://github.com/vim-jp/issues)のfork）
 - 日本コミュニティ内でのOpenFOAMに関する議論の場
-- 質問掲示板ではない
+- 機能追加やチュートリアルの作成などの発案、開発に使用
+- 質問は[Google Group](https://groups.google.com/forum/#!forum/openfoam)へ
+- もちろん誰でも参加可能
+
+![issueTracking](symposium/Presentation/fig/issueTracking.png)
 
 +++
 
 ### OpenFOAM-jp
 
-- OpenFOAM-devのFork
-- Gitの練習などで使用してもらえたら
+- OpenFOAM-devのfork
+- 誰でもfork, Pull Requestが可能
+- 事前にissuesを作成することを推奨
+- インストール方法は[こちら](https://github.com/OpenFOAM-jp/issues/wiki/インストール手順)
 
 +++
+
+### OpenFOAM-jpまとめ
+
+| レポジトリ名 | OpenFOAM-jp |
+| :---: | :---: |
+| リモートレポジトリ | GitHub |
+| clone, fork | 誰でもOK |
+| issue | 誰でもOK([GitHub](https://github.com/OpenFOAM-jp/issues)) |
+| Pull Request | 誰でもOK |
+
+---
+
+## ここまでのまとめ
+
+|   | ESI版 | Foundation版 | OpenFOAM-jp |
+| :---: | :---: | :---: | :---: |
+| 運営 | [ESI-OpenCFD](https://openfoam.com/) | @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) | OpenFOAM-jp |
+| リモートレポジトリ | GitLab | GitHub | GiHub |
+| レポジトリ名 | ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/OpenFOAM-jp)
+| clone, fork | 誰でもOK | 誰でもOK | 誰でもOK |
+| issue | 誰でもOK([GitLab](https://bugs.openfoam.org/)) | 誰でもOK@size[80%](([専用サイト](https://bugs.openfoam.org/))) | 誰でもOK([GitHub](https://github.com/OpenFOAM-jp/issues)) | 
+| Pull Request | 権限が必要 | 権限が必要 | @color[#ffa500](誰でもOK) |
+
+---
 
 ### OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp
 
