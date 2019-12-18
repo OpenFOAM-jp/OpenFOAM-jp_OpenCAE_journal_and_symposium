@@ -29,9 +29,9 @@
 
 ---
 
-@snap[west text-gray text-60]
+@snap[north-west text-gray]
 
-@fab[git-alt fa-huge]
+# @fab[git-alt]
 
 @snapend
 
@@ -46,7 +46,7 @@
 - 分散型プロジェクト管理システム
 - 複数人の同時作業に適している
 - OSSの開発や管理に使用されていることが多い
-- web上のplatformとしてGitHub @fab[github] やGitLab @fab[gitlab] などがある
+- web上のplatformとしてGitHub@fab[github]やGitLab@fab[gitlab]などがある
 
 @snapend
 
@@ -59,24 +59,21 @@
 
 +++
 
-@snap[north span-100]
+@snap[west span-40]
+
+@img[span-40](symposium/Presentation/fig/issue_example.png)
+
+@snapend
+
+@snap[east span-60]
 
 ### issue
 
 - バグ報告, 機能の要望, 予定, 開発など
 - 基本的にGitHubなどのplatform上で管理される
 
-@snapend  
 
-@snap[east]
-
-@img[span-80](symposium/Presentation/fig/gitissue.png)
-
-@snapend
-
-@snap[west]
-
-@img[span-40](symposium/Presentation/fig/issue_example.png)
+@img[span-100](symposium/Presentation/fig/gitissue.png)
 
 @snapend
 
@@ -92,7 +89,7 @@
 
 @snapend
 
-@img[span-70](symposium/Presentation/fig/PR2.png)
+@img[span-80](symposium/Presentation/fig/PR2.png)
 
 
 +++
@@ -164,11 +161,19 @@ $ git push
 
 ## 継続的インテグレーション（CI）
 
+@snapend
+
+@snap[west span-40]
+
+@img[span-100](symposium/Presentation/fig/ci.png)
+
+@snapend
+
+@snap[span-60]
+
 - push時の自動でテストシステム
 - Pull Requestの承認の際の指標になる
 - テスト内容は自分で作成する
-
-@img[span-50](symposium/Presentation/fig/ci.png)
 
 @snapend
 
