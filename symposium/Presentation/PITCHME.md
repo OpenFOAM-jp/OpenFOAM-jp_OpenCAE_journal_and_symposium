@@ -10,14 +10,14 @@
 
 - gitを使ったossの開発
 - OpenFOAM Foundation版とESI版の違い
-- ESI版のコントリビュート方法
-- Foundation版のコントリビュート方法
+- ESI版
+- Foundation版
 - OpeFOAM-jp
-- Travis による継続的インテグレーション
+- プロジェクトの例
 
 ---
 
-## (予備知識)gitを使ったOSSの開発
+## gitを使ったOSSの開発
   
 ![git all](symposium/Presentation/fig/git.png)
 
@@ -26,13 +26,15 @@
 ## gitとは？
   
 - 分散型プロジェクト管理システム
-- 
+- 複数人の同時作業に適している
+- OSSの開発や管理に使用されていることが多い
+- web上のplatformとしてGitHubやGitLabなどがある
 
 +++
 
 ### issue
 
-- バグ報告, 機能の要望, 導入予定の機能の審議と開発など
+- バグ報告, 機能の要望, 予定, 開発など
   
 ![GitHub issue](symposium/Presentation/fig/gitissue.png)
 
@@ -49,15 +51,6 @@
 +++
 
 ### 手元のPCでの操作
-
-- @size[80%](リモートとのやりとり : )
-  - @size[80%](clone（ダウンロード）)
-  - @size[80%](pull（更新）)
-  - @size[80%](push（アップロード）)
-- @size[80%](ローカル : )
-  - @size[80%](checkout（branch切り替えor作成）)
-  - @size[80%](add（選択）)
-  - @size[80%](commit（登録）)
 
 ![git operation](symposium/Presentation/fig/gitlocal.png)
 
@@ -114,7 +107,7 @@ GitHubなどのweb上で行う
 ### ESI版
 
 - ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発~~
-- **[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLabで開発**
+- **@color[#ff0000](<NEW!!>)[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLabで開発**
 
 ![GitLab Register](symposium/Presentation/fig/gitlab_top.png)
 
@@ -122,7 +115,7 @@ GitHubなどのweb上で行う
 
 ### issue
 
-議論対象：バグ報告, 機能の要望, 導入予定の機能の審議と開発など
+バグ報告, 機能の要望, 導入予定の機能の審議と開発など
   
 ![issue sample](symposium/Presentation/fig/gitlabIssues.png)
 
@@ -144,11 +137,21 @@ GitHubなどのweb上で行う
 
 +++
 
+### Pull Requestなど
+
+- プロジェクトメンバーのみがPull Requestなどを行うことができる
+- メンバーに加入するには専用ページから申し込む
+- ただし現在14人しかいないほど狭き門
+
+![plus issue](symposium/Presentation/fig/com_contactus.png)
+
++++
+
 ### ESI版まとめ
 
+| repository | ~~OpenFOAM-plus~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | 
 | :---: | :---: |
-| リモートレポジトリ | GitLab |
-| レポジトリ名 | ~~OpenFOAM-plus~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | 
+| platform | GitLab |
 | clone, fork | 誰でもOK |
 | issue | 誰でもOK |
 | Pull Request | 権限が必要 |
@@ -177,10 +180,20 @@ GitHubなどのweb上で行う
 
 +++
 
+### Pull Request
+
+- GitHubでPull Requestを送ることはできる
+- ただ過去の20件のうち承認されたものはない
+- issueを立てる→管理者が編集、という方式が取られている
+- 管理者はおそらく二人
+
++++
+
 ### Foundation版まとめ
 
-| リモートレポジトリ | GitHub |
-| レポジトリ名 | OpenFOAM-dev |
+| repository | OpenFOAM-dev |
+| :---: | :---: |
+| platform | GitHub |
 | clone, fork | 誰でもOK |
 | issue | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
 | Pull Request | 権限が必要 |
@@ -191,9 +204,9 @@ GitHubなどのweb上で行う
 
 |   | ESI版 | Foundation版 |
 | :---: | :---: | :---: |
-| 運営 | [ESI-OpenCFD](https://openfoam.com/) | @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) |
-| リモートレポジトリ | GitLab | GitHub |
-| レポジトリ名 | ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) |
+| organization | [ESI-OpenCFD](https://openfoam.com/) | @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) |
+| platform | GitLab | GitHub |
+| repository | [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) |
 | clone, fork | 誰でもOK | 誰でもOK |
 | issue | 誰でもOK([GitLab](https://bugs.openfoam.org/)) | 誰でもOK@size[80%](([専用サイト](https://bugs.openfoam.org/))) |
 | Pull Request | 権限が必要 | 権限が必要 |
@@ -236,12 +249,12 @@ GitHubなどのweb上で行う
 
 ### OpenFOAM-jpまとめ
 
-| レポジトリ名 | OpenFOAM-jp |
+| repository | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/) |
 | :---: | :---: |
-| リモートレポジトリ | GitHub |
+| platform | GitHub |
 | clone, fork | 誰でもOK |
 | issue | 誰でもOK([GitHub](https://github.com/OpenFOAM-jp/issues)) |
-| Pull Request | 誰でもOK |
+| Pull Request | @color[#ff0000](誰でもOK) |
 
 ---
 
@@ -251,35 +264,71 @@ GitHubなどのweb上で行う
 | :---: | :---: | :---: | :---: |
 | 運営 | [ESI-OpenCFD](https://openfoam.com/) | @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) | OpenFOAM-jp |
 | リモートレポジトリ | GitLab | GitHub | GiHub |
-| レポジトリ名 | ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/OpenFOAM-jp)
+| レポジトリ名 | [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/OpenFOAM-jp)
 | clone, fork | 誰でもOK | 誰でもOK | 誰でもOK |
-| issue | 誰でもOK([GitLab](https://bugs.openfoam.org/)) | 誰でもOK@size[80%](([専用サイト](https://bugs.openfoam.org/))) | 誰でもOK([GitHub](https://github.com/OpenFOAM-jp/issues)) | 
-| Pull Request | 権限が必要 | 権限が必要 | @color[#ffa500](誰でもOK) |
+| issue | 誰でもOK  ([GitLab](https://bugs.openfoam.org/)) | 誰でもOK  @size[80%](([専用サイト](https://bugs.openfoam.org/))) | 誰でもOK  ([GitHub](https://github.com/OpenFOAM-jp/issues)) | 
+| Pull Request | 権限が必要 | 権限が必要 | @color[#ff0000](誰でもOK) |
 
 ---
 
-### OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp
+## OpenFOAM-jp プロジェクト紹介
 
-OpenFOAMのユーティリティに関するまとめ
++++
+
+## ユーティリティのチュートリアル
+
+情報の少ないOpenFOAMのユーティリティについてまとめを作成
 
 ![util](symposium/Presentation/fig/util-tut.png)
 
++++
+
+## 継続的インテグレーション（CI）
+
+- push時の自動でテストシステム
+- Pull Requestの承認の際の指標になる
+- テスト内容は自分で作成する
+
+![ci](symposium/Presentation/fig/ci.png)
+
++++
+
+### CI動作例
+
+- 本発表の梗概を共同制作
+- Travis CIを活用
+- 各branchをTeXで作成→push→Pull Request
+- CIが通っていればmerge
+
+![ci](symposium/Presentation/fig/ci-sample.png)
+
++++
+
+## 機能追加 
+
+- mergeMeshesのオプションの改造
+- snappyHexMeshのスムージング機能独立
+- transformPointsのコピーオプション追加
+
+@size[300%](@color[#0000ff](随時募集中！（issueへ）))
+
++++
+
+## ドキュメントの翻訳
+
 ---
 
-## GitHub および Travis による継続的インテグレーション
+## まとめ
 
-+++
-
-### 動作例
-
-+++
-
-### .travis.ymlの例
-+++
+- ESI版とFoundation版はissueを送ることでコントリビュートできる
+- ただし実際に書いたコードを反映させることは権限がないとできない
+- 開発をやってみたい人のためにOpenFOAM-jpを作ってみた
+- 参加者募集中！
+- やってみたいことがあったらissueへ！
 
 ---
 
-### バク報告
+### バグ報告
 
 TODO: DockerFileを使ったバク報告の方法
 
