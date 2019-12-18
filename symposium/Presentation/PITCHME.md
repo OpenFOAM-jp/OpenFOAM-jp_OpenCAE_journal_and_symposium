@@ -17,13 +17,13 @@
 
 ---
 
-@snap[north span-40]
+@snap[north span]
 
 ## gitを使ったOSSの開発
 
 @snapend
   
-@snap[south span-40]
+@snap[south span]
 
 ![git all](symposium/Presentation/fig/git.png)
 
@@ -291,13 +291,17 @@ GitHubなどのweb上で行う
 
 +++
 
-@snap[midpoint span-40] 
+@snap[north-west span-0] 
 
 ## 継続的インテグレーション（CI）
 
 - push時の自動でテストシステム
 - Pull Requestの承認の際の指標になる
 - テスト内容は自分で作成する
+
+@snapend
+
+@snap[east span-40]
 
 ![ci](symposium/Presentation/fig/ci.png)
 
