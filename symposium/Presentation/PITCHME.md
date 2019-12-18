@@ -61,11 +61,11 @@
 
 @snap[west span-40]
 
-@img[span-40](symposium/Presentation/fig/issue_example.png)
+@img[span-100](symposium/Presentation/fig/issue_example.png)
 
 @snapend
 
-@snap[east span-60]
+@snap[east span-60 text-left -text-09]
 
 ### issue
 
@@ -169,7 +169,7 @@ $ git push
 
 @snapend
 
-@snap[span-60]
+@snap[east span-60]
 
 - push時の自動でテストシステム
 - Pull Requestの承認の際の指標になる
@@ -183,12 +183,11 @@ $ git push
 
 ### CI動作例
 
-- 本発表の梗概を共同制作
-- Travis CIを活用
+- 例：本発表の梗概を共同制作
+- Travis CIでTex@fab[arrow-right]pdfを自動テスト
 - 各branchをTeXで作成→push→Pull Request
-- CIが通っていればmerge
 
-@img[span-50](symposium/Presentation/fig/ci-sample.png)
+@img[span-70](symposium/Presentation/fig/ci-sample.png)
 
 @snapend
 
@@ -215,6 +214,8 @@ $ git push
 ### OpenFOAM
 @snapend
 
+@snap[text-07]
+
 - OSSのCFDライブラリ
 - Imperial Collageで開発された商用ソルバー"FOAM"がベース
 - 2004年にオープンソース化
@@ -231,6 +232,8 @@ $ git push
     - ESI社とOpenCFD社によるFork
   - 他にもたくさんある
 
+@snapend
+
 ---
 
 ## ESI版
@@ -242,7 +245,7 @@ $ git push
 ### ESI版の開発
 
 - ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLab@fab[gitlab]で開発~~
-- **@color[#ff0000](<NEW!!>)[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLab@fab[gitlab]で開発**
+- @color[#ff0000](<NEW!!>)[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLab@fab[gitlab]で開発
 
 @snapend
 
