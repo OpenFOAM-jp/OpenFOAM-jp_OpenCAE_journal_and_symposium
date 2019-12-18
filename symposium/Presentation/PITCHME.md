@@ -1,15 +1,27 @@
-### OpenFOAMコントリビュート活動
+@snap[text-50]
+
+# OpenFOAMコントリビュート活動
+
+@snapend
+
+@snap[south]
 
 - 稲葉竜一
-- @tkoyama010
 - 松原大輔
+- @tkoyama010
+
+@snapend
 
 ---
 
+@snap[north]
+
 ### 目次
 
+@snapend
+
 - gitを使ったossの開発
-- OpenFOAM Foundation版とESI版の違い
+- OpenFOAMのfork
 - ESI版
 - Foundation版
 - OpeFOAM-jp
@@ -27,8 +39,10 @@
 
 +++
 
-@snap[north span-100]
-## gitとは？
+@snap[north]
+
+### gitとは？
+
 @snapend
   
 - 分散型プロジェクト管理システム
@@ -36,27 +50,43 @@
 - OSSの開発や管理に使用されていることが多い
 - web上のplatformとしてGitHubやGitLabなどがある
 
+- issueで議論 |
+- branchで共同編集 |
+- Pull Requestでチェック |
+- CIで自動テスト |
+
 +++
 
-@snap[north span-100]
+@snap[north]
 
 ### issue
 
 - バグ報告, 機能の要望, 予定, 開発など
+- 基本的にGitHubなどのplatform上で管理される
 
 @snapend  
 
-![GitHub issue](symposium/Presentation/fig/gitissue.png)
+@snap[east]
+
+@img[span-50](symposium/Presentation/fig/gitissue.png)
+
+@snapend
+
+@snap[west]
+
+@img[span-50](symposium/Presentation/fig/issue_example.png)
+
+@snapend
 
 +++
 
-@snap[north span-100]
+@snap[north text-08]
 
 ### branchの考え方
 
+- 各編集作業を枝分かれ(branch)して管理する
+- 編集がおわったらPull Requestで議論した後にmergeする
 - 目的別、作業者別に同時並行で編集可能
-- 本体への影響を与えない
-- 不具合発生時に問題の切り分けなどが容易になる
 
 @snapend
 
@@ -65,12 +95,12 @@
 
 +++
 
-@snap[north span-100]
+@snap[north text-08]
 
 ### 手元のPCでの操作
 
-- 最初にclone(複製)してcheckout(ブランチ切り替え)してから作業開始
-- 作業した後にそのファイルをaddしてcommit(登録)をする
+- ブランチを切り替え(checkout)てから作業開始
+- 作業した後にそのファイルを指定(add)して登録(commit)をする
 - 他の人の変更があった場合にはpull(更新)を行う
 
 @snapend
@@ -81,12 +111,13 @@
 
 @snap[north span-100]
 
-### ローカルの操作例
+### ローカルの操作
  
-- 自分のbranchを作成してpush
+- 例：自分のbranchを作成してpush
 
 @snapend
 
+@snap[east span-50]
 
 ```sh
 $ git clone https://github.com/myName/myProject.git
@@ -104,6 +135,14 @@ $ git push
 @[4](developブランチから派生したブランチを作成)
 @[5-8](変更が終わったら、変更ファイルを指定(add)→コメントをつけて登録(commit)→リモートへアップロード(push))
 
+@snapend
+
+@snap[west]
+
+@img[span-50](symposium/Presentation/fig/gitlocal.png)
+
+@snapend
+
 +++
 
 @snap[north span-100]
@@ -115,11 +154,17 @@ $ git push
 
 @snapend
 
-@img[span-70](symposium/TeX/fig/fig-f4.png)
+@snap[west]
+@img[span-50](symposium/Presentation/fig/PR2.png)
+@snapend
+
+@snap[east]
+@img[span-50](symposium/TeX/fig/fig-f4.png)
+@snapend
 
 +++
 
-@snap[north text-08 span-100]
+@snap[north text-08]
 
 ## 継続的インテグレーション（CI）
 
@@ -129,23 +174,28 @@ $ git push
 
 @snapend
 
-@img[span-50](symposium/Presentation/fig/ci.png)
+@snap[south]
 
+@img[span-60](symposium/Presentation/fig/ci.png)
+
+@snapend
 
 +++
 
-@snap[north span-100]
-### CI動作例
-@snapend
+@snap[north]
 
-@snap[span-50]
+### CI動作例
+
 - 本発表の梗概を共同制作
 - Travis CIを活用
 - 各branchをTeXで作成→push→Pull Request
 - CIが通っていればmerge
 
-![ci](symposium/Presentation/fig/ci-sample.png)
 @snapend
+
+
+@img[span-50](symposium/Presentation/fig/ci-sample.png)
+
 
 +++
 
@@ -162,82 +212,100 @@ $ git push
 
 ---
 
-## OpenFOAM Foundation版とESI版の違い
+## OpenFOAM
 
 +++
 
-@snap[north span-100]
+@snap[north]
 ### OpenFOAM
 @snapend
 
+- OSSのCFDライブラリ
 - Imperial Collageで開発された商用ソルバー"FOAM"がベース
 - 2004年にオープンソース化
-- その後いくつかのForkができる
-  - Foundation版：OpenFOAM Foundation Inc.によるFork
-  - ESI版：ESI社とOpenCFD社によるFork
-  
+- その後いくつかのforkができる
+  - Foundation版
+    - 最新版は**OpenFOAM-V7**
+    - FOAMの生みの親であるHenry Weller氏が管理
+    - Ubuntuではaptでインストールできる
+    - OpenFOAM Foundation Inc.による運営
+  - ESI版
+    - 最新版は**OpenFOAM-v1906**
+    - OpenFAOM-3.0+として生まれたfork
+    - 開発頻度が高い
+    - ESI社とOpenCFD社によるFork
+  - 他にもたくさんある
+
 ---
 
-## ESI版のコントリビュート方法
+## ESI版
 
 +++
 
 
-@snap[north span-100]
-### ESI版
-@snapend
+@snap[north]
+### ESI版の開発
 
 - ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発~~
 - **@color[#ff0000](<NEW!!>)[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLabで開発**
+
+@snapend
 
 @img[span-70](symposium/Presentation/fig/gitlab_top.png)
 
 +++
 
-@snap[north span-100]
-### issue
-@snapend
+@snap[north]
+
+### ESI版のissue
 
 バグ報告, 機能の要望, 導入予定の機能の審議と開発など
   
+@snapend
+
 @img[span-70](symposium/Presentation/fig/gitlabIssues.png)
 
 +++
 
-@snap[north span-100]
-### issueの立て方
-@snapend
+@snap[north]
+### ESI版のissueの立て方
 
 - issuesのページの右上のNew Issueボタンから作成する
+
+@snapend
 
 @img[span-70](symposium/Presentation/fig/gitlab_issue.png)
 
 +++
 
-@snap[north span-100]
+@snap[north]
 ### issueを立ててみた
-@snapend
 
 - 簡単なtypoのissue
 
+@snapend
+
+@snap[south]
 @img[span-70](symposium/TeX/fig/plus_issue.png)
+@snapend
 
 +++
 
-@snap[north span-100]
+@snap[north text-08]
 ### Pull Requestなど
-@snapend
 
 - プロジェクトメンバーのみがPull Requestなどを行うことができる
 - メンバーに加入するには専用ページから申し込む
 - ただし現在14人しかいないほど狭き門
+
+@snapend
 
 @img[span-70](symposium/Presentation/fig/com_contactus.png)
 
 
 +++
 
-@snap[north span-100]
+@snap[north]
 ### ESI版まとめ
 @snapend
 
@@ -250,12 +318,12 @@ $ git push
 
 ---
 
-## Foundation版のコントリビュート方法
+## Foundation版
 
 +++
 
 @snap[north span-100]
-### Foundation版
+### Foundation版の開発
 @snapend
 
 - [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub上で開発
@@ -265,12 +333,13 @@ $ git push
 
 +++
 
-@snap[north span-100]
+@snap[north]
 ### Foundation版のissue
-@snapend
 
 - [専用サイト](https://bugs.openfoam.org/)で行われる(GitHub上ではない)
 - 申請すれば誰でもViewer→Reporterに権限が変わる
+
+@snapend
 
 @img[span-70](symposium/Presentation/fig/issueTracking.png)
 
@@ -315,22 +384,23 @@ $ git push
 
 +++
 
-@snap[north span-100]
-### issues
-@snapend
+@snap[north text-08]
+### OpenFOAM-jpのissue
 
-- [issuesレポジトリ](https://github.com/OpenFOAM-jp/issues)を単独で作成（[vim-jp/issues](https://github.com/vim-jp/issues)のfork）
+- [issuesレポジトリ](https://github.com/OpenFOAM-jp/issues)として作成（[vim-jp/issues](https://github.com/vim-jp/issues)のfork）
 - 日本コミュニティ内でのOpenFOAMに関する議論の場
 - 機能追加やチュートリアルの作成などの発案、開発に使用
-- 質問は[Google Group](https://groups.google.com/forum/#!forum/openfoam)へ
+- OpenFOAMの質問は既存の[Google Group](https://groups.google.com/forum/#!forum/openfoam)へ
 - もちろん誰でも参加可能
+
+@snapend
 
 @img[span-70](symposium/Presentation/fig/jp-issue.png)
 
 +++
 
-@snap[north span-100]
-### OpenFOAM-jp
+@snap[north]
+### OpenFOAM-jpの開発
 @snapend
 
 - OpenFOAM-devのfork
@@ -342,7 +412,7 @@ $ git push
 
 +++
 
-@snap[north span-100]
+@snap[north]
 ### OpenFOAM-jpまとめ
 @snapend
 
@@ -355,8 +425,8 @@ $ git push
 
 ---
 
-@snap[north span-100]
-## repositoryの比較
+@snap[north]
+### repositoryの比較
 @snapend
 
 |   | ESI版 | Foundation版 | OpenFOAM-jp |
@@ -374,15 +444,15 @@ $ git push
 
 +++
 
-@snap[north span-100]
+@snap[north text-08]
+
 ## ユーティリティのチュートリアル
+
+OpenFOAMのユーティリティの使い方に関するまとめ
+
 @snapend
 
-@snap
-情報の少ないOpenFOAMのユーティリティについてまとめを作成
-
-@img[span-70](symposium/Presentation/fig/util-tut.png)
-@snapend
+@img[span-60](symposium/Presentation/fig/util-tut.png)
 
 +++
 
@@ -390,8 +460,18 @@ $ git push
 
 - mergeMeshesのオプションの改造
 - snappyHexMeshのスムージング機能独立
-- transformPointsのコピーオプション追加 |
-- @size[200%](@color[#0000ff](随時募集中！（issueへ）))
+- transformPointsのコピーオプション追加
+- fvOptionsでCHT(固体)の計算
+- @size[200%](@color[#0000ff](随時募集中！（issueへ）)) |
+
++++
+
+## 他にも
+
+- ドキュメントの翻訳
+- エラーメッセージの日本語化
+- OpenFOAMのCIテスト
+- Dockerfileを用いたバグ管理
 
 ---
 
@@ -403,15 +483,3 @@ $ git push
 - @size[200%](@color[#0000ff](参加者募集中！)
 - @size[200%](@color[#0000ff](やってみたいことがあったらissueへ！)
 
----
-
-### バグ報告
-
-TODO: DockerFileを使ったバク報告の方法
-
----
-
-### ローカライズ
-
-TODO: Omegatを使用したドキュメント翻訳
-TODO: エラーメッセージの翻訳について
