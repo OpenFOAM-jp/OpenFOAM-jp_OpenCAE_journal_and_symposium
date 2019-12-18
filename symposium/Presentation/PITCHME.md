@@ -49,13 +49,15 @@
 
 @snap[north span-100]
 ### branchの考え方
+@snapend  
 
+@snap[span-70]
 - 目的別、作業者別に同時並行で編集可能
 - 本体への影響を与えない
 - 不具合発生時に問題の切り分けなどが容易になる
 
-@snapend  
 ![GitHub branch](symposium/Presentation/fig/PR2.png)
+@snapend
 
 +++
 
@@ -63,15 +65,23 @@
 ### 手元のPCでの操作
 @snapend
 
+@snap[span-70]
+
+- 最初にclone(複製)してcheckout(ブランチ切り替え)してから作業開始
+- 作業した後にそのファイルをaddしてcommit(登録)をする
+- 他の人の変更があった場合にはpull(更新)を行う
+
 ![git operation](symposium/Presentation/fig/gitlocal.png)
+
+@snapend
 
 +++
 
 @snap[north span-100]
-### 操作例
+### ローカルの操作例
 @snapend
  
-ローカルで自分のbranchを作成してpush
+自分のbranchを作成してpush
 
 ```sh
 $ git clone https://github.com/myName/myProject.git
@@ -93,20 +103,56 @@ $ git push
 
 @snap[north span-100]
 ### プルリクエストを送る
-@snapend
 
-GitHubなどのweb上で行う
+- GitHubなどのweb上で行う
+- issueの様に議論をして問題がなければ権限者によりmergeされる
+
+@snapend
 
 ![git operation](symposium/TeX/fig/fig-f4.png)
 
 +++
 
+@snap[north text-80]
+## 継続的インテグレーション（CI）
+@snapend
+
+@snap
+- push時の自動でテストシステム
+- Pull Requestの承認の際の指標になる
+- テスト内容は自分で作成する
+
+@img[span-50](symposium/Presentation/fig/ci.png)
+
+@snapend
+
++++
+
+@snap[north span-100]
+### CI動作例
+@snapend
+
+@snap[span-50]
+- 本発表の梗概を共同制作
+- Travis CIを活用
+- 各branchをTeXで作成→push→Pull Request
+- CIが通っていればmerge
+
+![ci](symposium/Presentation/fig/ci-sample.png)
+@snapend
+
++++
 
 @snap[north span-100]
 ## まとめ
+
+- git開発は共同作業に便利
+- 一度cloneすればローカルで作業可能
+- CIにより自動テストなども可能
+
 @snapend
 
-![git all](symposium/Presentation/fig/git.png)
+@img[span-70](symposium/Presentation/fig/git.png)
 
 ---
 
@@ -138,7 +184,7 @@ GitHubなどのweb上で行う
 - ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発~~
 - **@color[#ff0000](<NEW!!>)[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLabで開発**
 
-![GitLab Register](symposium/Presentation/fig/gitlab_top.png)
+@img[span-70](symposium/Presentation/fig/gitlab_top.png)
 
 +++
 
@@ -148,7 +194,7 @@ GitHubなどのweb上で行う
 
 バグ報告, 機能の要望, 導入予定の機能の審議と開発など
   
-![issue sample](symposium/Presentation/fig/gitlabIssues.png)
+@img[span-70](symposium/Presentation/fig/gitlabIssues.png)
 
 +++
 
@@ -158,7 +204,7 @@ GitHubなどのweb上で行う
 
 - issuesのページの右上のNew Issueボタンから作成する
 
-![GitLab issue](symposium/Presentation/fig/gitlab_issue.png)
+@img[span-70](symposium/Presentation/fig/gitlab_issue.png)
 
 +++
 
@@ -168,7 +214,7 @@ GitHubなどのweb上で行う
 
 - 簡単なtypoのissue
 
-![plus issue](symposium/TeX/fig/plus_issue.png)
+@img[span-70](symposium/TeX/fig/plus_issue.png)
 
 +++
 
@@ -180,7 +226,8 @@ GitHubなどのweb上で行う
 - メンバーに加入するには専用ページから申し込む
 - ただし現在14人しかいないほど狭き門
 
-![plus issue](symposium/Presentation/fig/com_contactus.png)
+@img[span-70](symposium/Presentation/fig/com_contactus.png)
+
 
 +++
 
@@ -208,7 +255,7 @@ GitHubなどのweb上で行う
 - [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub上で開発
 - 最新リリース版は**OpenFOAM-V7**
 
-![GitHub Register](symposium/Presentation/fig/openfoam-dev-toppage.png)
+@img[span-70](symposium/Presentation/fig/openfoam-dev-toppage.png)
 
 +++
 
@@ -219,7 +266,7 @@ GitHubなどのweb上で行う
 - [専用サイト](https://bugs.openfoam.org/)で行われる(GitHub上ではない)
 - 申請すれば誰でもViewer→Reporterに権限が変わる
 
-![issueTracking](symposium/Presentation/fig/issueTracking.png)
+@img[span-70](symposium/Presentation/fig/issueTracking.png)
 
 +++
 
@@ -272,7 +319,7 @@ GitHubなどのweb上で行う
 - 質問は[Google Group](https://groups.google.com/forum/#!forum/openfoam)へ
 - もちろん誰でも参加可能
 
-![issueTracking](symposium/Presentation/fig/issueTracking.png)
+@img[span-70](symposium/Presentation/fig/jp-issue.png)
 
 +++
 
@@ -284,6 +331,8 @@ GitHubなどのweb上で行う
 - 誰でもfork, Pull Requestが可能
 - 事前にissuesを作成することを推奨
 - インストール方法は[こちら](https://github.com/OpenFOAM-jp/issues/wiki/インストール手順)
+
+@img[span-70](symposium/Presentation/fig/jp-OpenFOAM-jp.png)
 
 +++
 
@@ -326,37 +375,7 @@ GitHubなどのweb上で行う
 @snap
 情報の少ないOpenFOAMのユーティリティについてまとめを作成
 
-![util](symposium/Presentation/fig/util-tut.png)
-@snapend
-
-+++
-
-@snap[north span-100]
-## 継続的インテグレーション（CI）
-@snapend
-
-@snap
-- push時の自動でテストシステム
-- Pull Requestの承認の際の指標になる
-- テスト内容は自分で作成する
-
-![ci](symposium/Presentation/fig/ci.png)
-
-@snapend
-
-+++
-
-@snap[north span-100]
-### CI動作例
-@snapend
-
-@snap
-- 本発表の梗概を共同制作
-- Travis CIを活用
-- 各branchをTeXで作成→push→Pull Request
-- CIが通っていればmerge
-
-![ci](symposium/Presentation/fig/ci-sample.png)
+@img[span-70](symposium/Presentation/fig/util-tut.png)
 @snapend
 
 +++
@@ -365,13 +384,8 @@ GitHubなどのweb上で行う
 
 - mergeMeshesのオプションの改造
 - snappyHexMeshのスムージング機能独立
-- transformPointsのコピーオプション追加
-
-@size[300%](@color[#0000ff](随時募集中！（issueへ）))
-
-+++
-
-## ドキュメントの翻訳
+- transformPointsのコピーオプション追加 |
+- @size[200%](@color[#0000ff](随時募集中！（issueへ）))
 
 ---
 
@@ -380,8 +394,8 @@ GitHubなどのweb上で行う
 - ESI版とFoundation版はissueを送ることでコントリビュートできる
 - ただし実際に書いたコードを反映させることは権限がないとできない
 - 開発をやってみたい人のためにOpenFOAM-jpを作ってみた
-- 参加者募集中！
-- やってみたいことがあったらissueへ！
+- @size[200%](@color[#0000ff](参加者募集中！)
+- @size[200%](@color[#0000ff](やってみたいことがあったらissueへ！)
 
 ---
 
