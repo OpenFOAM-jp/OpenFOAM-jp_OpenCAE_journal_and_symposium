@@ -1,4 +1,4 @@
-@snap[text-50]
+@snap[text-10]
 
 ## OpenFOAMコントリビュート活動
 
@@ -14,7 +14,7 @@
 
 ---
 
-@snap[north]
+@snap[north span-100]
 
 ### 目次
 
@@ -29,26 +29,26 @@
 
 ---
 
+@snap[west text-gray text-60]
+
 @fab[git-alt fa-huge]
 
-@snap[north]
+@snapend
 
 ## gitを使ったOSSの開発
 
-@snapend
-
 +++
 
-@snap[north]
+@snap[north span-100]
 
 ### gitとは？
-
-@snapend
   
 - 分散型プロジェクト管理システム
 - 複数人の同時作業に適している
 - OSSの開発や管理に使用されていることが多い
-- web上のplatformとしてGitHub @fab[github] やGitLab @fab[github] などがある
+- web上のplatformとしてGitHub @fab[github] やGitLab @fab[gitlab] などがある
+
+@snapend
 
 @ol
 1. issueで議論 
@@ -59,7 +59,7 @@
 
 +++
 
-@snap[north]
+@snap[north span-100]
 
 ### issue
 
@@ -76,13 +76,13 @@
 
 @snap[west]
 
-@img[span-100](symposium/Presentation/fig/issue_example.png)
+@img[span-40](symposium/Presentation/fig/issue_example.png)
 
 @snapend
 
 +++
 
-@snap[north text-08]
+@snap[north text-08 span-100]
 
 ### branchの考え方
 
@@ -97,7 +97,7 @@
 
 +++
 
-@snap[north text-08]
+@snap[north text-08 span-100]
 
 ### 手元のPCでの操作
 
@@ -111,7 +111,7 @@
 
 +++
 
-@snap[north]
+@snap[north span-100]
 
 ### ローカルの操作
  
@@ -132,16 +132,16 @@ $ git commit -m "#16 test"
 $ git push
 ```
 
-@[1-2](GutHubなどにあるリモートレポジトリからダウンロード)
-@[3](developブランチに切り替える)
-@[4](developブランチから派生したブランチを作成)
-@[5-8](変更が終わったら、変更ファイルを指定(add)→コメントをつけて登録(commit)→リモートへアップロード(push))
+@[1-2](ローカルにダウンロード)
+@[3](ブランチ切替 @fab[arrow-right] develop )
+@[4](ブランチ作成 develop @fab[arrow-right] my-branch-1)
+@[5-8](リモートへアップロード)
 
 @snapend
 
 @snap[west]
 
-@img[span-100](symposium/Presentation/fig/gitlocal.png)
+@img[span-60](symposium/Presentation/fig/gitlocal.png)
 
 @snapend
 
@@ -156,9 +156,7 @@ $ git push
 
 @snapend
 
-@img[span-60](symposium/TeX/fig/fig-f4.png)
-
-@img[span-50](symposium/Presentation/fig/PR2.png)
+@img[span-100](symposium/Presentation/fig/PR2.png)
 
 +++
 
@@ -170,13 +168,13 @@ $ git push
 - Pull Requestの承認の際の指標になる
 - テスト内容は自分で作成する
 
-@snapend
+@img[span-50](symposium/Presentation/fig/ci.png)
 
-@img[span-80](symposium/Presentation/fig/ci.png)
+@snapend
 
 +++
 
-@snap[north]
+@snap[north span-100]
 
 ### CI動作例
 
@@ -185,11 +183,9 @@ $ git push
 - 各branchをTeXで作成→push→Pull Request
 - CIが通っていればmerge
 
-@snapend
-
-
 @img[span-50](symposium/Presentation/fig/ci-sample.png)
 
+@snapend
 
 +++
 
@@ -210,7 +206,7 @@ $ git push
 
 +++
 
-@snap[north]
+@snap[north span-100]
 ### OpenFOAM
 @snapend
 
@@ -237,11 +233,11 @@ $ git push
 +++
 
 
-@snap[north]
+@snap[north span-100]
 ### ESI版の開発
 
-- ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発~~
-- **@color[#ff0000](<NEW!!>)[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLabで開発**
+- ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLab@fab[gitlab]で開発~~
+- **@color[#ff0000](<NEW!!>)[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLab@fab[gitlab]で開発**
 
 @snapend
 
@@ -249,7 +245,7 @@ $ git push
 
 +++
 
-@snap[north]
+@snap[north span-100]
 
 ### ESI版のissue
 
@@ -261,7 +257,7 @@ $ git push
 
 +++
 
-@snap[north]
+@snap[north span-100]
 ### ESI版のissueの立て方
 
 - issuesのページの右上のNew Issueボタンから作成する
@@ -272,20 +268,17 @@ $ git push
 
 +++
 
-@snap[north]
+@snap[north span-100]
 ### issueを立ててみた
 
 - 簡単なtypoのissue
 
-@snapend
-
-@snap[south]
 @img[span-70](symposium/TeX/fig/plus_issue.png)
-@snapend
 
+@snapend
 +++
 
-@snap[north text-08]
+@snap[north span-100 text-08]
 ### Pull Requestなど
 
 - プロジェクトメンバーのみがPull Requestなどを行うことができる
@@ -299,13 +292,13 @@ $ git push
 
 +++
 
-@snap[north]
+@snap[north span-100]
 ### ESI版まとめ
 @snapend
 
 | repository | ~~OpenFOAM-plus~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | 
 | :---: | :---: |
-| platform | GitLab |
+| platform | GitLab@fab[gitlab] |
 | clone, fork | 誰でもOK |
 | issue | 誰でもOK |
 | Pull Request | 権限が必要 |
@@ -320,14 +313,14 @@ $ git push
 ### Foundation版の開発
 @snapend
 
-- [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub上で開発
+- [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub@fab[github]上で開発
 - 最新リリース版は**OpenFOAM-V7**
 
 @img[span-70](symposium/Presentation/fig/openfoam-dev-toppage.png)
 
 +++
 
-@snap[north]
+@snap[north span-100]
 ### Foundation版のissue
 
 - [専用サイト](https://bugs.openfoam.org/)で行われる(GitHub上ではない)
@@ -356,7 +349,7 @@ $ git push
 
 | repository | OpenFOAM-dev |
 | :---: | :---: |
-| platform | GitHub |
+| platform | GitHub@fab[github] |
 | clone, fork | 誰でもOK |
 | issue | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
 | Pull Request | 権限が必要 |
@@ -368,7 +361,7 @@ $ git push
 +++
 
 @snap[north span-100]
-### 目的
+### OpenFOAM-jpの目的と経緯
 @snapend
 
 - コントリビュートの最初の一歩として
@@ -376,9 +369,15 @@ $ git push
 - 日本のコントリビュート活動の活性化
 - Gitとかの練習をしたい
 
+## @fab[arrow-down]
+
+- 有志でコミュニティを作成（現在3人）
+- OpenFAOM-devをforkしたGitHub@fab[github] repositoryを作成
+- 色々やってみよう！
+
 +++
 
-@snap[north text-08]
+@snap[north span-100 text-08]
 ### OpenFOAM-jpのissue
 
 - [issuesレポジトリ](https://github.com/OpenFOAM-jp/issues)として作成（[vim-jp/issues](https://github.com/vim-jp/issues)のfork）
@@ -393,7 +392,7 @@ $ git push
 
 +++
 
-@snap[north]
+@snap[north span-100]
 ### OpenFOAM-jpの開発
 @snapend
 
@@ -406,7 +405,7 @@ $ git push
 
 +++
 
-@snap[north]
+@snap[north span-100]
 ### OpenFOAM-jpまとめ
 @snapend
 
@@ -419,7 +418,7 @@ $ git push
 
 ---
 
-@snap[north]
+@snap[north span-100]
 ### repositoryの比較
 @snapend
 
@@ -438,7 +437,7 @@ $ git push
 
 +++
 
-@snap[north text-08]
+@snap[north span-100 text-08]
 
 ## ユーティリティのチュートリアル
 
