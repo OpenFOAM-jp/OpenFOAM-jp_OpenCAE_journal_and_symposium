@@ -17,9 +17,17 @@
 
 ---
 
+@snap[north span-40]
+
 ## gitを使ったOSSの開発
+
+@snapend
   
+@snap[south span-40]
+
 ![git all](symposium/Presentation/fig/git.png)
+
+@snapend
 
 +++
 
@@ -283,6 +291,8 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[midpoint span-40] 
+
 ## 継続的インテグレーション（CI）
 
 - push時の自動でテストシステム
@@ -290,6 +300,8 @@ GitHubなどのweb上で行う
 - テスト内容は自分で作成する
 
 ![ci](symposium/Presentation/fig/ci.png)
+
+@snapend
 
 +++
 
