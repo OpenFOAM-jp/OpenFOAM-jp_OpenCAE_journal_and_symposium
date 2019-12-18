@@ -356,7 +356,7 @@ $ git push
 ---
 
 @snap[north span-100]
-## 各forkのまとめ
+## repositoryの比較
 @snapend
 
 |   | ESI版 | Foundation版 | OpenFOAM-jp |
