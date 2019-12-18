@@ -21,11 +21,15 @@
 
 ## gitを使ったOSSの開発
 
+@snapend
+
 ![git all](symposium/Presentation/fig/git.png)
 
 +++
 
+@snap[north span-100]
 ## gitとは？
+@snapend
   
 - 分散型プロジェクト管理システム
 - 複数人の同時作業に適している
@@ -34,20 +38,23 @@
 
 +++
 
+@snap[north span-100]
 ### issue
 
 - バグ報告, 機能の要望, 予定, 開発など
-  
+@snapend  
 ![GitHub issue](symposium/Presentation/fig/gitissue.png)
 
 +++
 
+@snap[north span-100]
 ### branchの考え方
 
 - 目的別、作業者別に同時並行で編集可能
 - 本体への影響を与えない
 - 不具合発生時に問題の切り分けなどが容易になる
 
+@snapend  
 ![GitHub branch](symposium/Presentation/fig/PR2.png)
 
 +++
