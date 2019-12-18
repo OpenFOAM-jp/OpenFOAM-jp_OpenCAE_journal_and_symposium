@@ -1,6 +1,6 @@
 @snap[text-50]
 
-# OpenFOAMコントリビュート活動
+## OpenFOAMコントリビュート活動
 
 @snapend
 
@@ -29,13 +29,13 @@
 
 ---
 
-@snap[north span-100]
+@fab[git-alt fa-huge]
+
+@snap[north]
 
 ## gitを使ったOSSの開発
 
 @snapend
-
-![git all](symposium/Presentation/fig/git.png)
 
 +++
 
@@ -48,12 +48,14 @@
 - 分散型プロジェクト管理システム
 - 複数人の同時作業に適している
 - OSSの開発や管理に使用されていることが多い
-- web上のplatformとしてGitHubやGitLabなどがある
+- web上のplatformとしてGitHub @fab[github] やGitLab @fab[github] などがある
 
-- issueで議論 |
-- branchで共同編集 |
-- Pull Requestでチェック |
-- CIで自動テスト |
+@ol
+1. issueで議論 
+1. branchで共同編集 
+1. Pull Requestでチェック 
+1. CIで自動テスト 
+@olend
 
 +++
 
@@ -68,13 +70,13 @@
 
 @snap[east]
 
-@img[span-50](symposium/Presentation/fig/gitissue.png)
+@img[span-80](symposium/Presentation/fig/gitissue.png)
 
 @snapend
 
 @snap[west]
 
-@img[span-50](symposium/Presentation/fig/issue_example.png)
+@img[span-100](symposium/Presentation/fig/issue_example.png)
 
 @snapend
 
@@ -105,11 +107,11 @@
 
 @snapend
 
-@img[span-70](symposium/Presentation/fig/gitlocal.png)
+@img[span-50](symposium/Presentation/fig/gitlocal.png)
 
 +++
 
-@snap[north span-100]
+@snap[north]
 
 ### ローカルの操作
  
@@ -117,7 +119,7 @@
 
 @snapend
 
-@snap[east span-50]
+@snap[east span-60 text-08]
 
 ```sh
 $ git clone https://github.com/myName/myProject.git
@@ -139,7 +141,7 @@ $ git push
 
 @snap[west]
 
-@img[span-50](symposium/Presentation/fig/gitlocal.png)
+@img[span-100](symposium/Presentation/fig/gitlocal.png)
 
 @snapend
 
@@ -154,17 +156,13 @@ $ git push
 
 @snapend
 
-@snap[west]
-@img[span-50](symposium/Presentation/fig/PR2.png)
-@snapend
+@img[span-60](symposium/TeX/fig/fig-f4.png)
 
-@snap[east]
-@img[span-50](symposium/TeX/fig/fig-f4.png)
-@snapend
+@img[span-50](symposium/Presentation/fig/PR2.png)
 
 +++
 
-@snap[north text-08]
+@snap[north text-08 span-100]
 
 ## 継続的インテグレーション（CI）
 
@@ -174,11 +172,7 @@ $ git push
 
 @snapend
 
-@snap[south]
-
-@img[span-60](symposium/Presentation/fig/ci.png)
-
-@snapend
+@img[span-80](symposium/Presentation/fig/ci.png)
 
 +++
 
