@@ -17,13 +17,13 @@
 
 ---
 
-@snap[north span]
+@snap[north span-100]
 
 ## gitを使ったOSSの開発
 
 @snapend
   
-@snap[south span]
+@snap[south span-100]
 
 ![git all](symposium/Presentation/fig/git.png)
 
