@@ -39,49 +39,54 @@
 +++
 
 @snap[north span-100]
+
 ### issue
 
 - バグ報告, 機能の要望, 予定, 開発など
+
 @snapend  
+
 ![GitHub issue](symposium/Presentation/fig/gitissue.png)
 
 +++
 
 @snap[north span-100]
-### branchの考え方
-@snapend  
 
-@snap[span-70]
+### branchの考え方
+
 - 目的別、作業者別に同時並行で編集可能
 - 本体への影響を与えない
 - 不具合発生時に問題の切り分けなどが容易になる
 
-![GitHub branch](symposium/Presentation/fig/PR2.png)
 @snapend
+
+@img[span-70](symposium/Presentation/fig/PR2.png)
+
 
 +++
 
 @snap[north span-100]
-### 手元のPCでの操作
-@snapend
 
-@snap[span-70]
+### 手元のPCでの操作
 
 - 最初にclone(複製)してcheckout(ブランチ切り替え)してから作業開始
 - 作業した後にそのファイルをaddしてcommit(登録)をする
 - 他の人の変更があった場合にはpull(更新)を行う
 
-![git operation](symposium/Presentation/fig/gitlocal.png)
-
 @snapend
+
+@img[span-70](symposium/Presentation/fig/gitlocal.png)
 
 +++
 
 @snap[north span-100]
+
 ### ローカルの操作例
-@snapend
  
-自分のbranchを作成してpush
+- 自分のbranchを作成してpush
+
+@snapend
+
 
 ```sh
 $ git clone https://github.com/myName/myProject.git
@@ -102,6 +107,7 @@ $ git push
 +++
 
 @snap[north span-100]
+
 ### プルリクエストを送る
 
 - GitHubなどのweb上で行う
@@ -109,22 +115,22 @@ $ git push
 
 @snapend
 
-![git operation](symposium/TeX/fig/fig-f4.png)
+@img[span-70](symposium/TeX/fig/fig-f4.png)
 
 +++
 
-@snap[north text-80]
-## 継続的インテグレーション（CI）
-@snapend
+@snap[north text-08 span-100]
 
-@snap
+## 継続的インテグレーション（CI）
+
 - push時の自動でテストシステム
 - Pull Requestの承認の際の指標になる
 - テスト内容は自分で作成する
 
+@snapend
+
 @img[span-50](symposium/Presentation/fig/ci.png)
 
-@snapend
 
 +++
 
