@@ -1,7 +1,7 @@
 theme : template
-theme-headline   : ["Kosugi Maru", "orange"]
-theme-byline     : ["Kosugi Maru", "#E26C22"]
-theme-background : ["linear-gradient(75deg, white 25.33%, #2F6ED4 25.33%)"]
+theme-headline   : ["Kosugi Maru", "#2F6ED4"]
+theme-byline     : ["Kosugi Maru", "#2F6ED4"]
+theme-background : ["linear-gradient(100deg, white 90%, #2F6ED4 10%)"]
 theme-code       : ["Ubuntu Mono", "none"]
 theme-text       : ["Kosugi Maru", "none"]
 

@@ -12,12 +12,6 @@
     font-size: 2em;
 }
 
-.reveal pre code {
-    font-family: 'Ubuntu Mono';
-}
-
 .slide-title {
-    color: orangered;
-    text-transform: uppercase;
-    font-size: 0.5em;
+    font-family: 'Kosugi Maru', sans-serif !important;
 }
