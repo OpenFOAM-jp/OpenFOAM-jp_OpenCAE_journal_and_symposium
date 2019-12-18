@@ -59,13 +59,17 @@
 
 +++
 
+@snap[north span-100]
 ### 手元のPCでの操作
+@snapend
 
 ![git operation](symposium/Presentation/fig/gitlocal.png)
 
 +++
 
+@snap[north span-100]
 ### 操作例
+@snapend
  
 ローカルで自分のbranchを作成してpush
 
@@ -87,7 +91,9 @@ $ git push
 
 +++
 
+@snap[north span-100]
 ### プルリクエストを送る
+@snapend
 
 GitHubなどのweb上で行う
 
@@ -95,7 +101,10 @@ GitHubなどのweb上で行う
 
 +++
 
+
+@snap[north span-100]
 ## まとめ
+@snapend
 
 ![git all](symposium/Presentation/fig/git.png)
 
@@ -105,7 +114,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### OpenFOAM
+@snapend
 
 - Imperial Collageで開発された商用ソルバー"FOAM"がベース
 - 2004年にオープンソース化
@@ -119,7 +130,10 @@ GitHubなどのweb上で行う
 
 +++
 
+
+@snap[north span-100]
 ### ESI版
+@snapend
 
 - ~~[OpenFOAM-plus](https://develop.openfoam.com/Development/OpenFOAM-plus)としてGitLabで開発~~
 - **@color[#ff0000](<NEW!!>)[openfoam](https://develop.openfoam.com/Development/openfoam/)としてGitLabで開発**
@@ -128,7 +142,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### issue
+@snapend
 
 バグ報告, 機能の要望, 導入予定の機能の審議と開発など
   
@@ -136,7 +152,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### issueの立て方
+@snapend
 
 - issuesのページの右上のNew Issueボタンから作成する
 
@@ -144,7 +162,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### issueを立ててみた
+@snapend
 
 - 簡単なtypoのissue
 
@@ -152,7 +172,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### Pull Requestなど
+@snapend
 
 - プロジェクトメンバーのみがPull Requestなどを行うことができる
 - メンバーに加入するには専用ページから申し込む
@@ -162,7 +184,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### ESI版まとめ
+@snapend
 
 | repository | ~~OpenFOAM-plus~~ [openfoam](https://develop.openfoam.com/Development/openfoam/) | 
 | :---: | :---: |
@@ -177,7 +201,9 @@ GitHubなどのweb上で行う
 
 +++
 
-### GitHub
+@snap[north span-100]
+### Foundation版
+@snapend
 
 - [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub上で開発
 - 最新リリース版は**OpenFOAM-V7**
@@ -186,7 +212,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### Foundation版のissue
+@snapend
 
 - [専用サイト](https://bugs.openfoam.org/)で行われる(GitHub上ではない)
 - 申請すれば誰でもViewer→Reporterに権限が変わる
@@ -195,7 +223,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### Pull Request
+@snapend
 
 - GitHubでPull Requestを送ることはできる
 - ただ過去の20件のうち承認されたものはない
@@ -204,7 +234,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### Foundation版まとめ
+@snapend
 
 | repository | OpenFOAM-dev |
 | :---: | :---: |
@@ -215,24 +247,13 @@ GitHubなどのweb上で行う
 
 ---
 
-## ESI版とFoundation版 まとめ
-
-|   | ESI版 | Foundation版 |
-| :---: | :---: | :---: |
-| organization | [ESI-OpenCFD](https://openfoam.com/) | @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) |
-| platform | GitLab | GitHub |
-| repository | [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) |
-| clone, fork | 誰でもOK | 誰でもOK |
-| issue | 誰でもOK([GitLab](https://bugs.openfoam.org/)) | 誰でもOK@size[80%](([専用サイト](https://bugs.openfoam.org/))) |
-| Pull Request | 権限が必要 | 権限が必要 |
-
----
-
 ## OpeFOAM-jp
 
 +++
 
+@snap[north span-100]
 ### 目的
+@snapend
 
 - コントリビュートの最初の一歩として
 - OpenFOAMの開発をやってみたい
@@ -241,7 +262,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### issues
+@snapend
 
 - [issuesレポジトリ](https://github.com/OpenFOAM-jp/issues)を単独で作成（[vim-jp/issues](https://github.com/vim-jp/issues)のfork）
 - 日本コミュニティ内でのOpenFOAMに関する議論の場
@@ -253,7 +276,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### OpenFOAM-jp
+@snapend
 
 - OpenFOAM-devのfork
 - 誰でもfork, Pull Requestが可能
@@ -262,7 +287,9 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### OpenFOAM-jpまとめ
+@snapend
 
 | repository | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/) |
 | :---: | :---: |
@@ -273,7 +300,9 @@ GitHubなどのweb上で行う
 
 ---
 
-## ここまでのまとめ
+@snap[north span-100]
+## 各forkのまとめ
+@snapend
 
 |   | ESI版 | Foundation版 | OpenFOAM-jp |
 | :---: | :---: | :---: | :---: |
@@ -290,25 +319,26 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ## ユーティリティのチュートリアル
+@snapend
 
+@snap
 情報の少ないOpenFOAMのユーティリティについてまとめを作成
 
 ![util](symposium/Presentation/fig/util-tut.png)
+@snapend
 
 +++
 
-@snap[north-west span-0] 
-
+@snap[north span-100]
 ## 継続的インテグレーション（CI）
+@snapend
 
+@snap
 - push時の自動でテストシステム
 - Pull Requestの承認の際の指標になる
 - テスト内容は自分で作成する
-
-@snapend
-
-@snap[east span-40]
 
 ![ci](symposium/Presentation/fig/ci.png)
 
@@ -316,14 +346,18 @@ GitHubなどのweb上で行う
 
 +++
 
+@snap[north span-100]
 ### CI動作例
+@snapend
 
+@snap
 - 本発表の梗概を共同制作
 - Travis CIを活用
 - 各branchをTeXで作成→push→Pull Request
 - CIが通っていればmerge
 
 ![ci](symposium/Presentation/fig/ci-sample.png)
+@snapend
 
 +++
 
