@@ -21,13 +21,7 @@
 
 ## gitを使ったOSSの開発
 
-@snapend
-  
-@snap[south span-100]
-
 ![git all](symposium/Presentation/fig/git.png)
-
-@snapend
 
 +++
 
@@ -91,6 +85,12 @@ $ git push
 GitHubなどのweb上で行う
 
 ![git operation](symposium/TeX/fig/fig-f4.png)
+
++++
+
+## まとめ
+
+![git all](symposium/Presentation/fig/git.png)
 
 ---
 
