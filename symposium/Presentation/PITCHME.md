@@ -41,7 +41,7 @@
 
 @snap[north span-100]
 
-### gitとは？
+### git@fab[git-alt]とは？
   
 - 分散型プロジェクト管理システム
 - 複数人の同時作業に適している
@@ -65,7 +65,7 @@
 
 @snapend
 
-@snap[east span-60 text-left -text-09]
+@snap[east span-60 text-left text-08]
 
 ### issue
 
@@ -73,7 +73,7 @@
 - 基本的にGitHubなどのplatform上で管理される
 
 
-@img[span-100](symposium/Presentation/fig/gitissue.png)
+@img[span-90](symposium/Presentation/fig/gitissue.png)
 
 @snapend
 
@@ -130,8 +130,8 @@ $ git push
 ```
 
 @[1-2](ローカルにダウンロード)
-@[3](ブランチ切替 @fab[arrow-right] develop )
-@[4](ブランチ作成 develop @fab[arrow-right] my-branch-1)
+@[3](ブランチ切替 @fa[arrow-right] develop )
+@[4](ブランチ作成 develop @fa[arrow-right] my-branch-1)
 @[5-8](リモートへアップロード)
 
 @snapend
@@ -184,7 +184,7 @@ $ git push
 ### CI動作例
 
 - 例：本発表の梗概を共同制作
-- Travis CIでTex@fab[arrow-right]pdfを自動テスト
+- Travis CIでTex@fa[arrow-right]pdfを自動テスト
 - 各branchをTeXで作成→push→Pull Request
 
 @img[span-70](symposium/Presentation/fig/ci-sample.png)
@@ -233,6 +233,57 @@ $ git push
   - 他にもたくさんある
 
 @snapend
+
+---
+
+## Foundation版
+
++++
+
+@snap[north span-100]
+### Foundation版の開発
+@snapend
+
+- [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub@fab[github]上で開発
+- 最新リリース版は**OpenFOAM-V7**
+
+@img[span-70](symposium/Presentation/fig/openfoam-dev-toppage.png)
+
++++
+
+@snap[north span-100]
+### Foundation版のissue
+
+- [専用サイト](https://bugs.openfoam.org/)で行われる(GitHub上ではない)
+- 申請すれば誰でもViewer→Reporterに権限が変わる
+
+@snapend
+
+@img[span-70](symposium/Presentation/fig/issueTracking.png)
+
++++
+
+@snap[north span-100]
+### Pull Request
+@snapend
+
+- GitHubでPull Requestを送ることはできる
+- ただ過去の20件のうち承認されたものはない
+- issueを立てる→管理者が編集、という方式が取られている
+- 管理者はおそらく二人
+
++++
+
+@snap[north span-100]
+### Foundation版まとめ
+@snapend
+
+| repository | OpenFOAM-dev |
+| :---: | :---: |
+| platform | GitHub@fab[github] |
+| clone, fork | 誰でもOK |
+| issue | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
+| Pull Request | 権限が必要 |
 
 ---
 
@@ -293,10 +344,9 @@ $ git push
 - メンバーに加入するには専用ページから申し込む
 - ただし現在14人しかいないほど狭き門
 
-@snapend
-
 @img[span-70](symposium/Presentation/fig/com_contactus.png)
 
+@snapend
 
 +++
 
@@ -313,57 +363,6 @@ $ git push
 
 ---
 
-## Foundation版
-
-+++
-
-@snap[north span-100]
-### Foundation版の開発
-@snapend
-
-- [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev)としてGitHub@fab[github]上で開発
-- 最新リリース版は**OpenFOAM-V7**
-
-@img[span-70](symposium/Presentation/fig/openfoam-dev-toppage.png)
-
-+++
-
-@snap[north span-100]
-### Foundation版のissue
-
-- [専用サイト](https://bugs.openfoam.org/)で行われる(GitHub上ではない)
-- 申請すれば誰でもViewer→Reporterに権限が変わる
-
-@snapend
-
-@img[span-70](symposium/Presentation/fig/issueTracking.png)
-
-+++
-
-@snap[north span-100]
-### Pull Request
-@snapend
-
-- GitHubでPull Requestを送ることはできる
-- ただ過去の20件のうち承認されたものはない
-- issueを立てる→管理者が編集、という方式が取られている
-- 管理者はおそらく二人
-
-+++
-
-@snap[north span-100]
-### Foundation版まとめ
-@snapend
-
-| repository | OpenFOAM-dev |
-| :---: | :---: |
-| platform | GitHub@fab[github] |
-| clone, fork | 誰でもOK |
-| issue | 誰でもOK([専用サイト](https://bugs.openfoam.org/)) |
-| Pull Request | 権限が必要 |
-
----
-
 ## OpeFOAM-jp
 
 +++
@@ -372,12 +371,11 @@ $ git push
 ### OpenFOAM-jpの目的と経緯
 @snapend
 
-- コントリビュートの最初の一歩として
 - OpenFOAMの開発をやってみたい
-- 日本のコントリビュート活動の活性化
+- 日本のコントリビュート活動を増やしたい
 - Gitとかの練習をしたい
 
-## @fab[arrow-down]
+## @fa[arrow-down]
 
 - 有志でコミュニティを作成（現在3人）
 - OpenFAOM-devをforkしたGitHub@fab[github] repositoryを作成
@@ -394,9 +392,9 @@ $ git push
 - OpenFOAMの質問は既存の[Google Group](https://groups.google.com/forum/#!forum/openfoam)へ
 - もちろん誰でも参加可能
 
-@snapend
-
 @img[span-70](symposium/Presentation/fig/jp-issue.png)
+
+@snapend
 
 +++
 
@@ -405,7 +403,7 @@ $ git push
 @snapend
 
 - OpenFOAM-devのfork
-- 誰でもfork, Pull Requestが可能
+- 誰でもfork, branch, Pull Requestが可能
 - 事前にissuesを作成することを推奨
 - インストール方法は[こちら](https://github.com/OpenFOAM-jp/issues/wiki/インストール手順)
 
@@ -430,13 +428,13 @@ $ git push
 ### repositoryの比較
 @snapend
 
-|   | ESI版 | Foundation版 | OpenFOAM-jp |
+|   | Foundation版 | ESI版 |OpenFOAM-jp |
 | :---: | :---: | :---: | :---: |
-| 運営 | [ESI-OpenCFD](https://openfoam.com/) | @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) | OpenFOAM-jp |
-| リモートレポジトリ | GitLab | GitHub | GiHub |
-| レポジトリ名 | [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/OpenFOAM-jp)
+| 運営 |  @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) | [ESI-OpenCFD](https://openfoam.com/) |OpenFOAM-jp |
+| リモートレポジトリ | GitHab@fab[github] | GitLab@fab[gitlab] | GiHub@fab[github] |
+| レポジトリ名 | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) | [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/OpenFOAM-jp)
 | clone, fork | 誰でもOK | 誰でもOK | 誰でもOK |
-| issue | 誰でもOK  ([GitLab](https://bugs.openfoam.org/)) | 誰でもOK  @size[80%](([専用サイト](https://bugs.openfoam.org/))) | 誰でもOK  ([GitHub](https://github.com/OpenFOAM-jp/issues)) | 
+| issue | 誰でもOK  @size[80%](([専用サイト](https://bugs.openfoam.org/))) | 誰でもOK  ([GitLab](https://bugs.openfoam.org/)) | 誰でもOK  ([GitHub](https://github.com/OpenFOAM-jp/issues)) | 
 | Pull Request | 権限が必要 | 権限が必要 | @color[#ff0000](誰でもOK) |
 
 ---
@@ -451,9 +449,9 @@ $ git push
 
 OpenFOAMのユーティリティの使い方に関するまとめ
 
-@snapend
-
 @img[span-60](symposium/Presentation/fig/util-tut.png)
+
+@snapend
 
 +++
 
@@ -469,18 +467,20 @@ OpenFOAMのユーティリティの使い方に関するまとめ
 
 ## 他にも
 
+@ul
 - ドキュメントの翻訳
 - エラーメッセージの日本語化
 - OpenFOAMのCIテスト
 - Dockerfileを用いたバグ管理
+@ulend
 
 ---
 
 ## まとめ
 
-- ESI版とFoundation版はissueを送ることでコントリビュートできる
-- ただし実際に書いたコードを反映させることは権限がないとできない
+- ESI版とFoundation版は誰でもissueを送ることができる
+- ただしPull Requestは権限がないとできない
 - 開発をやってみたい人のためにOpenFOAM-jpを作ってみた
-- @size[200%](@color[#0000ff](参加者募集中！)
-- @size[200%](@color[#0000ff](やってみたいことがあったらissueへ！)
+- @size[200%](@color[#0000ff](参加者募集中！)) |
+- @size[200%](@color[#0000ff](やってみたいことがあったらissueへ！)) |
 
