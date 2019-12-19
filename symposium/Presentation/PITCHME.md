@@ -22,8 +22,8 @@
 
 - gitを使ったossの開発
 - OpenFOAMのfork
-- ESI版
 - Foundation版
+- ESI版
 - OpeFOAM-jp
 - プロジェクトの例
 
@@ -31,7 +31,7 @@
 
 @snap[north-west text-gray]
 
-# @fab[git-alt]
+# @fab[git]
 
 @snapend
 
@@ -41,7 +41,7 @@
 
 @snap[north span-100]
 
-### git@fab[git-alt]とは？
+### git@fab[git]とは？
   
 - 分散型プロジェクト管理システム
 - 複数人の同時作業に適している
@@ -130,8 +130,8 @@ $ git push
 ```
 
 @[1-2](ローカルにダウンロード)
-@[3](ブランチ切替 @fa[arrow-right] develop )
-@[4](ブランチ作成 develop @fa[arrow-right] my-branch-1)
+@[3](ブランチ切替 → develop )
+@[4](ブランチ作成 develop → my-branch-1)
 @[5-8](リモートへアップロード)
 
 @snapend
@@ -153,7 +153,7 @@ $ git push
 
 @snapend
 
-@img[span-100](symposium/Presentation/fig/PR2.png)
+@img[span-100](symposium/TeX/fig/fig-f4.png)
 
 +++
 
@@ -184,7 +184,7 @@ $ git push
 ### CI動作例
 
 - 例：本発表の梗概を共同制作
-- Travis CIでTex@fa[arrow-right]pdfを自動テスト
+- [Travis CI](https://travis-ci.org/)でTex→pdfを自動テスト
 - 各branchをTeXで作成→push→Pull Request
 
 @img[span-70](symposium/Presentation/fig/ci-sample.png)
@@ -232,6 +232,10 @@ $ git push
     - ESI社とOpenCFD社によるFork
   - 他にもたくさんある
 
+@snapend
+
+@snap[south-east text-06]
+参考：[OpenFOAM history](https://www.openfoam.com/history/)
 @snapend
 
 ---
@@ -378,7 +382,7 @@ $ git push
 ## @fa[arrow-down]
 
 - 有志でコミュニティを作成（現在3人）
-- OpenFAOM-devをforkしたGitHub@fab[github] repositoryを作成
+- OpenFAOM-devをforkした[GitHub@fab[github] repository](https://github.com/OpenFOAM-jp)を作成
 - 色々やってみよう！
 
 +++
@@ -405,7 +409,7 @@ $ git push
 - OpenFOAM-devのfork
 - 誰でもfork, branch, Pull Requestが可能
 - 事前にissuesを作成することを推奨
-- インストール方法は[こちら](https://github.com/OpenFOAM-jp/issues/wiki/インストール手順)
+- インストール方法を[wiki](https://github.com/OpenFOAM-jp/issues/wiki/インストール手順)として作成
 
 @img[span-70](symposium/Presentation/fig/jp-OpenFOAM-jp.png)
 
@@ -430,9 +434,9 @@ $ git push
 
 |   | Foundation版 | ESI版 |OpenFOAM-jp |
 | :---: | :---: | :---: | :---: |
-| 運営 |  @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) | [ESI-OpenCFD](https://openfoam.com/) |OpenFOAM-jp |
-| リモートレポジトリ | GitHab@fab[github] | GitLab@fab[gitlab] | GiHub@fab[github] |
-| レポジトリ名 | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) | [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/OpenFOAM-jp)
+| Organization |  @size[80%]([OpenFOAM Foundation Ltd](https://openfoam.org/)) | [ESI-OpenCFD](https://openfoam.com/) |OpenFOAM-jp |
+| platform | GitHab@fab[github] | GitLab@fab[gitlab] | GiHub@fab[github] |
+| repository | [OpenFOAM-dev](https://github.com/OpenFOAM/OpenFOAM-dev) | [openfoam](https://develop.openfoam.com/Development/openfoam/) | [OpenFOAM-jp](https://github.com/OpenFOAM-jp/OpenFOAM-jp)
 | clone, fork | 誰でもOK | 誰でもOK | 誰でもOK |
 | issue | 誰でもOK  @size[80%](([専用サイト](https://bugs.openfoam.org/))) | 誰でもOK  ([GitLab](https://bugs.openfoam.org/)) | 誰でもOK  ([GitHub](https://github.com/OpenFOAM-jp/issues)) | 
 | Pull Request | 権限が必要 | 権限が必要 | @color[#ff0000](誰でもOK) |
@@ -447,7 +451,7 @@ $ git push
 
 ## ユーティリティのチュートリアル
 
-OpenFOAMのユーティリティの使い方に関するまとめ
+- OpenFOAMのユーティリティの使い方に関するまとめ([link](https://github.com/OpenFOAM-jp/OpenFOAM-utilities-tutorials-jp))
 
 @img[span-60](symposium/Presentation/fig/util-tut.png)
 
@@ -455,7 +459,14 @@ OpenFOAMのユーティリティの使い方に関するまとめ
 
 +++
 
+@snap[north span-100 text-08]
+
 ## 機能追加 
+
+- develop branchでほしいと思った機能を追加していく
+- 共同開発、発案のみも歓迎
+
+### 例
 
 - mergeMeshesのオプションの改造
 - snappyHexMeshのスムージング機能独立
@@ -463,9 +474,15 @@ OpenFOAMのユーティリティの使い方に関するまとめ
 - fvOptionsでCHT(固体)の計算
 - @size[200%](@color[#0000ff](随時募集中！（issueへ）)) |
 
+@snapend
+
 +++
 
+@snap[north span-100 text-08]
+
 ## 他にも
+
+@snapend
 
 @ul
 - ドキュメントの翻訳
