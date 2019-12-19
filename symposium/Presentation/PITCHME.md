@@ -29,24 +29,18 @@
 
 ---
 
-@snap[north-west text-gray]
-
-# @fab[git]
-
-@snapend
-
-## gitを使ったOSSの開発
+## @fab[git]を使ったOSSの開発
 
 +++
 
 @snap[north span-100]
 
-### git@fab[git]とは？
+### @fab[git]とは？
   
 - 分散型プロジェクト管理システム
 - 複数人の同時作業に適している
 - OSSの開発や管理に使用されていることが多い
-- web上のplatformとしてGitHub@fab[github]やGitLab@fab[gitlab]などがある
+- web上のplatformとしてGitHub@fab[github]やGitLab@fab[gitlab]やbitbucket@fab[bitbucket]などがある
 
 @snapend
 
@@ -171,7 +165,7 @@ $ git push
 
 @snap[east span-60]
 
-- push時の自動でテストシステム
+- push時の自動テストシステム
 - Pull Requestの承認の際の指標になる
 - テスト内容は自分で作成する
 
@@ -224,12 +218,12 @@ $ git push
     - 最新版は**OpenFOAM-V7**
     - FOAMの生みの親であるHenry Weller氏が管理
     - Ubuntuではaptでインストールできる
-    - OpenFOAM Foundation Inc.による運営
+    - OpenFOAM Foundation Inc.により運営
   - ESI版
     - 最新版は**OpenFOAM-v1906**
     - OpenFAOM-3.0+として生まれたfork
     - 開発頻度が高い
-    - ESI社とOpenCFD社によるFork
+    - ESI社とOpenCFD社により運営
   - 他にもたくさんある
 
 @snapend
@@ -409,7 +403,7 @@ $ git push
 - OpenFOAM-devのfork
 - 誰でもfork, branch, Pull Requestが可能
 - 事前にissuesを作成することを推奨
-- インストール方法を[wiki](https://github.com/OpenFOAM-jp/issues/wiki/インストール手順)として作成
+- インストール方法は[wiki](https://github.com/OpenFOAM-jp/issues/wiki/インストール手順)として作成
 
 @img[span-70](symposium/Presentation/fig/jp-OpenFOAM-jp.png)
 
@@ -466,13 +460,15 @@ $ git push
 - develop branchでほしいと思った機能を追加していく
 - 共同開発、発案のみも歓迎
 
+### 　
 ### 例
+### 　
 
 - mergeMeshesのオプションの改造
 - snappyHexMeshのスムージング機能独立
 - transformPointsのコピーオプション追加
 - fvOptionsでCHT(固体)の計算
-- @size[200%](@color[#0000ff](随時募集中！（issueへ）)) |
+- @size[200%](@color[#0000ff](随時募集中！（issueへ）))
 
 @snapend
 
@@ -480,7 +476,7 @@ $ git push
 
 @snap[north span-100 text-08]
 
-## 他にも
+## 他にも・・・
 
 @snapend
 
@@ -496,7 +492,7 @@ $ git push
 ## まとめ
 
 - ESI版とFoundation版は誰でもissueを送ることができる
-- ただしPull Requestは権限がないとできない
+- Pull Requestは権限がないとできない
 - 開発をやってみたい人のためにOpenFOAM-jpを作ってみた
 - @size[200%](@color[#0000ff](参加者募集中！)) |
 - @size[200%](@color[#0000ff](やってみたいことがあったらissueへ！)) |
