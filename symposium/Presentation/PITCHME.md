@@ -24,7 +24,7 @@
 - OpenFOAMのfork
 - Foundation版
 - ESI版
-- OpeFOAM-jp
+- OpenFOAM-jp
 - プロジェクトの例
 
 ---
@@ -361,7 +361,7 @@ $ git push
 
 ---
 
-## OpeFOAM-jp
+## OpenFOAM-jp
 
 +++
 
